@@ -24,6 +24,11 @@ class ModelConfig:
     family: str
     size_b: float
     quantization: Quantization
+    max_model_len: int = 2048
+
+    @property
+    def label(self) -> str:
+        return f"{self.family}_{self.size_b}B_{self.quantization.value}"
 
 
 @dataclass
