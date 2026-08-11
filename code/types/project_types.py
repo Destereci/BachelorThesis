@@ -87,5 +87,17 @@ class SampleResult:
 
 @dataclass
 class ExperimentResult:
-    #TODO: define which experiment result data should be stored
-    pass
+    config: ExperimentConfig
+    samples: list[SampleResult] = field(default_factory=list)
+
+    mean_quality: dict[str, float] = field(default_factory=dict)
+    mean_joules_per_output_token: float = 0.0
+    mean_joules_per_input_token: float = 0.0
+    mean_eq_score: float = 0.0
+    mean_output_tokens: float = 0.0
+    mean_input_tokens: float = 0.0
+    total_joules: float = 0.0
+    flops_per_task: float = 0.0
+
+    def compute_aggregates(self) -> None:
+        pass  # TODO: implement aggregate computation

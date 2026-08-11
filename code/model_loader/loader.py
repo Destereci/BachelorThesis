@@ -1,5 +1,5 @@
 from typing import NamedTuple
-from vllm import LLM
+from vllm import LLM, SamplingParams
 from types.project_types import ModelConfig, Quantization
 
 
@@ -38,3 +38,15 @@ def load_model(config: ModelConfig) -> LoadedModel:
         raise ValueError(f"Unsupported quantization: {quant}")
 
     return LoadedModel(llm=llm, label=config.label)
+
+
+def make_sampling_params(
+    max_new_tokens: int,
+    temperature: float,
+    seed: int,
+) -> "SamplingParams":
+    return SamplingParams(
+        max_tokens=max_new_tokens,
+        temperature=temperature,
+        seed=seed,
+    )

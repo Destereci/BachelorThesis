@@ -1,14 +1,12 @@
 
 from datasets import load_dataset
 from __future__ import annotations
+from base_task import BaseTask, register_task
+from code.types import TaskType
 
-class codeTask:
 
-    def __init__(self, dataset_name: str, split: str, max_samples: int):
-        self.dataset_name = dataset_name
-        self.split = split
-        self.max_samples = max_samples
-        self._data: list[dict] = []
+@register_task(TaskType.CODE)
+class CodeTask(BaseTask):
 
 
     metric_name = "pass_at_k"

@@ -1,11 +1,9 @@
 
 from datasets import load_dataset
+from base_task import BaseTask, register_task
+from code.types import TaskType
 
 class SummarizationTask():
-    def __init__(self, dataset_name: str, split: str, max_samples: int) -> None:
-        self.dataset_name = dataset_name
-        self.split = split
-        self.max_samples = max_samples
 
     metric_name = "bertscore"
 
