@@ -3,7 +3,8 @@ from datasets import load_dataset
 from base_task import BaseTask, register_task
 from code.types import TaskType
 
-class SummarizationTask():
+@register_task(TaskType.SUMMARIZATION)
+class SummarizationTask(BaseTask):
 
     metric_name = "bertscore"
 
