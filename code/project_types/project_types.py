@@ -77,9 +77,9 @@ class SampleResult:
     completion: str
     energy: PhaseEnergy
     latency_s: float
+    eq_score: float
     quality_scores: dict[str, float] = field(default_factory=dict)
     metadata: dict = field(default_factory=dict)
-    eq_score: float
 
     #TODO: define EQ score here
     
