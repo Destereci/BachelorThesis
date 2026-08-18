@@ -4,35 +4,48 @@ from types.project_types import ModelConfig, Quantization
 
 
 class LoadedModel(NamedTuple):
-    llm: "LLM"
+    llm: LLM
     label: str
 
 
-def load_model(config: ModelConfig) -> LoadedModel:
+# Maps (family, quantization) → pre-quantized HF checkpoint
+# These are loaded directly — no runtime quantization step
+PREQUANTIZED_CHECKPOINTS: dict[tuple[str, str], str] = {
+    ("mistral", "int4"): "TheBloke/Mistral-7B-Instruct-v0.2-GPTQ",
+    ("mistral", "int8"): "TheBloke/Mistral-7B-Instruct-v0.2-GPTQ",
+    ("llama3",  "int4"): "bartowski/Meta-Llama-3-8B-Instruct-GPTQ",
+    ("llama3",  "int8"): "bartowski/Meta-Llama-3-8B-Instruct-GPTQ",
+    ("phi3",    "int4"): "bartowski/Phi-3-mini-4k-instruct-GPTQ",
+    ("phi3",    "int8"): "bartowski/Phi-3-mini-4k-instruct-GPTQ",
+}
 
+
+def load_model(config: ModelConfig) -> LoadedModel:
     quant = config.quantization
-    model_id = config.model_id
+    key = (config.family, quant.value)
 
     if quant == Quantization.FP16:
-        llm = LLM(model=model_id, 
-                  max_model_len=config.max_model_len, 
-                  gpu_memory_utilization=0.9,
-                  dtype="float16")
+        llm = LLM(
+            model=config.model_id,
+            dtype="float16",
+            max_model_len=config.max_model_len,
+            gpu_memory_utilization=0.9,
+        )
 
-    elif quant == Quantization.INT8:
-        llm = LLM(model=model_id, 
-                  max_model_len=config.max_model_len, 
-                  gpu_memory_utilization=0.9,
-                  dtype="float16",
-                  quantization="bitsandbytes",
-                  load_format="bitsandbytes")
-
-    elif quant == Quantization.INT4:
-        llm = LLM(model=model_id, 
-                  max_model_len=config.max_model_len, 
-                  gpu_memory_utilization=0.9,
-                  dtype="float16",
-                  quantization="gptq")
+    elif quant in (Quantization.INT8, Quantization.INT4):
+        if key not in PREQUANTIZED_CHECKPOINTS:
+            raise ValueError(
+                f"No pre-quantized checkpoint registered for {key}. "
+                f"Add it to PREQUANTIZED_CHECKPOINTS."
+            )
+        checkpoint = PREQUANTIZED_CHECKPOINTS[key]
+        llm = LLM(
+            model=checkpoint,
+            quantization="gptq",
+            dtype="float16",
+            max_model_len=config.max_model_len,
+            gpu_memory_utilization=0.9,
+        )
 
     else:
         raise ValueError(f"Unsupported quantization: {quant}")
@@ -44,7 +57,7 @@ def make_sampling_params(
     max_new_tokens: int,
     temperature: float,
     seed: int,
-) -> "SamplingParams":
+) -> SamplingParams:
     return SamplingParams(
         max_tokens=max_new_tokens,
         temperature=temperature,
