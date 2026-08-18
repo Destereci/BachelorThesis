@@ -7,7 +7,7 @@ import tempfile
 from metrics.base_metric import BaseMetric, register_metric
 
 @register_metric("pass_at_k")
-class PassAtKMetric:
+class PassAtKMetric(BaseMetric):
 
     
 

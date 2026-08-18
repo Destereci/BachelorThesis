@@ -4,7 +4,7 @@ import json
 from metrics.base_metric import BaseMetric, register_metric
 
 @register_metric("json_validity")
-class JsonValidityMetric:
+class JsonValidityMetric(BaseMetric):
 
     def score_batch(self, generated, references, samples):
 

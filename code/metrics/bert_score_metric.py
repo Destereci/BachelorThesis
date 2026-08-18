@@ -4,7 +4,7 @@ from metrics.base_metric import BaseMetric, register_metric
 
 
 @register_metric("bertscore")
-class BERTScoreMetric:
+class BERTScoreMetric(BaseMetric):
 
     def __init__(self):
         self._bert_scorer = None
