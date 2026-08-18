@@ -1,6 +1,6 @@
 from typing import NamedTuple
 from vllm import LLM, SamplingParams
-from types.project_types import ModelConfig, Quantization
+from project_types.project_types import ModelConfig, Quantization
 
 
 class LoadedModel(NamedTuple):

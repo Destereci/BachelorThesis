@@ -4,7 +4,7 @@ from pathlib import Path
 import json
 
 from metrics.base_metric import get_metric
-from types.project_types import ExperimentConfig, ExperimentResult, PhaseEnergy, SampleResult
+from project_types.project_types import ExperimentConfig, ExperimentResult, PhaseEnergy, SampleResult
 from tasks.base_task import get_task
 from energy import Energy_Monitor
 from model_loader.loader import load_model, make_sampling_params

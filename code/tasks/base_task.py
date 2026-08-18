@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from types.project_types import TaskType
+from project_types.project_types import TaskType
 
 
 _TASK_REGISTRY: dict[TaskType, type["BaseTask"]] = {}
