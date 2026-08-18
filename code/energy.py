@@ -63,14 +63,40 @@ class Energy_Monitor:
             time.sleep(self.poll_interval_s)
 
 
-    #TODO: implement method to measure joules
+    def _poll_loop(self) -> None:
+        while not self._stop_event.is_set():
+            power_mw = nvmlDeviceGetPowerUsage(self._handle)
+            power_w = power_mw / 1000.0
+            timestamp = time.perf_counter()
+            with self._lock:
+                self._readings.append(_Reading(timestamp, power_w))
+            time.sleep(self.poll_interval_s)
+
+    @staticmethod
+    def _trapezoid(readings: list[_Reading]) -> float:
+        if len(readings) < 2:
+            return 0.0
+        total = 0.0
+        for i in range(1, len(readings)):
+            dt = readings[i].timestamp - readings[i - 1].timestamp
+            avg_power = (readings[i].power_w + readings[i - 1].power_w) / 2.0
+            total += dt * avg_power
+        return total
 
 
+    def _integrate(self, readings: list[_Reading], split_ts: float | None) -> PhaseEnergy:
+        if not readings:
+            return PhaseEnergy(0.0, 0.0, 0, 0)
+        if split_ts is None:
+            total = self._trapezoid(readings)
+            return PhaseEnergy(0, total, 0)
+        prefill_readings = [r for r in readings if r.timestamp < split_ts]
+        decode_readings = [r for r in readings if r.timestamp >= split_ts]
 
+        if prefill_readings and decode_readings:
+            decode_readings =[prefill_readings[-1]] + decode_readings
 
-    #TODO: implement method to measure FLOPs
-
-
-
-
-    #TODO: implement method to propagate PhaseEnergy
+        return PhaseEnergy(prefill_joules=self._trapezoid(prefill_readings), 
+                           generation_joules=self._trapezoid(decode_readings), 
+                           prefill_tokens=0, 
+                           decode_tokens=0)
