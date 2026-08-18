@@ -5,7 +5,7 @@ from dataclasses import dataclass
 import time
 from pynvml import *
 
-from types import PhaseEnergy
+from project_types.project_types import PhaseEnergy
 
 @dataclass
 class _Reading:
