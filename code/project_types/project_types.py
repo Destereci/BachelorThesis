@@ -15,7 +15,7 @@ class TaskType(str, Enum):
 
     SUMMARIZATION = "summarization"
     CODE = "code"
-    JSON_GEN = "json_gen"
+    JSON = "json"
 
 
 @dataclass
