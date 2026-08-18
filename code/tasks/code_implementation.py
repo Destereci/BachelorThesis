@@ -12,7 +12,7 @@ class CodeTask(BaseTask):
 
     def load_dataset(self) -> None:
         if self.dataset_name == "humaneval":
-            ds = load_dataset("openai_humaneval", split="test")
+            ds = load_dataset("openai/openai_humaneval", split="test")
             self._data = [
                 {
                     "id": row["task_id"],
