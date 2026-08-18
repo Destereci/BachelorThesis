@@ -26,7 +26,6 @@ sample_result = SampleResult(
     prompt="Summarize the following article...",
     reference="This is the reference summary.",
     generated="This is the generated summary.",
-    completion="This is the completion text.",
     energy=phase_energy,
     latency_s=1.0,
     quality_scores={"rouge": 0.85, "bleu": 0.75},

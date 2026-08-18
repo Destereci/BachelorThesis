@@ -74,14 +74,14 @@ class SampleResult:
     prompt: str
     reference: str
     generated: str
-    completion: str
     energy: PhaseEnergy
     latency_s: float
-    eq_score: float
     quality_scores: dict[str, float] = field(default_factory=dict)
     metadata: dict = field(default_factory=dict)
 
-    #TODO: define EQ score here
+    @property
+    def eq_score(self) -> float:
+        return self.quality_scores["eq_score"]
     
 
 @dataclass
