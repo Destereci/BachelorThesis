@@ -7,6 +7,7 @@ from metrics.base_metric import get_metric
 from project_types.project_types import ExperimentConfig, ExperimentResult, PhaseEnergy, SampleResult
 from tasks.base_task import get_task
 import tasks.json_implementation, tasks.summarization_implementation, tasks.code_implementation
+import metrics.bert_score_metric, metrics.json_validity_metric, metrics.pass_at_k_metric
 from energy import Energy_Monitor
 from model_loader.loader import load_model, make_sampling_params
 
