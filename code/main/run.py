@@ -4,7 +4,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from types.project_types import ModelConfig, ExperimentConfig, Quantization, TaskType
+from project_types import ModelConfig, ExperimentConfig, Quantization, TaskType
 from runner import run_experiment
 
 
