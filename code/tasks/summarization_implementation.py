@@ -1,4 +1,3 @@
-
 from datasets import load_dataset
 from tasks.base_task import BaseTask, register_task
 from project_types.project_types import TaskType
