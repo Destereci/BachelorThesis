@@ -1,6 +1,7 @@
 import argparse
 import sys
 from pathlib import Path
+import traceback
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
@@ -116,6 +117,7 @@ def main():
                 results_summary.append(summary)
                 _print_summary_row(summary)
             except Exception as e:
+                traceback.print_exc()
                 print(f"   [ERROR] {e}")
 
     print(f"\n{'='*60}")
