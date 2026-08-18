@@ -91,7 +91,7 @@ def main():
                 quantization=quant,
             )
             exp_cfg = ExperimentConfig(
-                model=model_cfg,
+                model_config=model_cfg,
                 task_type=task_type,
                 dataset_name=dataset,
                 dataset_split=args.split,
