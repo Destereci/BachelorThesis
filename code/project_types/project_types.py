@@ -79,6 +79,7 @@ class SampleResult:
     latency_s: float
     quality_scores: dict[str, float] = field(default_factory=dict)
     metadata: dict = field(default_factory=dict)
+    eq_score: float
 
     #TODO: define EQ score here
     
@@ -96,6 +97,7 @@ class ExperimentResult:
     mean_input_tokens: float = 0.0
     total_joules: float = 0.0
     flops_per_task: float = 0.0
+    eq_score: float = 0.0
 
     def compute_aggregates(self) -> None:
         pass  # TODO: implement aggregate computation

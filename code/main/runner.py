@@ -102,11 +102,11 @@ def _save_result(result: ExperimentResult, output_dir: str) -> None:
 
     payload = {
         "config": {
-            "model":        result.config.model.label,
-            "model_id":     result.config.model.model_id,
-            "family":       result.config.model.family,
-            "size_b":       result.config.model.size_b,
-            "quantization": result.config.model.quantization.value,
+            "model":        result.config.model_config.label,
+            "model_id":     result.config.model_config.model_id,
+            "family":       result.config.model_config.family,
+            "size_b":       result.config.model_config.size_b,
+            "quantization": result.config.model_config.quantization.value,
             "task_type":    result.config.task_type.value,
             "dataset":      result.config.dataset_name,
             "max_samples":  result.config.max_samples,
@@ -130,7 +130,7 @@ def _save_result(result: ExperimentResult, output_dir: str) -> None:
                 "eq_score":       s.eq_score,
                 "energy": {
                     "prefill_joules":          s.energy.prefill_joules,
-                    "decode_joules":           s.energy.decode_joules,
+                    "decode_joules":           s.energy.generation_joules,
                     "total_joules":            s.energy.total_joules,
                     "joules_per_output_token": s.energy.joules_per_output_token,
                     "joules_per_input_token":  s.energy.joules_per_input_token,
