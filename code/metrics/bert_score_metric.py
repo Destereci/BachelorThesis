@@ -1,7 +1,9 @@
+from metrics.base_metric import BaseMetric, register_metric
 
 
 
 
+@register_metric("bertscore")
 class BERTScoreMetric:
 
     def __init__(self):

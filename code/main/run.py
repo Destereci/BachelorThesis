@@ -6,7 +6,7 @@ import traceback
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from project_types.project_types import ModelConfig, ExperimentConfig, Quantization, TaskType
-from runner import run_experiment
+from main.runner import run_experiment
 
 
 

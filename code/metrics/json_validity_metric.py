@@ -1,10 +1,10 @@
 import jsonschema
 import re
 import json
+from metrics.base_metric import BaseMetric, register_metric
 
-
+@register_metric("json_validity")
 class JsonValidityMetric:
-    metric_name = "json_validity"
 
     def score_batch(self, generated, references, samples):
 
