@@ -2,7 +2,7 @@
 from datasets import load_dataset
 from __future__ import annotations
 from base_task import BaseTask, register_task
-from code.types import TaskType
+from project_types.project_types import TaskType
 
 
 @register_task(TaskType.CODE)
