@@ -96,8 +96,31 @@ class ExperimentResult:
     mean_output_tokens: float = 0.0
     mean_input_tokens: float = 0.0
     total_joules: float = 0.0
-    flops_per_task: float = 0.0
-    eq_score: float = 0.0
+    #flops_per_task: float = 0.0
+    #eq_score: float = 0.0
 
     def compute_aggregates(self) -> None:
-        pass  # TODO: implement aggregate computation
+
+        if not self.samples:
+            return
+        n = len(self.samples)
+ 
+        self.mean_joules_per_output_token = sum(
+            s.energy.joules_per_output_token for s in self.samples
+        ) / n
+        self.mean_joules_per_input_token = sum(
+            s.energy.joules_per_input_token for s in self.samples
+        ) / n
+        self.total_joules = sum(s.energy.total_joules for s in self.samples)
+        self.mean_output_tokens = sum(s.energy.decode_tokens for s in self.samples) / n
+        self.mean_input_tokens = sum(s.energy.prefill_tokens for s in self.samples) / n
+ 
+        eq_scores = [s.eq_score for s in self.samples if s.eq_score is not None]
+        self.mean_eq_score = sum(eq_scores) / len(eq_scores) if eq_scores else 0.0
+ 
+        all_keys = set()
+        for s in self.samples:
+            all_keys.update(s.quality_scores.keys())
+        for key in all_keys:
+            vals = [s.quality_scores[key] for s in self.samples if key in s.quality_scores]
+            self.mean_quality[key] = sum(vals) / len(vals) if vals else 0.0

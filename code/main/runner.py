@@ -97,7 +97,7 @@ def run_experiment(config: ExperimentConfig) -> ExperimentResult:
 
 def _save_result(result: ExperimentResult, output_dir: str) -> None:
     Path(output_dir).mkdir(parents=True, exist_ok=True)
-    filename = f"{result.config.model.label}__{result.config.task_type.value}__{result.config.dataset_name}.json"
+    filename = f"{result.config.model_config.label}__{result.config.task_type.value}__{result.config.dataset_name}.json"
     path = Path(output_dir) / filename
 
     payload = {
