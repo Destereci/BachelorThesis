@@ -3,6 +3,7 @@ import uuid
 from pathlib import Path
 import json
 
+import metrics.base_metric 
 from metrics.base_metric import get_metric
 from project_types.project_types import ExperimentConfig, ExperimentResult, PhaseEnergy, SampleResult
 from tasks.base_task import get_task
