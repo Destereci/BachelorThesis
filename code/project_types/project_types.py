@@ -1,5 +1,6 @@
 from dataclasses import dataclass, field
 from enum import Enum
+from typing import Optional
 
 
 class Quantization(str, Enum):
@@ -80,8 +81,12 @@ class SampleResult:
     metadata: dict = field(default_factory=dict)
 
     @property
-    def eq_score(self) -> float:
-        return self.quality_scores["eq_score"]
+    def eq_score(self) -> Optional[float]:
+        primary = self.quality_scores.get("primary")
+        j_per_tok = self.energy.joules_per_output_token
+        if primary is None or j_per_tok == 0:
+            return None
+        return primary / j_per_tok
     
 
 @dataclass
