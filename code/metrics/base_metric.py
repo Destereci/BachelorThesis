@@ -11,7 +11,7 @@ def register_metric(metric_name: str):
     return decorator
 
 def get_metric(metric_name: str) -> "BaseMetric":
-    return _METRIC_REGISTRY[metric_name]
+    return _METRIC_REGISTRY[metric_name]()
 
 class BaseMetric(ABC):
 
