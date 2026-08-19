@@ -87,8 +87,7 @@ def run_experiment(config: ExperimentConfig) -> ExperimentResult:
     for i, scores in enumerate(quality_scores):
         result.samples[i].quality_scores = scores
 
-    # TODO: implement aggregate computation
-    # result.compute_aggregates()
+    result.compute_aggregates()
 
     _save_result(result, config.output_dir)
 

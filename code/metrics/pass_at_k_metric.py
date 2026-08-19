@@ -26,7 +26,7 @@ class PassAtKMetric(BaseMetric):
 
     def _execute(self, code: str, sample: dict) -> bool:
 
-        code = re.sub(r"```(?:python)?\n?", "", code).strip()
+        code = re.sub(r"```(?:python)?", "", code).strip()
 
         test_code = sample.get("test_code", "")
         entry_point = sample.get("entry_point", "")
