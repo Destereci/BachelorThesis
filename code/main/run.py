@@ -111,7 +111,6 @@ def main():
                     "task":        task_type.value,
                     "quality":     result.mean_quality,
                     "j_per_tok":   round(result.mean_joules_per_output_token, 4),
-                    "eq_score":    round(result.mean_eq_score, 4),
                     "out_tokens":  round(result.mean_output_tokens, 1),
                 }
                 results_summary.append(summary)
@@ -123,18 +122,18 @@ def main():
     print(f"\n{'='*60}")
     print("  FINAL SUMMARY")
     print(f"{'='*60}")
-    print(f"  {'Model':<28} {'Quant':<6} {'Primary Q':>10} {'J/tok':>8} {'EQ':>8}")
+    print(f"  {'Model':<28} {'Quant':<6} {'Primary Q':>10} {'J/tok':>8} ")
     print(f"  {'-'*60}")
     for s in results_summary:
         primary = s["quality"].get("primary", 0)
-        print(f"  {s['model']:<28} {s['quant']:<6} {primary:>10.3f} {s['j_per_tok']:>8.4f} {s['eq_score']:>8.4f}")
+        print(f"  {s['model']:<28} {s['quant']:<6} {primary:>10.3f} {s['j_per_tok']:>8.4f}")
 
 
 def _print_summary_row(s: dict) -> None:
     primary = s["quality"].get("primary", 0)
     print(
         f"   OK  | quality={primary:.3f} | "
-        f"J/tok={s['j_per_tok']:.4f} | EQ={s['eq_score']:.4f} | "
+        f"J/tok={s['j_per_tok']:.4f} "
         f"out_tokens={s['out_tokens']:.0f}"
     )
 
