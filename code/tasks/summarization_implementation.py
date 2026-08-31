@@ -16,7 +16,7 @@ class SummarizationTask(BaseTask):
                     "input": row["document"],
                     "reference": row["summary"],
                 }
-                for row in ds.select(range(min(self.max_samples, len(ds))))
+                for row in ds.select(range(self.max_samples))
             ]
         else:
             raise ValueError(f"Unknown dataset: {self.dataset_name}")

@@ -1,5 +1,6 @@
 from metrics.base_metric import BaseMetric, register_metric
-
+from bert_score import BERTScorer
+from rouge_score import rouge_scorer
 
 
 
@@ -12,12 +13,10 @@ class BERTScoreMetric(BaseMetric):
 
     def _load(self):
         if self._bert_scorer is None:
-            from bert_score import BERTScorer
-            from rouge_score import rouge_scorer
             self._bert_scorer = BERTScorer(lang="en", rescale_with_baseline=True)
             self._rouge_scorer = rouge_scorer.RougeScorer(rouge_types=["rougeL"], use_stemmer=True)
 
-    def score_batch(self, generated, references):
+    def score_batch(self, generated, references, samples):
         self._load()
         P, R, F1 = self._bert_scorer.score(generated, references)
         results = []
@@ -25,7 +24,7 @@ class BERTScoreMetric(BaseMetric):
         for i, (gen, ref) in enumerate(zip(generated, references)):
             rouge_score = self._rouge_scorer.score(ref, gen)
             results.append({
-                "primary":   float(F1[i]),          # BERTScore F1
+                "primary":   float(F1[i]),
                 "bertscore_f1": float(F1[i]),
                 "bertscore_p":  float(P[i]),
                 "bertscore_r":  float(R[i]),

@@ -63,14 +63,6 @@ class Energy_Monitor:
             time.sleep(self.poll_interval_s)
 
 
-    def _poll_loop(self) -> None:
-        while not self._stop_event.is_set():
-            power_mw = nvmlDeviceGetPowerUsage(self._handle)
-            power_w = power_mw / 1000.0
-            timestamp = time.perf_counter()
-            with self._lock:
-                self._readings.append(_Reading(timestamp, power_w))
-            time.sleep(self.poll_interval_s)
 
     @staticmethod
     def _trapezoid(readings: list[_Reading]) -> float:
@@ -98,5 +90,4 @@ class Energy_Monitor:
 
         return PhaseEnergy(prefill_joules=self._trapezoid(prefill_readings), 
                            generation_joules=self._trapezoid(decode_readings), 
-                           prefill_tokens=0, 
-                           decode_tokens=0)
+                           prefill_tokens=0, decode_tokens=0)

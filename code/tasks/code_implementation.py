@@ -18,7 +18,7 @@ class CodeTask(BaseTask):
                     "id": row["task_id"],
                     "input": row["prompt"],
                     "reference": row["canonical_solution"],
-                    "test": row["test"],
+                    "test_code": row["test"],
                     "entry_point": row["entry_point"],
                 }
                 for row in ds.select(range(min(self.max_samples, len(ds))))
