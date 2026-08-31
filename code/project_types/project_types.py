@@ -80,13 +80,31 @@ class SampleResult:
     quality_scores: dict[str, float] = field(default_factory=dict)
     metadata: dict = field(default_factory=dict)
 
+    #@property
+    #def eq_score(self) -> Optional[float]:
+    #    primary = self.quality_scores.get("primary")
+    #    j_per_tok = self.energy.joules_per_output_token
+    #    if primary is None or j_per_tok == 0:
+    #        return None
+    #    return primary / j_per_tok
+
     @property
-    def eq_score(self) -> Optional[float]:
-        primary = self.quality_scores.get("primary")
-        j_per_tok = self.energy.joules_per_output_token
-        if primary is None or j_per_tok == 0:
-            return None
-        return primary / j_per_tok
+    def eq_score(
+        quality_quant: float,
+        quality_fp16: float,
+        energy_quant: float,
+        energy_fp16: float,
+    ) -> Optional[float]:
+
+        if quality_fp16 == 0 or energy_fp16 == 0:
+            return 0.0
+
+        delta_quality = (quality_fp16 - quality_quant) / quality_fp16
+        delta_energy  = (energy_fp16  - energy_quant)  / energy_fp16
+
+        eq = delta_energy - delta_quality
+
+        return max(-1.0, min(1.0, eq))
     
 
 @dataclass
