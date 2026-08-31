@@ -115,7 +115,6 @@ def _save_result(result: ExperimentResult, output_dir: str) -> None:
             "mean_quality":                  result.mean_quality,
             "mean_joules_per_output_token":  result.mean_joules_per_output_token,
             "mean_joules_per_input_token":   result.mean_joules_per_input_token,
-            "mean_eq_score":                 result.mean_eq_score,
             "mean_output_tokens":            result.mean_output_tokens,
             "mean_input_tokens":             result.mean_input_tokens,
             "total_joules":                  result.total_joules,
@@ -127,7 +126,6 @@ def _save_result(result: ExperimentResult, output_dir: str) -> None:
                 "generated":      s.generated,
                 "reference":      s.reference,
                 "quality_scores": s.quality_scores,
-                "eq_score":       s.eq_score,
                 "energy": {
                     "prefill_joules":          s.energy.prefill_joules,
                     "decode_joules":           s.energy.generation_joules,
