@@ -13,7 +13,7 @@ class LoadedModel(NamedTuple):
 PREQUANTIZED_CHECKPOINTS: dict[tuple[str, str], dict[str, str]] = {
     
     # INT4 GPTQ
-    ("phi3",    "int4"): {"model_id": "ssuncheol/Phi-3-mini-128k-instruct-int4", "quant_format": "gptq"},
+    ("phi3",    "int4"): {"model_id": "justinthelaw/Phi-3-mini-128k-instruct-4bit-128g-GPTQ", "quant_format": "gptq"},
     ("mistral", "int4"): {"model_id": "RedHatAI/Mistral-7B-Instruct-v0.3-GPTQ-4bit", "quant_format": "gptq"},
     ("llama3",  "int4"): {"model_id": "study-hjt/Meta-Llama-3-8B-Instruct-GPTQ-Int4", "quant_format": "gptq"},
 
