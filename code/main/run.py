@@ -22,7 +22,7 @@ MODEL_CATALOGUE: dict[str, dict] = {
         "size_b": 7.0,
     },
     "phi3_mini": {
-        "model_id": "microsoft/Phi-3-mini-4k-instruct",
+        "model_id": "microsoft/Phi-3-mini-128k-instruct",
         "family": "phi3",
         "size_b": 3.8,
     },
