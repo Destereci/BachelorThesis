@@ -62,10 +62,14 @@ def run_experiment(config: ExperimentConfig) -> ExperimentResult:
         generated_text = output.outputs[0].text
         input_tokens_count = len(output.prompt_token_ids)
         output_tokens_count = len(output.outputs[0].token_ids)
+        total_tokens = input_tokens_count + output_tokens_count
+
+        prefill_fraction = input_tokens_count / total_tokens
+        total_joules = energy.total_joules
 
         energy = PhaseEnergy(
-            prefill_joules=energy.prefill_joules,
-            generation_joules=energy.generation_joules,
+            prefill_joules=total_joules * prefill_fraction,
+            generation_joules=total_joules * (1 - prefill_fraction),
             prefill_tokens=input_tokens_count,
             decode_tokens=output_tokens_count
         )

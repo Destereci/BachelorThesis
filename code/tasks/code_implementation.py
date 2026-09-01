@@ -28,7 +28,7 @@ class CodeTask(BaseTask):
 
 
     def format_prompt(self, sample: dict) -> str:
-        return ("Complete the following Python function. Return only the function body.\n\n" + sample["input"])
+        return (sample["input"])
 
 
     def get_reference(self, sample: dict) -> str:

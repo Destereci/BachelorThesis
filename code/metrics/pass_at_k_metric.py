@@ -30,7 +30,8 @@ class PassAtKMetric(BaseMetric):
 
         test_code = sample.get("test_code", "")
         entry_point = sample.get("entry_point", "")
-        full_code = f"{code}\n\n{test_code}\n"
+        full_code = sample["input"] + code  # prompt already has def line
+        full_code += f"\n\n{test_code}\n"
 
         if entry_point:
             full_code += f"\ncheck({entry_point})\n"
@@ -38,6 +39,10 @@ class PassAtKMetric(BaseMetric):
         with tempfile.NamedTemporaryFile(suffix=".py", mode="w", delete=False) as temp_file:
             temp_file.write(full_code)
             temp_file_name=temp_file.name
+
+        print("="*40)
+        print(full_code)
+        print("="*40)
 
         try:
             result = subprocess.run(
