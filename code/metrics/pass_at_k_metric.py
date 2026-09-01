@@ -3,6 +3,7 @@ import subprocess
 import os
 import re
 import tempfile
+from unittest import result
 
 from metrics.base_metric import BaseMetric, register_metric
 
@@ -26,11 +27,11 @@ class PassAtKMetric(BaseMetric):
 
     def _execute(self, code: str, sample: dict) -> bool:
 
-        code = re.sub(r"```(?:python)?", "", code).strip()
+        code = re.sub(r"```(?:python)?", "", code).rstrip()
 
         test_code = sample.get("test_code", "")
         entry_point = sample.get("entry_point", "")
-        full_code = sample["input"] + code  # prompt already has def line
+        full_code = sample["input"] + "\n" + code
         full_code += f"\n\n{test_code}\n"
 
         if entry_point:
@@ -51,6 +52,8 @@ class PassAtKMetric(BaseMetric):
                 text=True,
                 timeout=10
             )
+            print("STDOUT:", result.stdout)
+            print("STDERR:", result.stderr)
             return result.returncode == 0
         except subprocess.TimeoutExpired:
             return False
