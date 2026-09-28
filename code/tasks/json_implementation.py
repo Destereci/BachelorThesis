@@ -12,8 +12,8 @@ class JsonGenTask(BaseTask):
     metric_name = "json_validity"
 
     def load_dataset(self) -> None:
-        if os.path.exists(f"{self.dataset_name}.json"):
-            with open(f"{self.dataset_name}.json", "r") as f:
+        if os.path.exists(self.dataset_name):
+            with open(self.dataset_name, "r", encoding="utf-8") as f:
                 rows = [json.loads(line) for line in f if line.strip()]
         else:
             ds = load_dataset(self.dataset_name, split=self.split)

@@ -10,13 +10,14 @@ class SummarizationTask(BaseTask):
     def load_dataset(self) -> None:
         if self.dataset_name == "xsum":
             ds = load_dataset("xsum", split=self.split)
+            n = len(ds) if self.max_samples is None else min(self.max_samples, len(ds))
             self._data = [
                 {
                     "id": str(row["id"]), 
                     "input": row["document"],
                     "reference": row["summary"],
                 }
-                for row in ds.select(range(self.max_samples))
+                for row in ds.select(range(n))
             ]
         else:
             raise ValueError(f"Unknown dataset: {self.dataset_name}")

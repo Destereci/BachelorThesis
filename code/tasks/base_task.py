@@ -49,3 +49,6 @@ class BaseTask(ABC):
         if not self._data:
             self.load_dataset()
         return len(self._data)
+
+    def _n(self, total: int) -> int:
+        return total if self.max_samples is None else min(self.max_samples, total)

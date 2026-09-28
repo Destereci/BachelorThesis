@@ -43,7 +43,7 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--dataset",     default=None,   help="Override default dataset")
     p.add_argument("--models",      default="all",  help="'all' or comma-sep model keys")
     p.add_argument("--quants",      default="all",  help="'all' or fp16,int8,int4")
-    p.add_argument("--max-samples", type=int, default=100)
+    p.add_argument("--max-samples", type=int, default=100, help="Max samples use 0 or -1 for full dataset")
     p.add_argument("--max-tokens",  type=int, default=512)
     p.add_argument("--output-dir",  default="results")
     p.add_argument("--split",       default="test")
@@ -96,7 +96,7 @@ def main():
                 task_type=task_type,
                 dataset_name=dataset,
                 dataset_split=args.split,
-                max_samples=args.max_samples,
+                max_samples=None if args.max_samples <= 0 else args.max_samples,
                 max_new_tokens=args.max_tokens,
                 output_dir=args.output_dir,
             )

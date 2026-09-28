@@ -21,7 +21,7 @@ class CodeTask(BaseTask):
                     "test_code": row["test"],
                     "entry_point": row["entry_point"],
                 }
-                for row in ds.select(range(min(self.max_samples, len(ds))))
+                for row in ds.select(range(self._n(len(ds))))
             ]
         else:
             raise ValueError(f"Unknown dataset: {self.dataset_name}")
