@@ -42,7 +42,7 @@ def load_model(config: ModelConfig) -> LoadedModel:
             model=model_id,
             dtype="float16",
             max_model_len=config.max_model_len,
-            gpu_memory_utilization=0.9,
+            gpu_memory_utilization=0.6,
         )
  
     elif quant in (Quantization.INT8, Quantization.INT4):
@@ -58,7 +58,7 @@ def load_model(config: ModelConfig) -> LoadedModel:
             quantization=checkpoint["quant_format"],
             dtype="float16",
             max_model_len=config.max_model_len,
-            gpu_memory_utilization=0.9,
+            gpu_memory_utilization=0.6,
         )
  
  
