@@ -11,6 +11,11 @@ from main.runner import run_experiment
 
 
 MODEL_CATALOGUE: dict[str, dict] = {
+    "qwen2.5_14b": {
+        "model_id": "Qwen/Qwen2.5-14B-Instruct",
+        "family": "qwen2.5_14b",
+        "size_b": 14.0,
+    },
     "llama3_8b": {
         "model_id": "meta-llama/Meta-Llama-3-8B-Instruct",
         "family": "llama3",
@@ -25,6 +30,16 @@ MODEL_CATALOGUE: dict[str, dict] = {
         "model_id": "microsoft/Phi-3-mini-128k-instruct",
         "family": "phi3",
         "size_b": 3.8,
+    },
+    "qwen2.5_1.5b": {
+        "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+        "family": "qwen2.5_1.5b",
+        "size_b": 1.5,
+    },
+    "qwen2.5_0.5b": {
+        "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
+        "family": "qwen2.5_0.5b",
+        "size_b": 0.5,
     },
 }
 
