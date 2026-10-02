@@ -14,7 +14,6 @@ PREQUANTIZED_CHECKPOINTS: dict[tuple[str, str], dict[str, str]] = {
     
     # INT4 GPTQ
     ("qwen2.5_0.5b", "int4"): {"model_id": "Qwen/Qwen2.5-0.5B-Instruct-GPTQ-Int4", "quant_format": "gptq"},
-    ("qwen2.5_1.5b", "int4"): {"model_id": "Qwen/Qwen2.5-1.5B-Instruct-GPTQ-Int4", "quant_format": "gptq"},
     ("phi3",    "int4"): {"model_id": "justinthelaw/Phi-3-mini-128k-instruct-4bit-128g-GPTQ", "quant_format": "gptq"},
     ("mistral", "int4"): {"model_id": "RedHatAI/Mistral-7B-Instruct-v0.3-GPTQ-4bit", "quant_format": "gptq"},
     ("llama3",  "int4"): {"model_id": "study-hjt/Meta-Llama-3-8B-Instruct-GPTQ-Int4", "quant_format": "gptq"},
@@ -22,7 +21,6 @@ PREQUANTIZED_CHECKPOINTS: dict[tuple[str, str], dict[str, str]] = {
 
     # INT8 W8A8 compressed-tensors
     ("qwen2.5_0.5b", "int8"): {"model_id": "RedHatAI/Qwen2-0.5B-Instruct-quantized.w8a8", "quant_format": "compressed-tensors"},
-    ("qwen2.5_1.5b", "int8"): {"model_id": "danieldk/Qwen2.5-1.5B-Instruct-w8a8-int-dynamic-weight", "quant_format": "compressed-tensors"},
     ("phi3",    "int8"): {"model_id": "RedHatAI/Phi-3-mini-128k-instruct-quantized.w8a8", "quant_format": "compressed-tensors"},
     ("mistral", "int8"): {"model_id": "RedHatAI/Mistral-7B-Instruct-v0.3-quantized.w8a8", "quant_format": "compressed-tensors"},
     ("llama3",  "int8"): {"model_id": "RedHatAI/Meta-Llama-3-8B-Instruct-quantized.w8a8", "quant_format": "compressed-tensors"},

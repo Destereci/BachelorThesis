@@ -31,11 +31,6 @@ MODEL_CATALOGUE: dict[str, dict] = {
         "family": "phi3",
         "size_b": 3.8,
     },
-    "qwen2.5_1.5b": {
-        "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
-        "family": "qwen2.5_1.5b",
-        "size_b": 1.5,
-    },
     "qwen2.5_0.5b": {
         "model_id": "Qwen/Qwen2.5-0.5B-Instruct",
         "family": "qwen2.5_0.5b",
