@@ -31,6 +31,7 @@ def run_experiment(config: ExperimentConfig) -> ExperimentResult:
     monitor = Energy_Monitor()
     loaded = load_model(config.model_config)
     llm = loaded.llm
+    monitor.capture_baseline_pids()
     sampling = make_sampling_params(
         max_new_tokens=config.max_new_tokens,
         temperature=config.temperature,
@@ -56,7 +57,7 @@ def run_experiment(config: ExperimentConfig) -> ExperimentResult:
         monitor.mark_prefill_end()
 
         latency_s = time.perf_counter() - t0
-        energy: PhaseEnergy = monitor.stop()
+        energy, contention = monitor.stop()
 
         output = outputs[0]
         generated_text = output.outputs[0].text
@@ -85,7 +86,8 @@ def run_experiment(config: ExperimentConfig) -> ExperimentResult:
             reference=reference,
             generated=generated_text,
             energy=energy,
-            latency_s=latency_s
+            latency_s=latency_s,
+            contention=contention
         ))
 
     quality_scores = metric.score_batch(all_generated, all_references, all_samples)
@@ -140,6 +142,7 @@ def _save_result(result: ExperimentResult, output_dir: str) -> None:
                     "decode_tokens":           s.energy.decode_tokens,
                 },
                 "latency_s": s.latency_s,
+                "contention": s.contention,
             }
             for s in result.samples
         ],

@@ -9,6 +9,8 @@ from project_types.project_types import PhaseEnergy
 class _Reading:
     timestamp: float
     power_w: float
+    gpu_util_percent: float
+    other_proc_count: int
 
 class Energy_Monitor:
     def __init__(self, device_index: int = 0, poll_interval_s: float = 0.05):
@@ -20,10 +22,28 @@ class Energy_Monitor:
         self._stop_event = threading.Event()
         self._thread: threading.Thread | None = None
         self._lock = threading.Lock()
+        self._own_pids: set[int] = set()
+
 
         nvmlInit()
         self._handle = nvmlDeviceGetHandleByIndex(device_index)
 
+
+    def capture_baseline_pids(self) -> None:
+        self._own_pids = {os.getpid()}
+        try:
+            for p in nvmlDeviceGetComputeRunningProcesses(self._handle):
+                self._own_pids.add(p.pid)
+        except NVMLError:
+            pass
+
+
+    def _other_process_count(self) -> int:
+        try:
+            procs = nvmlDeviceGetComputeRunningProcesses(self._handle)
+        except NVMLError:
+            return 0
+        return sum(1 for p in procs if p.pid not in self._own_pids)
 
     def start(self):
         self._readings.clear()
@@ -48,18 +68,27 @@ class Energy_Monitor:
             readings = list(self._readings)
             split_ts = self._prefill_end_ts
 
-        return self._integrate(readings, split_ts)    
+        energy = self._integrate(readings, split_ts)
+        contention = self._summarize_contention(readings)
+        return energy, contention    
 
 
 
 
     def _poll_loop(self) -> None:
+        last_proc_check = 0.0
+        other_count = 0
         while not self._stop_event.is_set():
-            power_mw = nvmlDeviceGetPowerUsage(self._handle)
-            power_w = power_mw / 1000.0
+            power_w = nvmlDeviceGetPowerUsage(self._handle) / 1000.0
+            util = nvmlDeviceGetUtilizationRates(self._handle)
             timestamp = time.perf_counter()
+
+            if timestamp - last_proc_check > 0.5:
+                other_count = self._other_process_count()
+                last_proc_check = timestamp
+
             with self._lock:
-                self._readings.append(_Reading(timestamp, power_w))
+                self._readings.append(_Reading(timestamp, power_w, util.gpu, other_count))
             time.sleep(self.poll_interval_s)
 
 
@@ -91,3 +120,14 @@ class Energy_Monitor:
         return PhaseEnergy(prefill_joules=self._trapezoid(prefill_readings), 
                            generation_joules=self._trapezoid(decode_readings), 
                            prefill_tokens=0, decode_tokens=0)
+
+    @staticmethod
+    def _summarize_contention(readings: list[_Reading]) -> dict:
+        if not readings:
+            return {"other_process_present_frac": 0.0, "max_other_process_count": 0, "mean_gpu_util_percent": 0.0}
+        n_contended = sum(1 for r in readings if r.other_proc_count > 0)
+        return {
+            "other_process_present_frac": n_contended / len(readings),
+            "max_other_process_count": max(r.other_proc_count for r in readings),
+            "mean_gpu_util_percent": sum(r.gpu_util_percent for r in readings) / len(readings),
+        }

@@ -79,6 +79,7 @@ class SampleResult:
     latency_s: float
     quality_scores: dict[str, float] = field(default_factory=dict)
     metadata: dict = field(default_factory=dict)
+    contention: dict = field(default_factory=dict)
 
     
 
