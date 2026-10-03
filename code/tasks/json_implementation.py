@@ -1,7 +1,4 @@
-import json
-import os
-from random import sample
-
+from __future__ import annotations
 from datasets import load_dataset
 from tasks.base_task import BaseTask, register_task
 from project_types.project_types import TaskType
@@ -13,14 +10,17 @@ class JsonGenTask(BaseTask):
     metric_name = "json_validity"
 
     def load_dataset(self) -> None:
-        ds = load_dataset("epfl-dlab/JSONSchemaBench")
-        self._data = [
-            {
-                "id": row["unique_id"],
-                "schema": row["json_schema"],  
-            }
-            for row in ds.select(range(self._n(len(ds))))
-        ]
+        if self.dataset_name == "JSONSchemaBench":
+            ds = load_dataset("epfl-dlab/JSONSchemaBench", split=self.split)
+            self._data = [
+                {
+                    "id": row["unique_id"],
+                    "schema": row["json_schema"],  
+                }
+                for row in ds.select(range(self._n(len(ds))))
+            ]
+        else:
+            raise ValueError(f"Unknown dataset: {self.dataset_name}")
 
     def format_prompt(self, sample: dict) -> str:
         return (

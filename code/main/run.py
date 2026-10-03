@@ -43,7 +43,7 @@ QUANTIZATIONS = [Quantization.FP16, Quantization.INT8, Quantization.INT4]
 DEFAULT_DATASETS: dict[str, str] = {
     "summarization": "xsum",
     "code":          "humaneval",
-    "json":      "epfl-dlab/JSONSchemaBench",
+    "json":      "JSONSchemaBench",
 }
 
 
