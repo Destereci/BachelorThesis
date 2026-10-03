@@ -22,11 +22,13 @@ class JsonGenTask(BaseTask):
         self._data = rows[:self.max_samples]
 
     def format_prompt(self, sample: dict) -> str:
-        return (
-            f"{sample['instruction']}\n\n"
-            f"Text:\n{sample['input_text']}\n\n"
-            "Return only valid JSON, no explanation or markdown fences."
-        )
+        if "prompt" in sample:
+            return "\n\n".join(m["content"] for m in sample["prompt"])
+
+        if "json_schema" in sample:
+            return f"Generate a JSON object that conforms to this schema:\n{sample['json_schema']}"
+
+        raise KeyError(f"Unknown sample format: {list(sample.keys())}")
 
     def get_reference(self, sample: dict) -> str:
-        return json.dumps(sample["reference_json"])
+        return sample.get("completion", "")
