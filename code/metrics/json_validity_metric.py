@@ -19,9 +19,15 @@ class JsonValidityMetric(BaseMetric):
             try:
                 gen_obj = json.loads(gen_clean)
                 parseable = 1.0
-                if "schema" in sample:
+
+                schema = sample.get(
+                    "json_schema",
+                    sample.get("schema")
+                )
+
+                if schema is not None:
                     try:
-                        jsonschema.validate(gen_obj, sample["schema"])
+                        jsonschema.validate(gen_obj, schema)
                         schema_valid = 1.0
                     except jsonschema.ValidationError:
                         schema_valid = 0.0
@@ -34,7 +40,7 @@ class JsonValidityMetric(BaseMetric):
                 pass
 
             results.append({
-                "primary": parseable,
+                "primary": schema_valid,
                 "parseable": parseable,
                 "schema_valid": schema_valid,
                 "field_f1": field_f1,

@@ -1,5 +1,6 @@
 import json
 import os
+from random import sample
 
 from datasets import load_dataset
 from tasks.base_task import BaseTask, register_task
@@ -22,13 +23,39 @@ class JsonGenTask(BaseTask):
         self._data = rows[:self.max_samples]
 
     def format_prompt(self, sample: dict) -> str:
+        schema = sample.get("json_schema", sample.get("schema"))
+
+        if schema is None:
+            raise KeyError(f"No JSON schema found in sample: {list(sample.keys())}")
+
+        schema_str = json.dumps(schema, separators=(",", ":"))
+
         if "prompt" in sample:
-            return "\n\n".join(m["content"] for m in sample["prompt"])
+            prompt = sample["prompt"]
 
-        if "json_schema" in sample:
-            return f"Generate a JSON object that conforms to this schema:\n{sample['json_schema']}"
+            if isinstance(prompt, list):
+                task_parts  = [
+                    m["content"]
+                    for m in prompt
+                    if m.get("role") == "user"
+                ]
+                task = "\n".join(task_parts)
+            else:
+                task = str(prompt)
+        else:
+            task = ""
 
-        raise KeyError(f"Unknown sample format: {list(sample.keys())}")
+        return (
+            "Generate a JSON object that satisfies the following schema.\n"
+            f"Schema: {schema_str}\n"
+            f"Task: {task}\n"
+            "Output only the JSON object."
+        )
 
     def get_reference(self, sample: dict) -> str:
-        return sample.get("completion", "")
+        reference = sample.get("completion", "")
+        
+        if isinstance(reference, (dict, list)):
+            return json.dumps(reference)
+
+        return reference
