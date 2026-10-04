@@ -12,7 +12,7 @@ class JsonGenTask(BaseTask):
     def load_dataset(self) -> None:
         if self.dataset_name == "JSONSchemaBench":
             print(get_dataset_config_names("epfl-dlab/JSONSchemaBench"))
-            ds = load_dataset("epfl-dlab/JSONSchemaBench", "Github_easy", "Github_hard", split=self.split)
+            ds = load_dataset("epfl-dlab/JSONSchemaBench", "Github_easy", split=self.split)
             print(ds.column_names)
             print(ds[0])
             ds = ds.filter(lambda x: x["category"] in {"github_easy", "github_hard"})
