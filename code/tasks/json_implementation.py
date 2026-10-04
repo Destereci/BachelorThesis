@@ -1,5 +1,5 @@
 from __future__ import annotations
-from datasets import load_dataset
+from datasets import load_dataset, get_dataset_config_names
 from tasks.base_task import BaseTask, register_task
 from project_types.project_types import TaskType
 
@@ -11,7 +11,11 @@ class JsonGenTask(BaseTask):
 
     def load_dataset(self) -> None:
         if self.dataset_name == "JSONSchemaBench":
-            ds = load_dataset("epfl-dlab/JSONSchemaBench", split=self.split)
+            print(get_dataset_config_names("epfl-dlab/JSONSchemaBench"))
+            ds = load_dataset("epfl-dlab/JSONSchemaBench", "Github_easy", "Github_hard", split=self.split)
+            print(ds.column_names)
+            print(ds[0])
+            ds = ds.filter(lambda x: x["category"] in {"github_easy", "github_hard"})
             self._data = [
                 {
                     "id": row["unique_id"],
