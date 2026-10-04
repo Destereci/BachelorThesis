@@ -22,6 +22,7 @@ class BaseTask(ABC):
         self.split = split
         self.max_samples = max_samples
         self._data: list[dict] = []
+        self.seed = 42
 
     @abstractmethod
     def load_dataset(self) -> None:
