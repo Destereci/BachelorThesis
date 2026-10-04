@@ -93,7 +93,6 @@ def run_experiment(config: ExperimentConfig) -> ExperimentResult:
             energy=energy,
             latency_s=latency_s,
             contention=contention,
-            skipped_ids=skipped_ids
         ))
 
     quality_scores = metric.score_batch(all_generated, all_references, all_samples)
@@ -131,7 +130,6 @@ def _save_result(result: ExperimentResult, output_dir: str) -> None:
             "mean_input_tokens":             result.mean_input_tokens,
             "total_joules":                  result.total_joules,
             "n_samples":                     len(result.samples),
-            "skipped_ids":                   result.skipped_ids,
         },
         "samples": [
             {
@@ -153,6 +151,7 @@ def _save_result(result: ExperimentResult, output_dir: str) -> None:
             }
             for s in result.samples
         ],
+        "skipped_ids": result.skipped_ids
     }
 
     with open(path, "w") as f:
