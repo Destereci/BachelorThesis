@@ -5,12 +5,12 @@ import json
 
 import metrics.base_metric 
 from metrics.base_metric import get_metric
-from project_types.project_types import ExperimentConfig, ExperimentResult, PhaseEnergy, SampleResult
+from project_types.project_types import ExperimentConfig, ExperimentResult, ModelConfig, PhaseEnergy, SampleResult
 from tasks.base_task import get_task
 import tasks.json_implementation, tasks.summarization_implementation, tasks.code_implementation
 import metrics.bert_score_metric, metrics.json_validity_metric, metrics.pass_at_k_metric
 from energy import Energy_Monitor
-from model_loader.loader import load_model, make_sampling_params
+from model_loader.loader import load_model, make_sampling_params, prompt_fits
 
 
 
@@ -37,6 +37,7 @@ def run_experiment(config: ExperimentConfig) -> ExperimentResult:
         temperature=config.temperature,
         seed=config.seed
     )
+    skipped_ids: list[str] = []
 
     result = ExperimentResult(config=config)
 
@@ -48,6 +49,10 @@ def run_experiment(config: ExperimentConfig) -> ExperimentResult:
 
     for sample in task:
         prompt = task.format_prompt(sample)
+        if not prompt_fits(loaded, prompt, config.model_config.max_model_len, config.max_new_tokens):
+            skipped_ids.append(sample["id"])
+            continue
+
         reference = task.get_reference(sample)
 
         monitor.start()
@@ -87,7 +92,8 @@ def run_experiment(config: ExperimentConfig) -> ExperimentResult:
             generated=generated_text,
             energy=energy,
             latency_s=latency_s,
-            contention=contention
+            contention=contention,
+            skipped_ids=skipped_ids
         ))
 
     quality_scores = metric.score_batch(all_generated, all_references, all_samples)
@@ -143,6 +149,7 @@ def _save_result(result: ExperimentResult, output_dir: str) -> None:
                 },
                 "latency_s": s.latency_s,
                 "contention": s.contention,
+                "skipped": s.skipped_ids,
             }
             for s in result.samples
         ],

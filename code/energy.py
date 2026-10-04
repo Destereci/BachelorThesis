@@ -59,7 +59,7 @@ class Energy_Monitor:
             self._prefill_end_ts = time.perf_counter()
 
 
-    def stop(self) -> PhaseEnergy:
+    def stop(self) -> tuple[PhaseEnergy, dict]:
         self._stop_event.set()
         if self._thread:
             self._thread.join()

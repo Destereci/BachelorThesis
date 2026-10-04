@@ -76,3 +76,14 @@ def make_sampling_params(
         temperature=temperature,
         seed=seed,
     )
+
+def prompt_fits(loaded: LoadedModel, prompt: str,
+                max_model_len: int, max_new_tokens: int) -> bool:
+    tok = loaded.llm.get_tokenizer()
+    text = tok.apply_chat_template(
+        [{"role": "user", "content": prompt}],
+        add_generation_prompt=True,
+        tokenize=False,
+    )
+    n_tokens = len(tok(text, add_special_tokens=False)["input_ids"])
+    return n_tokens <= max_model_len - max_new_tokens

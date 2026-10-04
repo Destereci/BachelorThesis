@@ -80,6 +80,7 @@ class SampleResult:
     quality_scores: dict[str, float] = field(default_factory=dict)
     metadata: dict = field(default_factory=dict)
     contention: dict = field(default_factory=dict)
+    skipped_ids: list[str] = field(default_factory=list)
 
     
 
