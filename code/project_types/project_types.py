@@ -80,7 +80,6 @@ class SampleResult:
     quality_scores: dict[str, float] = field(default_factory=dict)
     metadata: dict = field(default_factory=dict)
     contention: dict = field(default_factory=dict)
-    skipped_ids: list[str] = field(default_factory=list)
 
     
 
@@ -95,6 +94,7 @@ class ExperimentResult:
     mean_output_tokens: float = 0.0
     mean_input_tokens: float = 0.0
     total_joules: float = 0.0
+    skipped_ids: list[str] = field(default_factory=list)
     #flops_per_task: float = 0.0
     #eq_score: float = 0.0
 

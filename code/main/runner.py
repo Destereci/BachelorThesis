@@ -131,6 +131,7 @@ def _save_result(result: ExperimentResult, output_dir: str) -> None:
             "mean_input_tokens":             result.mean_input_tokens,
             "total_joules":                  result.total_joules,
             "n_samples":                     len(result.samples),
+            "skipped_ids":                   result.skipped_ids,
         },
         "samples": [
             {
@@ -149,7 +150,6 @@ def _save_result(result: ExperimentResult, output_dir: str) -> None:
                 },
                 "latency_s": s.latency_s,
                 "contention": s.contention,
-                "skipped": s.skipped_ids,
             }
             for s in result.samples
         ],
