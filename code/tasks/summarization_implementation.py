@@ -10,6 +10,7 @@ class SummarizationTask(BaseTask):
     def load_dataset(self) -> None:
         if self.dataset_name == "xsum":
             ds = load_dataset("EdinburghNLP/xsum", split=self.split)
+            ds = ds.shuffle(seed=self.seed)
             n = len(ds) if self.max_samples is None else min(self.max_samples, len(ds))
             self._data = [
                 {
