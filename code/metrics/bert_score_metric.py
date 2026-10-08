@@ -18,10 +18,12 @@ class BERTScoreMetric(BaseMetric):
 
     def score_batch(self, generated, references, samples):
         self._load()
-        P, R, F1 = self._bert_scorer.score(generated, references)
+        empty_flags = [not g.strip() for g in generated]
+        safe_gen = [g.strip() if g.strip() else "." for g in generated]
+        P, R, F1 = self._bert_scorer.score(safe_gen, references)
         results = []
 
-        for i, (gen, ref) in enumerate(zip(generated, references)):
+        for i, (gen, ref) in enumerate(zip(safe_gen, references)):
             rouge_score = self._rouge_scorer.score(ref, gen)
             results.append({
                 "primary":   float(F1[i]),
@@ -29,5 +31,6 @@ class BERTScoreMetric(BaseMetric):
                 "bertscore_p":  float(P[i]),
                 "bertscore_r":  float(R[i]),
                 "rouge_l":      rouge_score["rougeL"].fmeasure,
+                "empty": empty_flags[i]
             })
         return results

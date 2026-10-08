@@ -3,6 +3,8 @@ import uuid
 from pathlib import Path
 import json
 
+from torch import empty
+
 import metrics.base_metric 
 from metrics.base_metric import get_metric
 from project_types.project_types import ExperimentConfig, ExperimentResult, ModelConfig, PhaseEnergy, SampleResult
@@ -95,7 +97,8 @@ def run_experiment(config: ExperimentConfig) -> ExperimentResult:
             latency_s=latency_s,
             contention=contention,
         ))
-
+    empty = [s["id"] for s, g in zip(all_samples, all_generated) if not g.strip()]
+    print("empty generations:", empty)
     quality_scores = metric.score_batch(all_generated, all_references, all_samples)
     for i, scores in enumerate(quality_scores):
         result.samples[i].quality_scores = scores

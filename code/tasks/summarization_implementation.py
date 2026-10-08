@@ -6,7 +6,7 @@ from project_types.project_types import TaskType
 class SummarizationTask(BaseTask):
 
     metric_name = "bertscore"
-    stop_sequence = ["\n"]
+    stop_sequence = ["\n\n"]
 
     def load_dataset(self) -> None:
         if self.dataset_name == "xsum":
