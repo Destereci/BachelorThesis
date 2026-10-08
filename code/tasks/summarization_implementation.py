@@ -26,7 +26,7 @@ class SummarizationTask(BaseTask):
 
     def format_prompt(self, sample: dict) -> str:
         return (
-            "Summarize the following article in 2-3 sentences.\n\n"
+            "Summarize the following article in only 1 sentence.\n\n"
             f"Article:\n{sample['input']}\n\nSummary:"
         )
 
