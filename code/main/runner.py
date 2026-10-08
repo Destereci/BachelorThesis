@@ -35,7 +35,8 @@ def run_experiment(config: ExperimentConfig) -> ExperimentResult:
     sampling = make_sampling_params(
         max_new_tokens=config.max_new_tokens,
         temperature=config.temperature,
-        seed=config.seed
+        seed=config.seed,
+        stop=getattr(task, "stop_sequence", None)
     )
     skipped_ids: list[str] = []
 

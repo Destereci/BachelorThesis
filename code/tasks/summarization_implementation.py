@@ -6,6 +6,7 @@ from project_types.project_types import TaskType
 class SummarizationTask(BaseTask):
 
     metric_name = "bertscore"
+    stop_sequence = ["\n"]
 
     def load_dataset(self) -> None:
         if self.dataset_name == "xsum":
@@ -26,8 +27,9 @@ class SummarizationTask(BaseTask):
 
     def format_prompt(self, sample: dict) -> str:
         return (
-            "Summarize the following article in only 1 sentence.\n\n"
-            f"Article:\n{sample['input']}\n\nSummary:"
+            "Summarize the following article in exactly one sentence. "
+            "Reply with only the summary and nothing else.\n\n"
+            f"Article:\n{sample['input']}"
         )
 
 

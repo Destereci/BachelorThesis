@@ -70,11 +70,13 @@ def make_sampling_params(
     max_new_tokens: int,
     temperature: float,
     seed: int,
+    stop=None
 ) -> SamplingParams:
     return SamplingParams(
         max_tokens=max_new_tokens,
         temperature=temperature,
         seed=seed,
+        stop=stop,
     )
 
 def prompt_fits(loaded: LoadedModel, prompt: str,
