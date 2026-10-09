@@ -52,6 +52,7 @@ def run_experiment(config: ExperimentConfig) -> ExperimentResult:
 
     for sample in task:
         prompt = task.format_prompt(sample)
+        print(f"This is the prompt: {prompt}")
         if not prompt_fits(loaded, prompt, config.model_config.max_model_len, config.max_new_tokens):
             skipped_ids.append(sample["id"])
             continue
