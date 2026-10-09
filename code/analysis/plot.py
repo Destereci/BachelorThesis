@@ -15,8 +15,8 @@ MODEL_COLOURS: dict[str, str] = {
     "phi3":     "#4C72B0",   # blue
     "mistral":  "#DD8452",   # orange
     "llama3":   "#55A868",   # green
-    "tinyllama":"#C44E52",   # red
-    "qwen":     "#8172B2",   # purple
+    "qwen2.5_0.5b":     "#8172B2",   # purple
+    "qwen2.5_14b":  "#C44E52",   # red
 }
 
 
@@ -133,7 +133,7 @@ def plot_task(df_task: pd.DataFrame, task_type: str, save_path: Path | None) -> 
     legend = ax.legend(
         handles=colour_handles + marker_handles + region_handles,
         fontsize=8,
-        loc="upper left",
+        loc="best",
         framealpha=0.9,
         title="Model / Quantization",
         title_fontsize=8,
