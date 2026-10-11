@@ -1,0 +1,32 @@
+{
+  "comparisons": [
+    {
+      "family": "mistral",
+      "size_b": 7.0,
+      "task_type": "summarization",
+      "dataset": "xsum",
+      "quantization": "int8",
+      "fp16_quality": 0.25580123655614206,
+      "fp16_j_per_tok": 18.247322294642963,
+      "quant_quality": 0.26150648029649726,
+      "quant_j_per_tok": 12.722225709464345,
+      "delta_quality_pct": -2.23,
+      "delta_energy_pct": 30.28,
+      "eq_score": 0.325093
+    },
+    {
+      "family": "mistral",
+      "size_b": 7.0,
+      "task_type": "summarization",
+      "dataset": "xsum",
+      "quantization": "int4",
+      "fp16_quality": 0.25580123655614206,
+      "fp16_j_per_tok": 18.247322294642963,
+      "quant_quality": 0.26302642679295407,
+      "quant_j_per_tok": 16.41244998133093,
+      "delta_quality_pct": -2.82,
+      "delta_energy_pct": 10.06,
+      "eq_score": 0.128801
+    }
+  ]
+}

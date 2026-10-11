@@ -1,0 +1,32 @@
+{
+  "comparisons": [
+    {
+      "family": "mistral",
+      "size_b": 7.0,
+      "task_type": "json",
+      "dataset": "JSONSchemaBench",
+      "quantization": "int8",
+      "fp16_quality": 0.7993197278911565,
+      "fp16_j_per_tok": 6.687387198294785,
+      "quant_quality": 0.7670807453416149,
+      "quant_j_per_tok": 5.94454302741223,
+      "delta_quality_pct": 4.03,
+      "delta_energy_pct": 11.11,
+      "eq_score": 0.070748
+    },
+    {
+      "family": "mistral",
+      "size_b": 7.0,
+      "task_type": "json",
+      "dataset": "JSONSchemaBench",
+      "quantization": "int4",
+      "fp16_quality": 0.7993197278911565,
+      "fp16_j_per_tok": 6.687387198294785,
+      "quant_quality": 0.6625194401244168,
+      "quant_j_per_tok": 6.159251651200099,
+      "delta_quality_pct": 17.11,
+      "delta_energy_pct": 7.9,
+      "eq_score": -0.092171
+    }
+  ]
+}

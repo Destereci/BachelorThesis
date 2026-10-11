@@ -1,0 +1,32 @@
+{
+  "comparisons": [
+    {
+      "family": "phi3",
+      "size_b": 3.8,
+      "task_type": "code",
+      "dataset": "humaneval",
+      "quantization": "int8",
+      "fp16_quality": 0.6158536585365854,
+      "fp16_j_per_tok": 8.160212182188724,
+      "quant_quality": 0.5487804878048781,
+      "quant_j_per_tok": 8.823458275639391,
+      "delta_quality_pct": 10.89,
+      "delta_energy_pct": -8.13,
+      "eq_score": -0.190189
+    },
+    {
+      "family": "phi3",
+      "size_b": 3.8,
+      "task_type": "code",
+      "dataset": "humaneval",
+      "quantization": "int4",
+      "fp16_quality": 0.6158536585365854,
+      "fp16_j_per_tok": 8.160212182188724,
+      "quant_quality": 0.5182926829268293,
+      "quant_j_per_tok": 11.156865827874372,
+      "delta_quality_pct": 15.84,
+      "delta_energy_pct": -36.72,
+      "eq_score": -0.525643
+    }
+  ]
+}

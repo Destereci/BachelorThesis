@@ -1,0 +1,32 @@
+{
+  "comparisons": [
+    {
+      "family": "qwen2.5_14b",
+      "size_b": 14.0,
+      "task_type": "code",
+      "dataset": "humaneval",
+      "quantization": "int8",
+      "fp16_quality": 0.7073170731707317,
+      "fp16_j_per_tok": 8.74179502895874,
+      "quant_quality": 0.6646341463414634,
+      "quant_j_per_tok": 5.719812780539214,
+      "delta_quality_pct": 6.03,
+      "delta_energy_pct": 34.57,
+      "eq_score": 0.285349
+    },
+    {
+      "family": "qwen2.5_14b",
+      "size_b": 14.0,
+      "task_type": "code",
+      "dataset": "humaneval",
+      "quantization": "int4",
+      "fp16_quality": 0.7073170731707317,
+      "fp16_j_per_tok": 8.74179502895874,
+      "quant_quality": 0.0,
+      "quant_j_per_tok": 6.377493326652689,
+      "delta_quality_pct": 100.0,
+      "delta_energy_pct": 27.05,
+      "eq_score": -0.72954
+    }
+  ]
+}
