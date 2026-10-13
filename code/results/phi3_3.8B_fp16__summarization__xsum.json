@@ -12,11 +12,17 @@
   "aggregates": {
     "mean_quality": {
       "empty": 0.43232323232323233,
-      "rouge_l": 0.06734291558931955,
-      "bertscore_f1": 0.26167993641075105,
-      "bertscore_r": 0.043794145807153496,
-      "primary": 0.26167993641075105,
-      "bertscore_p": 0.5259345075985736
+      "n_valid": 281,
+      "rouge_l": 0.11862897941890811,
+      "rouge_l_penalized": 0.06734291558931955,
+      "primary": 0.08247156060368971,
+      "primary_penalized": 0.08247156060368971,
+      "bertscore_f1": 0.14527908362571673,
+      "bertscore_f1_penalized": 0.08247156060368971,
+      "bertscore_p": 0.1657506012700803,
+      "bertscore_p_penalized": 0.09409276556947993,
+      "bertscore_r": 0.12706433946691004,
+      "bertscore_r_penalized": 0.07213147351555903
     },
     "mean_joules_per_output_token": 15.762210908344477,
     "mean_joules_per_input_token": 0.3548481809597729,
@@ -31,11 +37,11 @@
       "generated": "",
       "reference": "A woman who was seriously hurt in a fatal hen party motorway crash is now helping other major trauma victims rebuild their lives.",
       "quality_scores": {
-        "primary": 0.42492905259132385,
-        "bertscore_f1": 0.42492905259132385,
-        "bertscore_p": 0.998825192451477,
-        "bertscore_r": -0.049261778593063354,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -115,11 +121,11 @@
       "generated": "",
       "reference": "The agriculture minister is to return to China next month as attempts to access markets there continue.",
       "quality_scores": {
-        "primary": 0.48682883381843567,
-        "bertscore_f1": 0.48682883381843567,
-        "bertscore_p": 0.9989125728607178,
-        "bertscore_r": 0.054728586226701736,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -143,11 +149,11 @@
       "generated": "",
       "reference": "Blackpool have signed Bournemouth goalkeeper Ryan Allsop and midfielder Callum Cooke from Middlesbrough on season-long loans.",
       "quality_scores": {
-        "primary": 0.27778732776641846,
-        "bertscore_f1": 0.27778732776641846,
-        "bertscore_p": 0.9989171624183655,
-        "bertscore_r": -0.2888789176940918,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -171,11 +177,11 @@
       "generated": "",
       "reference": "Scotland must beat Slovenia if they are to resurrect their chances of reaching the World Cup finals, Gordon Strachan has acknowledged.",
       "quality_scores": {
-        "primary": 0.39262816309928894,
-        "bertscore_f1": 0.39262816309928894,
-        "bertscore_p": 0.9988499879837036,
-        "bertscore_r": -0.10279159247875214,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -283,11 +289,11 @@
       "generated": "",
       "reference": "Planners in Rugby have revealed they have been in talks with Coventry City Football Club about building a stadium in the borough.",
       "quality_scores": {
-        "primary": 0.45354506373405457,
-        "bertscore_f1": 0.45354506373405457,
-        "bertscore_p": 0.9989539384841919,
-        "bertscore_r": -0.0014951928751543164,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -311,11 +317,11 @@
       "generated": "",
       "reference": "A man tried to buy ricin from the \"dark web\" after the idea was \"implanted in his brain\" from watching the Breaking Bad television series, a court heard.",
       "quality_scores": {
-        "primary": 0.40444496273994446,
-        "bertscore_f1": 0.40444496273994446,
-        "bertscore_p": 0.9988375902175903,
-        "bertscore_r": -0.08326812833547592,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -339,11 +345,11 @@
       "generated": "",
       "reference": "A tumble dryer could \"not be ruled out\" as the cause of a flat fire in which two men died, an inquest has heard.",
       "quality_scores": {
-        "primary": 0.41827020049095154,
-        "bertscore_f1": 0.41827020049095154,
-        "bertscore_p": 0.99886554479599,
-        "bertscore_r": -0.060364123433828354,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -367,11 +373,11 @@
       "generated": "",
       "reference": "Bots appear to be spamming a US regulator's website over a proposed reversal of net neutrality rules, researchers have said.",
       "quality_scores": {
-        "primary": 0.47352662682533264,
-        "bertscore_f1": 0.47352662682533264,
-        "bertscore_p": 0.9988011717796326,
-        "bertscore_r": 0.032277703285217285,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -423,11 +429,11 @@
       "generated": "",
       "reference": "Michele Morgan, the French screen star and glamour icon who won the first best actress prize at the Cannes film festival, has died at the age of 96.",
       "quality_scores": {
-        "primary": 0.3678436279296875,
-        "bertscore_f1": 0.3678436279296875,
-        "bertscore_p": 0.9990077614784241,
-        "bertscore_r": -0.1435983031988144,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -479,11 +485,11 @@
       "generated": "",
       "reference": "St Johnstone have secured striker Steven MacLean on a contract extension.",
       "quality_scores": {
-        "primary": 0.47672098875045776,
-        "bertscore_f1": 0.47672098875045776,
-        "bertscore_p": 0.999173641204834,
-        "bertscore_r": 0.037418022751808167,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -647,11 +653,11 @@
       "generated": "",
       "reference": "The ex-chair of the Independent Monitoring Commission (IMC) has said he does not believe bringing it back would solve the latest Stormont crisis.",
       "quality_scores": {
-        "primary": 0.43629735708236694,
-        "bertscore_f1": 0.43629735708236694,
-        "bertscore_p": 0.9988998174667358,
-        "bertscore_r": -0.030351672321558,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -703,11 +709,11 @@
       "generated": "",
       "reference": "Liberty House plans to submit a formal bid on Tuesday to buy Tata Steel's UK assets, which include the Port Talbot works employing about 4,000 people.",
       "quality_scores": {
-        "primary": 0.3930233418941498,
-        "bertscore_f1": 0.3930233418941498,
-        "bertscore_p": 0.9988223910331726,
-        "bertscore_r": -0.10212163627147675,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -731,11 +737,11 @@
       "generated": "",
       "reference": "Health trusts in England have been ranked by their ability to learn from mistakes, as part of several changes designed to improve patient safety.",
       "quality_scores": {
-        "primary": 0.4757508337497711,
-        "bertscore_f1": 0.4757508337497711,
-        "bertscore_p": 0.9988478422164917,
-        "bertscore_r": 0.036005955189466476,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -815,11 +821,11 @@
       "generated": "",
       "reference": "The president of Cuba has spoken publicly for the first time against US President Donald Trump's rollback of a thaw between the two countries a month ago.",
       "quality_scores": {
-        "primary": 0.39741387963294983,
-        "bertscore_f1": 0.39741387963294983,
-        "bertscore_p": 0.9988244771957397,
-        "bertscore_r": -0.09487948566675186,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -871,11 +877,11 @@
       "generated": "",
       "reference": "Former Crusaders defender and player-manager Aaron Callaghan is the new manager of Carrick Rangers.",
       "quality_scores": {
-        "primary": 0.41241195797920227,
-        "bertscore_f1": 0.41241195797920227,
-        "bertscore_p": 0.9990968704223633,
-        "bertscore_r": -0.07024399936199188,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -899,11 +905,11 @@
       "generated": "",
       "reference": "Former classmates of Adam Lanza, 20, the man identified as the gunman in the Sandy Hook School killings, do not remember much about him.",
       "quality_scores": {
-        "primary": 0.40055912733078003,
-        "bertscore_f1": 0.40055912733078003,
-        "bertscore_p": 0.9989571571350098,
-        "bertscore_r": -0.08977311849594116,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -983,11 +989,11 @@
       "generated": "",
       "reference": "Health managers planning to close a hospital fertility unit have refused to put the service back out to tender.",
       "quality_scores": {
-        "primary": 0.4273708164691925,
-        "bertscore_f1": 0.4273708164691925,
-        "bertscore_p": 0.9988061189651489,
-        "bertscore_r": -0.045181214809417725,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -1039,11 +1045,11 @@
       "generated": "",
       "reference": "Councillors have voted to ban buses and taxis from Queen Street in Oxford for six months because of safety concerns.",
       "quality_scores": {
-        "primary": 0.4597582519054413,
-        "bertscore_f1": 0.4597582519054413,
-        "bertscore_p": 0.9988170862197876,
-        "bertscore_r": 0.009046146646142006,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -1095,11 +1101,11 @@
       "generated": "",
       "reference": "Glasgow Warriors assistant coach Mike Blair believes it is vital the Pro12 club sign up more of their squad on new contracts.",
       "quality_scores": {
-        "primary": 0.3828650116920471,
-        "bertscore_f1": 0.3828650116920471,
-        "bertscore_p": 0.9986773133277893,
-        "bertscore_r": -0.11874880641698837,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -1179,11 +1185,11 @@
       "generated": "",
       "reference": "The day 12-year-old Faizan Fayaz Dar died, he woke up in the morning in his hilltop home in Budgam in Indian-administered Kashmir, had a cup of salted tea, recited the Koran and pottered around in the kitchen where his mother prepared breakfast for the family.",
       "quality_scores": {
-        "primary": 0.33446168899536133,
-        "bertscore_f1": 0.33446168899536133,
-        "bertscore_p": 0.9988609552383423,
-        "bertscore_r": -0.1978408694267273,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -1207,11 +1213,11 @@
       "generated": "",
       "reference": "A former senior information officer for the Scottish government has been jailed for 18 months for using his mobile phone to take photos up women's skirts.",
       "quality_scores": {
-        "primary": 0.4212893843650818,
-        "bertscore_f1": 0.4212893843650818,
-        "bertscore_p": 0.9988672733306885,
-        "bertscore_r": -0.05534689873456955,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -1291,11 +1297,11 @@
       "generated": "",
       "reference": "A \u00a37m Birmingham free school opened by Prime Minister David Cameron is to go into special measures following a highly critical Ofsted report.",
       "quality_scores": {
-        "primary": 0.4016588628292084,
-        "bertscore_f1": 0.4016588628292084,
-        "bertscore_p": 0.998738169670105,
-        "bertscore_r": -0.08780995011329651,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -1319,11 +1325,11 @@
       "generated": "",
       "reference": "A proposal to abolish six councils and create one county-wide local authority for Oxfordshire has been published.",
       "quality_scores": {
-        "primary": 0.47455504536628723,
-        "bertscore_f1": 0.47455504536628723,
-        "bertscore_p": 0.9989811778068542,
-        "bertscore_r": 0.033889979124069214,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -1347,11 +1353,11 @@
       "generated": "",
       "reference": "Microsoft has unveiled Xbox SmartGlass: a service to allow tablet computers and smartphones to communicate with its video games consoles.",
       "quality_scores": {
-        "primary": 0.44628089666366577,
-        "bertscore_f1": 0.44628089666366577,
-        "bertscore_p": 0.9989967942237854,
-        "bertscore_r": -0.013712124899029732,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -1375,11 +1381,11 @@
       "generated": "",
       "reference": "League One side Southend United have signed defender Ryan Inniss on a season-long loan from Crystal Palace.",
       "quality_scores": {
-        "primary": 0.3149127662181854,
-        "bertscore_f1": 0.3149127662181854,
-        "bertscore_p": 0.9990360140800476,
-        "bertscore_r": -0.22951795160770416,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -1431,11 +1437,11 @@
       "generated": "",
       "reference": "A Borders textile firm has announced a 20% increase in its turnover, to \u00c2\u00a38m a year, in its annual accounts.",
       "quality_scores": {
-        "primary": 0.41100388765335083,
-        "bertscore_f1": 0.41100388765335083,
-        "bertscore_p": 0.998887836933136,
-        "bertscore_r": -0.07243921607732773,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -1571,11 +1577,11 @@
       "generated": "",
       "reference": "Is Tony Fadell destined to eclipse his former Apple workmate Sir Jonathan Ive?",
       "quality_scores": {
-        "primary": 0.34204620122909546,
-        "bertscore_f1": 0.34204620122909546,
-        "bertscore_p": 0.998137891292572,
-        "bertscore_r": -0.1850799024105072,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -1599,11 +1605,11 @@
       "generated": "",
       "reference": "Chelsea's 1-0 win at West Brom on Friday clinched the Blues their fifth Premier League title.",
       "quality_scores": {
-        "primary": 0.36826562881469727,
-        "bertscore_f1": 0.36826562881469727,
-        "bertscore_p": 0.9989221096038818,
-        "bertscore_r": -0.1428515911102295,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -1627,11 +1633,11 @@
       "generated": "",
       "reference": "A British teacher living in Spain has been arrested for allegedly storing and sharing sexual images of children.",
       "quality_scores": {
-        "primary": 0.4541729986667633,
-        "bertscore_f1": 0.4541729986667633,
-        "bertscore_p": 0.9988347291946411,
-        "bertscore_r": -0.00035796905285678804,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -1655,11 +1661,11 @@
       "generated": "",
       "reference": "John Swinney should have published his draft budget in mid-September, for MSPs to deliberate on it over winter, with a big rubber stamp in plenty time for the start of the financial year.",
       "quality_scores": {
-        "primary": 0.3804684579372406,
-        "bertscore_f1": 0.3804684579372406,
-        "bertscore_p": 0.9988542199134827,
-        "bertscore_r": -0.1228024885058403,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -1823,11 +1829,11 @@
       "generated": "",
       "reference": "With Chris Froome's triumph for Britain in the Tour de France, cycling is in the spotlight.",
       "quality_scores": {
-        "primary": 0.4587450325489044,
-        "bertscore_f1": 0.4587450325489044,
-        "bertscore_p": 0.9989560842514038,
-        "bertscore_r": 0.007243921048939228,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -1907,11 +1913,11 @@
       "generated": "",
       "reference": "UKIP leadership hopeful Steven Woolfe has been ruled \"ineligible\" to stand in the contest to replace Nigel Farage - after he submitted his papers late.",
       "quality_scores": {
-        "primary": 0.4464341700077057,
-        "bertscore_f1": 0.4464341700077057,
-        "bertscore_p": 0.9988729357719421,
-        "bertscore_r": -0.01337078120559454,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -1963,11 +1969,11 @@
       "generated": "",
       "reference": "Les Hutchison's involvement at Motherwell has ended before he expected it to.",
       "quality_scores": {
-        "primary": 0.46963372826576233,
-        "bertscore_f1": 0.46963372826576233,
-        "bertscore_p": 0.9988701343536377,
-        "bertscore_r": 0.02565421350300312,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -1991,11 +1997,11 @@
       "generated": "",
       "reference": "Harry Potter and the Cursed Child writer Jack Thorne is joining new TV drama Electric Dreams: The World of Philip K Dick.",
       "quality_scores": {
-        "primary": 0.36935126781463623,
-        "bertscore_f1": 0.36935126781463623,
-        "bertscore_p": 0.9989500641822815,
-        "bertscore_r": -0.14109356701374054,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -2103,11 +2109,11 @@
       "generated": "",
       "reference": "Fe gafodd canolfan siopa yn Abertawe ei gwagio brynhawn dydd Mercher am gyfnod yn dilyn pryderon am ddiogelwch.",
       "quality_scores": {
-        "primary": -0.04201532527804375,
-        "bertscore_f1": -0.04201532527804375,
-        "bertscore_p": 0.9981880784034729,
-        "bertscore_r": -0.7742694020271301,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -2131,11 +2137,11 @@
       "generated": "",
       "reference": "The number of cancer cases in Wales has risen by almost 10% over a 10-year period.",
       "quality_scores": {
-        "primary": 0.4619729220867157,
-        "bertscore_f1": 0.4619729220867157,
-        "bertscore_p": 0.9990094900131226,
-        "bertscore_r": 0.012640340253710747,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -2159,11 +2165,11 @@
       "generated": "",
       "reference": "A leading researcher into the mental health of military personnel has been knighted in the New Year's Honours.",
       "quality_scores": {
-        "primary": 0.4494445025920868,
-        "bertscore_f1": 0.4494445025920868,
-        "bertscore_p": 0.9989957213401794,
-        "bertscore_r": -0.008406966924667358,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -2187,11 +2193,11 @@
       "generated": "",
       "reference": "Leyton Orient have signed striker Armand Gnanduillet from Chesterfield for an undisclosed fee.",
       "quality_scores": {
-        "primary": 0.27349355816841125,
-        "bertscore_f1": 0.27349355816841125,
-        "bertscore_p": 0.998772144317627,
-        "bertscore_r": -0.29562124609947205,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -2271,11 +2277,11 @@
       "generated": "",
       "reference": "German skincare brand Nivea has apologised and removed an advert that was deemed discriminatory.",
       "quality_scores": {
-        "primary": 0.43781381845474243,
-        "bertscore_f1": 0.43781381845474243,
-        "bertscore_p": 0.9988937973976135,
-        "bertscore_r": -0.027814054861664772,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -2355,11 +2361,11 @@
       "generated": "",
       "reference": "First Minister Nicola Sturgeon has called for \"cast iron assurances\" jobs will not be lost at Clyde shipyards because of contract delays.",
       "quality_scores": {
-        "primary": 0.4437985122203827,
-        "bertscore_f1": 0.4437985122203827,
-        "bertscore_p": 0.9987035393714905,
-        "bertscore_r": -0.01766994595527649,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -2411,11 +2417,11 @@
       "generated": "",
       "reference": "Ding Junhui thrashed Mark Williams 13-3 inside two sessions to become the first man into this year's World Championship semi-finals.",
       "quality_scores": {
-        "primary": 0.3194604218006134,
-        "bertscore_f1": 0.3194604218006134,
-        "bertscore_p": 0.998843252658844,
-        "bertscore_r": -0.22206957638263702,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -2551,11 +2557,11 @@
       "generated": "",
       "reference": "Walmart has announced a partnership with the Chinese e-commerce firm JD.com to help revive the US company's struggling website Yihaodian.",
       "quality_scores": {
-        "primary": 0.4268050491809845,
-        "bertscore_f1": 0.4268050491809845,
-        "bertscore_p": 0.9990555047988892,
-        "bertscore_r": -0.046293675899505615,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -2607,11 +2613,11 @@
       "generated": "",
       "reference": "Katie Ledecky won her third gold of the Rio Games as she guided the United States to victory in the women's 4x200m freestyle relay final.",
       "quality_scores": {
-        "primary": 0.2744584083557129,
-        "bertscore_f1": 0.2744584083557129,
-        "bertscore_p": 0.9989454746246338,
-        "bertscore_r": -0.2941925525665283,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -2803,11 +2809,11 @@
       "generated": "",
       "reference": "MPs are demanding highways officials explain why roadworks on the A55 and A483 on the Chester-Wrexham border have over-run, causing months of frustration and long hold-ups for motorists.",
       "quality_scores": {
-        "primary": 0.3811677098274231,
-        "bertscore_f1": 0.3811677098274231,
-        "bertscore_p": 0.9987519979476929,
-        "bertscore_r": -0.12158674001693726,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -2831,11 +2837,11 @@
       "generated": "",
       "reference": "Police Scotland has said that it does not collate or hold specific figures on child sexual exploitation.",
       "quality_scores": {
-        "primary": 0.4131655991077423,
-        "bertscore_f1": 0.4131655991077423,
-        "bertscore_p": 0.9988871216773987,
-        "bertscore_r": -0.06885386258363724,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -2915,11 +2921,11 @@
       "generated": "",
       "reference": "EU leaders trying to finalise a deal with Turkey on the migrant crisis have warned of the difficulties they face at the start of a summit in Brussels.",
       "quality_scores": {
-        "primary": 0.4530866742134094,
-        "bertscore_f1": 0.4530866742134094,
-        "bertscore_p": 0.9989932179450989,
-        "bertscore_r": -0.002292841440066695,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -2943,11 +2949,11 @@
       "generated": "",
       "reference": "In September 2010 Masoumeh Ataie was attacked with acid by her father-in-law after her marriage broke down.",
       "quality_scores": {
-        "primary": 0.37624216079711914,
-        "bertscore_f1": 0.37624216079711914,
-        "bertscore_p": 0.9988998174667358,
-        "bertscore_r": -0.1297694444656372,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -2971,11 +2977,11 @@
       "generated": "",
       "reference": "The longest-serving Lib Dem peer and veteran human rights campaigner, Lord Avebury, has died at the age of 87.",
       "quality_scores": {
-        "primary": 0.3726904094219208,
-        "bertscore_f1": 0.3726904094219208,
-        "bertscore_p": 0.9989699125289917,
-        "bertscore_r": -0.13563773036003113,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -3027,11 +3033,11 @@
       "generated": "",
       "reference": "An Asda supermarket in Manchester is introducing a \"quiet hour\" to help autistic shoppers who can feel stressed by noise.",
       "quality_scores": {
-        "primary": 0.47609198093414307,
-        "bertscore_f1": 0.47609198093414307,
-        "bertscore_p": 0.9988414645195007,
-        "bertscore_r": 0.036587126553058624,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -3055,11 +3061,11 @@
       "generated": "",
       "reference": "Parts of Clandon Park House, which was reduced to a shell by a fire in April, are to be restored to their \"original glory\", the National Trust (NT) says.",
       "quality_scores": {
-        "primary": 0.40055277943611145,
-        "bertscore_f1": 0.40055277943611145,
-        "bertscore_p": 0.9988085627555847,
-        "bertscore_r": -0.08968397974967957,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -3195,11 +3201,11 @@
       "generated": "",
       "reference": "High-status Roman floors discovered by archaeologists during building work will go on permanent display, it has been confirmed.",
       "quality_scores": {
-        "primary": 0.4861832559108734,
-        "bertscore_f1": 0.4861832559108734,
-        "bertscore_p": 0.9988722205162048,
-        "bertscore_r": 0.05366140231490135,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -3223,11 +3229,11 @@
       "generated": "",
       "reference": "A cyclist has suffered serious head injuries after a collision with a car in Elgin.",
       "quality_scores": {
-        "primary": 0.5155818462371826,
-        "bertscore_f1": 0.5155818462371826,
-        "bertscore_p": 0.9991074800491333,
-        "bertscore_r": 0.10360374301671982,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -3307,11 +3313,11 @@
       "generated": "",
       "reference": "A man with learning difficulties has been left \"absolutely traumatised\" after being punched and robbed at a bus stop.",
       "quality_scores": {
-        "primary": 0.455671101808548,
-        "bertscore_f1": 0.455671101808548,
-        "bertscore_p": 0.9988160133361816,
-        "bertscore_r": 0.0021725750993937254,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -3335,11 +3341,11 @@
       "generated": "",
       "reference": "The front-runner in the French presidential election has told the BBC that the EU must reform or face the prospect of \"Frexit\".",
       "quality_scores": {
-        "primary": 0.4582357704639435,
-        "bertscore_f1": 0.4582357704639435,
-        "bertscore_p": 0.9990473389625549,
-        "bertscore_r": 0.00632459158077836,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -3363,11 +3369,11 @@
       "generated": "",
       "reference": "India's economy grew 7.5% in the three months ending in March, higher than the previous quarter and above expectations.",
       "quality_scores": {
-        "primary": 0.35844385623931885,
-        "bertscore_f1": 0.35844385623931885,
-        "bertscore_p": 0.9991152882575989,
-        "bertscore_r": -0.15902315080165863,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -3391,11 +3397,11 @@
       "generated": "",
       "reference": "Luke Wells has established himself in Sussex's County Championship side but is hungry for more.",
       "quality_scores": {
-        "primary": 0.47893989086151123,
-        "bertscore_f1": 0.47893989086151123,
-        "bertscore_p": 0.9987664818763733,
-        "bertscore_r": 0.041459325700998306,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -3503,11 +3509,11 @@
       "generated": "",
       "reference": "Walsall have signed Cyprus striker Andreas Makris from Anorthosis Famagusta for a club-record fee.",
       "quality_scores": {
-        "primary": 0.23702536523342133,
-        "bertscore_f1": 0.23702536523342133,
-        "bertscore_p": 0.9989122152328491,
-        "bertscore_r": -0.35337311029434204,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -3587,11 +3593,11 @@
       "generated": "",
       "reference": "An elderly man has been assaulted in his Glasgow home during an attempted robbery.",
       "quality_scores": {
-        "primary": 0.5079037547111511,
-        "bertscore_f1": 0.5079037547111511,
-        "bertscore_p": 0.9990922808647156,
-        "bertscore_r": 0.0904833972454071,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -3699,11 +3705,11 @@
       "generated": "",
       "reference": "Egyptian security forces are using sexual violence against detainees on a massive scale, according to the International Federation for Human Rights.",
       "quality_scores": {
-        "primary": 0.4366854727268219,
-        "bertscore_f1": 0.4366854727268219,
-        "bertscore_p": 0.9989504218101501,
-        "bertscore_r": -0.029737960547208786,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -3811,11 +3817,11 @@
       "generated": "",
       "reference": "Former Derby County defender Shaun Barker will be offered a deal at Burton Albion if he can prove his fitness, says manager Nigel Clough.",
       "quality_scores": {
-        "primary": 0.40028470754623413,
-        "bertscore_f1": 0.40028470754623413,
-        "bertscore_p": 0.9988662600517273,
-        "bertscore_r": -0.09016575664281845,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -3839,11 +3845,11 @@
       "generated": "",
       "reference": "A wine bar has been fined \u00a3100,000 after a woman drank a cocktail containing liquid nitrogen and had to have her stomach removed.",
       "quality_scores": {
-        "primary": 0.4415064752101898,
-        "bertscore_f1": 0.4415064752101898,
-        "bertscore_p": 0.9987859129905701,
-        "bertscore_r": -0.021564098075032234,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -3979,11 +3985,11 @@
       "generated": "",
       "reference": "At least seven Afghan soldiers have died and many were injured after a suicide bomber targeted a bus carrying troops in the Afghan capital Kabul.",
       "quality_scores": {
-        "primary": 0.3731859028339386,
-        "bertscore_f1": 0.3731859028339386,
-        "bertscore_p": 0.9988715648651123,
-        "bertscore_r": -0.13476155698299408,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -4035,11 +4041,11 @@
       "generated": "",
       "reference": "A tweak to Siri's pronunciation of Barbra Streisand's name will be heading to Apple products soon.",
       "quality_scores": {
-        "primary": 0.4253489673137665,
-        "bertscore_f1": 0.4253489673137665,
-        "bertscore_p": 0.9986826181411743,
-        "bertscore_r": -0.048465896397829056,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -4175,11 +4181,11 @@
       "generated": "",
       "reference": "More than 30 people have been killed after attackers dressed as doctors stormed the largest military hospital in Kabul, Afghan officials say.",
       "quality_scores": {
-        "primary": 0.4170517921447754,
-        "bertscore_f1": 0.4170517921447754,
-        "bertscore_p": 0.9990098476409912,
-        "bertscore_r": -0.062485408037900925,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -4259,11 +4265,11 @@
       "generated": "",
       "reference": "A man was arrested on suspicion of holding a staff member at gunpoint at a NatWest bank in Birmingham.",
       "quality_scores": {
-        "primary": 0.4247097671031952,
-        "bertscore_f1": 0.4247097671031952,
-        "bertscore_p": 0.9989394545555115,
-        "bertscore_r": -0.0497039332985878,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -4287,11 +4293,11 @@
       "generated": "",
       "reference": "Celtic striker Leigh Griffiths has yet to score for Scotland but is ready to lead the line against Slovenia despite admitting he is \"rusty\".",
       "quality_scores": {
-        "primary": 0.3880423605442047,
-        "bertscore_f1": 0.3880423605442047,
-        "bertscore_p": 0.998688280582428,
-        "bertscore_r": -0.11023961007595062,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -4315,11 +4321,11 @@
       "generated": "",
       "reference": "Many European commentators have reacted to London Mayor Boris Johnson's decision to back Britain leaving the European Union, seeing his intervention as a problem for Prime Minister David Cameron.",
       "quality_scores": {
-        "primary": 0.45016002655029297,
-        "bertscore_f1": 0.45016002655029297,
-        "bertscore_p": 0.9988337159156799,
-        "bertscore_r": -0.007095356937497854,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -4371,11 +4377,11 @@
       "generated": "",
       "reference": "Audience members were moved to tears at the opening of Marina Abramovic's new show at London's Serpentine Gallery.",
       "quality_scores": {
-        "primary": 0.4550431966781616,
-        "bertscore_f1": 0.4550431966781616,
-        "bertscore_p": 0.9989005327224731,
-        "bertscore_r": 0.001058343332260847,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -4399,11 +4405,11 @@
       "generated": "",
       "reference": "Sri Lankan teams searching for scores of people missing after a landslide fear there may be no more survivors.",
       "quality_scores": {
-        "primary": 0.41522982716560364,
-        "bertscore_f1": 0.41522982716560364,
-        "bertscore_p": 0.9988202452659607,
-        "bertscore_r": -0.06538382917642593,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -4595,11 +4601,11 @@
       "generated": "",
       "reference": "An \"urgent inquiry\" is needed into separated children who have gone missing from care, the Social Democratic and Labour Party has said.",
       "quality_scores": {
-        "primary": 0.4181186854839325,
-        "bertscore_f1": 0.4181186854839325,
-        "bertscore_p": 0.9989044666290283,
-        "bertscore_r": -0.060643211007118225,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -4623,11 +4629,11 @@
       "generated": "",
       "reference": "China has vowed to reduce the amount of steel it makes, Business Secretary Sajid Javid said.",
       "quality_scores": {
-        "primary": 0.44611525535583496,
-        "bertscore_f1": 0.44611525535583496,
-        "bertscore_p": 0.9990611672401428,
-        "bertscore_r": -0.014034368097782135,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -4651,11 +4657,11 @@
       "generated": "",
       "reference": "Prime Minister David Cameron has said he wants to put tackling corruption at the \"top of the international agenda\" ahead of a London summit on the issue.",
       "quality_scores": {
-        "primary": 0.4584144651889801,
-        "bertscore_f1": 0.4584144651889801,
-        "bertscore_p": 0.9988566637039185,
-        "bertscore_r": 0.006756842602044344,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -4707,11 +4713,11 @@
       "generated": "",
       "reference": "She is best known for period dramas - having been seen most recently in War and Peace and Downton Abbey.",
       "quality_scores": {
-        "primary": 0.31264403462409973,
-        "bertscore_f1": 0.31264403462409973,
-        "bertscore_p": 0.998638391494751,
-        "bertscore_r": -0.2329193651676178,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -4735,11 +4741,11 @@
       "generated": "",
       "reference": "Ever since Steamboat Willie, the iconic animated clip from 1928 featuring a mouse that would later become Mickey, Disney has had a proud record of innovating with new technology.",
       "quality_scores": {
-        "primary": 0.40057995915412903,
-        "bertscore_f1": 0.40057995915412903,
-        "bertscore_p": 0.9988068342208862,
-        "bertscore_r": -0.08963799476623535,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -4847,11 +4853,11 @@
       "generated": "",
       "reference": "The way in which people in Scotland are trained for work needs to change in order to meet future challenges, a think tank has warned.",
       "quality_scores": {
-        "primary": 0.4568789303302765,
-        "bertscore_f1": 0.4568789303302765,
-        "bertscore_p": 0.9986122250556946,
-        "bertscore_r": 0.004343735054135323,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -4931,11 +4937,11 @@
       "generated": "",
       "reference": "Campaigners opposed to the Scottish government's named person scheme claim ministers have refused to engage with them during a consultation on plans to reform the policy.",
       "quality_scores": {
-        "primary": 0.48779296875,
-        "bertscore_f1": 0.48779296875,
-        "bertscore_p": 0.9988906383514404,
-        "bertscore_r": 0.056380126625299454,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -4959,11 +4965,11 @@
       "generated": "",
       "reference": "A security alert in the centre of Larne, County Antrim, has ended and been declared a hoax.",
       "quality_scores": {
-        "primary": 0.4440128803253174,
-        "bertscore_f1": 0.4440128803253174,
-        "bertscore_p": 0.9991156458854675,
-        "bertscore_r": -0.017594249919056892,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -5043,11 +5049,11 @@
       "generated": "",
       "reference": "Sweden captain Zlatan Ibrahimovic says the World Cup is not worth watching without him after their play-off loss.",
       "quality_scores": {
-        "primary": 0.4027723968029022,
-        "bertscore_f1": 0.4027723968029022,
-        "bertscore_p": 0.9988902807235718,
-        "bertscore_r": -0.08607033640146255,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -5099,11 +5105,11 @@
       "generated": "",
       "reference": "How much do you remember about the news in Wales over the past 12 months?",
       "quality_scores": {
-        "primary": 0.47120389342308044,
-        "bertscore_f1": 0.47120389342308044,
-        "bertscore_p": 0.9990024566650391,
-        "bertscore_r": 0.028212347999215126,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -5127,11 +5133,11 @@
       "generated": "",
       "reference": "A full review of security has been carried out by NHS Lothian after a hospital cleaner allegedly used information about a female patient to contact her on Facebook.",
       "quality_scores": {
-        "primary": 0.3981841206550598,
-        "bertscore_f1": 0.3981841206550598,
-        "bertscore_p": 0.9987626075744629,
-        "bertscore_r": -0.09356681257486343,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -5183,11 +5189,11 @@
       "generated": "",
       "reference": "House builder Barratt has announced plans to create 1,420 homes at 14 new sites across Scotland this year.",
       "quality_scores": {
-        "primary": 0.42621633410453796,
-        "bertscore_f1": 0.42621633410453796,
-        "bertscore_p": 0.9988202452659607,
-        "bertscore_r": -0.04711396247148514,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -5267,11 +5273,11 @@
       "generated": "",
       "reference": "William Hague has held talks with Kurdish leaders about international efforts to confront Islamist extremists threatening to overrun parts of Iraq.",
       "quality_scores": {
-        "primary": 0.4536898732185364,
-        "bertscore_f1": 0.4536898732185364,
-        "bertscore_p": 0.9988563060760498,
-        "bertscore_r": -0.0011849766597151756,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -5351,11 +5357,11 @@
       "generated": "",
       "reference": "New York's Metropolitan Opera has cancelled plans for a global HD broadcast of a performance amid fears it could spark anti-Semitic sentiment.",
       "quality_scores": {
-        "primary": 0.4657185673713684,
-        "bertscore_f1": 0.4657185673713684,
-        "bertscore_p": 0.9989069104194641,
-        "bertscore_r": 0.019023295491933823,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -5519,11 +5525,11 @@
       "generated": "",
       "reference": "Police are treating the death of a man in Coleraine, County Londonderry, as suspicious and have made an arrest.",
       "quality_scores": {
-        "primary": 0.3944215178489685,
-        "bertscore_f1": 0.3944215178489685,
-        "bertscore_p": 0.9990509152412415,
-        "bertscore_r": -0.09996780753135681,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -5575,11 +5581,11 @@
       "generated": "",
       "reference": "One of Scotland's most successful entrepreneurs has sold his tyre-fitting business for \u00a350m to Michelin.",
       "quality_scores": {
-        "primary": 0.44763490557670593,
-        "bertscore_f1": 0.44763490557670593,
-        "bertscore_p": 0.9988110661506653,
-        "bertscore_r": -0.011315642856061459,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -5631,11 +5637,11 @@
       "generated": "",
       "reference": "James Horner, the Hollywood composer who wrote the Oscar-winning score for Titanic, has died in a California plane crash aged 61.",
       "quality_scores": {
-        "primary": 0.4165799617767334,
-        "bertscore_f1": 0.4165799617767334,
-        "bertscore_p": 0.9990583062171936,
-        "bertscore_r": -0.06330180168151855,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -5659,11 +5665,11 @@
       "generated": "",
       "reference": "Flood defences battered by winter storms around Wales are promised an extra \u00a34.2m for \"swift repair\" by the Welsh government.",
       "quality_scores": {
-        "primary": 0.45042523741722107,
-        "bertscore_f1": 0.45042523741722107,
-        "bertscore_p": 0.9988782405853271,
-        "bertscore_r": -0.0066811456345021725,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -5799,11 +5805,11 @@
       "generated": "",
       "reference": "A 14-year-old boy has been arrested in County Londonderry \"in connection with serious crime,\" police have said.",
       "quality_scores": {
-        "primary": 0.40950506925582886,
-        "bertscore_f1": 0.40950506925582886,
-        "bertscore_p": 0.9990155100822449,
-        "bertscore_r": -0.07500937581062317,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -5883,11 +5889,11 @@
       "generated": "",
       "reference": "The North Korean suspect questioned in connection with the death of Kim Jong-nam has said he was the victim of a conspiracy by the Malaysian authorities.",
       "quality_scores": {
-        "primary": 0.3827470541000366,
-        "bertscore_f1": 0.3827470541000366,
-        "bertscore_p": 0.9988899230957031,
-        "bertscore_r": -0.11908271908760071,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -5995,11 +6001,11 @@
       "generated": "",
       "reference": "Plans to relax so-called \"purdah rules\" on government announcements in the run-up to the EU referendum are to be the subject of a quickfire inquiry by MPs.",
       "quality_scores": {
-        "primary": 0.4144475758075714,
-        "bertscore_f1": 0.4144475758075714,
-        "bertscore_p": 0.9988131523132324,
-        "bertscore_r": -0.0666770413517952,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -6079,11 +6085,11 @@
       "generated": "",
       "reference": "Scientists say they now have a near-perfect picture of the genetic events that cause breast cancer.",
       "quality_scores": {
-        "primary": 0.4763060212135315,
-        "bertscore_f1": 0.4763060212135315,
-        "bertscore_p": 0.9990696310997009,
-        "bertscore_r": 0.036788396537303925,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -6331,11 +6337,11 @@
       "generated": "",
       "reference": "Tributes have been paid to a forensic archaeologist who led the searches for the Disappeared - people murdered and secretly buried by republicans during the Troubles in Northern Ireland.",
       "quality_scores": {
-        "primary": 0.41125747561454773,
-        "bertscore_f1": 0.41125747561454773,
-        "bertscore_p": 0.9986646175384521,
-        "bertscore_r": -0.0718686580657959,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -6387,11 +6393,11 @@
       "generated": "",
       "reference": "The pro-independence blogger behind the Wings Over Scotland website has been arrested for alleged online harassment.",
       "quality_scores": {
-        "primary": 0.4924893081188202,
-        "bertscore_f1": 0.4924893081188202,
-        "bertscore_p": 0.9990392327308655,
-        "bertscore_r": 0.0642533227801323,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -6471,11 +6477,11 @@
       "generated": "",
       "reference": "Conservative Ben Houchen has become the inaugural Tees Valley mayor after winning a tightly-fought contest.",
       "quality_scores": {
-        "primary": 0.3988794982433319,
-        "bertscore_f1": 0.3988794982433319,
-        "bertscore_p": 0.9989897012710571,
-        "bertscore_r": -0.09256966412067413,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -6527,11 +6533,11 @@
       "generated": "",
       "reference": "Afghan Taliban leader Mullah Akhtar Mansour has been seriously wounded in shooting at a meeting of militants in Pakistan, Taliban sources say.",
       "quality_scores": {
-        "primary": 0.34526562690734863,
-        "bertscore_f1": 0.34526562690734863,
-        "bertscore_p": 0.9989550113677979,
-        "bertscore_r": -0.18037572503089905,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -6583,11 +6589,11 @@
       "generated": "",
       "reference": "Dartmoor Hill ponies should be bred for human consumption to ensure their survival on the moor, says a pony group.",
       "quality_scores": {
-        "primary": 0.43445348739624023,
-        "bertscore_f1": 0.43445348739624023,
-        "bertscore_p": 0.9988973736763,
-        "bertscore_r": -0.033430490642786026,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -6639,11 +6645,11 @@
       "generated": "",
       "reference": "When the giant TV screens at the Likud election headquarters finally flashed up the results of the national exit polls, one-by-one there was a sudden tidal wave of sound.",
       "quality_scores": {
-        "primary": 0.4294431805610657,
-        "bertscore_f1": 0.4294431805610657,
-        "bertscore_p": 0.998827338218689,
-        "bertscore_r": -0.04174230620265007,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -6667,11 +6673,11 @@
       "generated": "",
       "reference": "George North believes the British and Irish Lions must \"kick on\" after a tough start to their New Zealand tour.",
       "quality_scores": {
-        "primary": 0.45542991161346436,
-        "bertscore_f1": 0.45542991161346436,
-        "bertscore_p": 0.9989585876464844,
-        "bertscore_r": 0.001668164157308638,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -6723,11 +6729,11 @@
       "generated": "",
       "reference": "Global football federations are \"overwhelmingly in favour\" of plans for a 48-team World Cup, Fifa president Gianni Infantino says.",
       "quality_scores": {
-        "primary": 0.3624017536640167,
-        "bertscore_f1": 0.3624017536640167,
-        "bertscore_p": 0.998822033405304,
-        "bertscore_r": -0.15237277746200562,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -6751,11 +6757,11 @@
       "generated": "",
       "reference": "Lee Westwood takes his place in the field at the Open at Royal Troon having enjoyed a box seat at both of the first two majors in 2016.",
       "quality_scores": {
-        "primary": 0.4085187017917633,
-        "bertscore_f1": 0.4085187017917633,
-        "bertscore_p": 0.9988765120506287,
-        "bertscore_r": -0.07654984295368195,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -6779,11 +6785,11 @@
       "generated": "",
       "reference": "Ben Murdoch-Masila scored two tries as Salford fought back to end Castleford Tigers' unbeaten start to the season.",
       "quality_scores": {
-        "primary": 0.27845513820648193,
-        "bertscore_f1": 0.27845513820648193,
-        "bertscore_p": 0.9989114999771118,
-        "bertscore_r": -0.2878117263317108,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -6863,11 +6869,11 @@
       "generated": "",
       "reference": "A baby who was born in a toilet and later died of sepsis could have survived if he had been given antibiotics, an inquest has heard.",
       "quality_scores": {
-        "primary": 0.41080719232559204,
-        "bertscore_f1": 0.41080719232559204,
-        "bertscore_p": 0.998726487159729,
-        "bertscore_r": -0.07265710830688477,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -6891,11 +6897,11 @@
       "generated": "",
       "reference": "A multi-vehicle crash has taken place during a heavy hail shower on the A74(M) after a spate of incidents in similar conditions on Sunday.",
       "quality_scores": {
-        "primary": 0.43525341153144836,
-        "bertscore_f1": 0.43525341153144836,
-        "bertscore_p": 0.9988287091255188,
-        "bertscore_r": -0.03204672038555145,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -7059,11 +7065,11 @@
       "generated": "",
       "reference": "Exeter came from 14 points down to beat Sale Sharks at Sandy Park and boost their hopes of securing a home semi-final in the Premiership play-offs.",
       "quality_scores": {
-        "primary": 0.32199931144714355,
-        "bertscore_f1": 0.32199931144714355,
-        "bertscore_p": 0.9987438321113586,
-        "bertscore_r": -0.21791259944438934,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -7199,11 +7205,11 @@
       "generated": "",
       "reference": "A woman working in an off-licence has been threatened with a knife during a robbery in north Belfast.",
       "quality_scores": {
-        "primary": 0.48004457354545593,
-        "bertscore_f1": 0.48004457354545593,
-        "bertscore_p": 0.9991361498832703,
-        "bertscore_r": 0.04306912422180176,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -7227,11 +7233,11 @@
       "generated": "",
       "reference": "The allowances for African troops fighting al-Qaeda-linked militants in Somalia have not been paid for at least six months, the BBC has learned.",
       "quality_scores": {
-        "primary": 0.4293164014816284,
-        "bertscore_f1": 0.4293164014816284,
-        "bertscore_p": 0.9988471269607544,
-        "bertscore_r": -0.04196656495332718,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -7283,11 +7289,11 @@
       "generated": "",
       "reference": "The kits used by humans 100,000 years ago to make paint have been found at the famous archaeological site of Blombos Cave in South Africa.",
       "quality_scores": {
-        "primary": 0.37613973021507263,
-        "bertscore_f1": 0.37613973021507263,
-        "bertscore_p": 0.9988818168640137,
-        "bertscore_r": -0.12992578744888306,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -7311,11 +7317,11 @@
       "generated": "",
       "reference": "Olympic silver medallist Samantha Murray recovered from a difficult start to remain on course for a first individual European pentathlon title.",
       "quality_scores": {
-        "primary": 0.36675870418548584,
-        "bertscore_f1": 0.36675870418548584,
-        "bertscore_p": 0.9989320039749146,
-        "bertscore_r": -0.14532341063022614,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -7339,11 +7345,11 @@
       "generated": "",
       "reference": "A high-profile Bitcoin developer has said the crypto-currency has failed and he will no longer take part in its development.",
       "quality_scores": {
-        "primary": 0.47824838757514954,
-        "bertscore_f1": 0.47824838757514954,
-        "bertscore_p": 0.9988626837730408,
-        "bertscore_r": 0.04022093489766121,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -7367,11 +7373,11 @@
       "generated": "",
       "reference": "A 1969 Led Zeppelin session for the BBC that was thought to have been lost when archives were wiped has been recovered from a recording made by a fan.",
       "quality_scores": {
-        "primary": 0.44275492429733276,
-        "bertscore_f1": 0.44275492429733276,
-        "bertscore_p": 0.998772144317627,
-        "bertscore_r": -0.019464390352368355,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -7395,11 +7401,11 @@
       "generated": "",
       "reference": "Doctors and nurses who treated cancer patient Ashya King have criticised his parents while speaking out for the first time in a BBC documentary.",
       "quality_scores": {
-        "primary": 0.42612382769584656,
-        "bertscore_f1": 0.42612382769584656,
-        "bertscore_p": 0.9989302754402161,
-        "bertscore_r": -0.04734388366341591,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -7423,11 +7429,11 @@
       "generated": "",
       "reference": "Ex-Nottingham Forest boss Billy Davies says he has \"unfinished business\" at the club and would love to return.",
       "quality_scores": {
-        "primary": 0.41471314430236816,
-        "bertscore_f1": 0.41471314430236816,
-        "bertscore_p": 0.9989327192306519,
-        "bertscore_r": -0.06631659716367722,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -7451,11 +7457,11 @@
       "generated": "",
       "reference": "The results have been published for more than five million GCSE entries - which will be five million different stories of exam dreams, dramas and disasters.",
       "quality_scores": {
-        "primary": 0.4395524561405182,
-        "bertscore_f1": 0.4395524561405182,
-        "bertscore_p": 0.9985577464103699,
-        "bertscore_r": -0.02467581070959568,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -7479,11 +7485,11 @@
       "generated": "",
       "reference": "A seven-year-old girl drowned at her best friend's birthday pool party while there was no lifeguard on duty, an inquest heard.",
       "quality_scores": {
-        "primary": 0.4213970899581909,
-        "bertscore_f1": 0.4213970899581909,
-        "bertscore_p": 0.9988778829574585,
-        "bertscore_r": -0.05517498776316643,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -7619,11 +7625,11 @@
       "generated": "",
       "reference": "Durham secured their first T20 Blast win in seven attempts as they beat Leicestershire in a frantic seven-overs-a side contest.",
       "quality_scores": {
-        "primary": 0.3647460341453552,
-        "bertscore_f1": 0.3647460341453552,
-        "bertscore_p": 0.998809278011322,
-        "bertscore_r": -0.14853380620479584,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -7731,11 +7737,11 @@
       "generated": "",
       "reference": "Controversial plans for a \u00a312m renewable energy project at a Conwy county waterfall beauty spot have been withdrawn.",
       "quality_scores": {
-        "primary": 0.43927204608917236,
-        "bertscore_f1": 0.43927204608917236,
-        "bertscore_p": 0.9988623261451721,
-        "bertscore_r": -0.025353901088237762,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -7759,11 +7765,11 @@
       "generated": "",
       "reference": "Nethaneel Mitchell-Blake missed the national record by one-hundredth of a second as he became only the third Briton to run sub 20 seconds for 200m.",
       "quality_scores": {
-        "primary": 0.23849345743656158,
-        "bertscore_f1": 0.23849345743656158,
-        "bertscore_p": 0.9987120032310486,
-        "bertscore_r": -0.35094478726387024,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -7843,11 +7849,11 @@
       "generated": "",
       "reference": "The Irish foreign minister has said the government will apply maximum pressure on the Egyptian authorities to secure the return of a prisoner to Ireland.",
       "quality_scores": {
-        "primary": 0.4593556523323059,
-        "bertscore_f1": 0.4593556523323059,
-        "bertscore_p": 0.9989264011383057,
-        "bertscore_r": 0.008292360231280327,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -7871,11 +7877,11 @@
       "generated": "",
       "reference": "Turkey has begun the trial of 45 managers and employees charged over a mine disaster which killed 301 people.",
       "quality_scores": {
-        "primary": 0.4841652810573578,
-        "bertscore_f1": 0.4841652810573578,
-        "bertscore_p": 0.9990664720535278,
-        "bertscore_r": 0.050101518630981445,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -7899,11 +7905,11 @@
       "generated": "",
       "reference": "Referrals to breast cancer clinics more than doubled in the UK after Angelina Jolie announced she had had a double mastectomy to prevent breast cancer.",
       "quality_scores": {
-        "primary": 0.40506404638290405,
-        "bertscore_f1": 0.40506404638290405,
-        "bertscore_p": 0.9988071322441101,
-        "bertscore_r": -0.08222357928752899,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -7983,11 +7989,11 @@
       "generated": "",
       "reference": "A sheep which is the mascot of a British Army regiment has been promoted at a ceremony marking its formation.",
       "quality_scores": {
-        "primary": 0.48827043175697327,
-        "bertscore_f1": 0.48827043175697327,
-        "bertscore_p": 0.9989585876464844,
-        "bertscore_r": 0.057143110781908035,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -8039,11 +8045,11 @@
       "generated": "",
       "reference": "A \u00c2\u00a315m Welsh discount travel pass for young people that was axed has been reinstated.",
       "quality_scores": {
-        "primary": 0.40669143199920654,
-        "bertscore_f1": 0.40669143199920654,
-        "bertscore_p": 0.9988114237785339,
-        "bertscore_r": -0.07953209429979324,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -8067,11 +8073,11 @@
       "generated": "",
       "reference": "Sussex seamer Steve Magoffin will be out for six to eight weeks after suffering an Achilles tendon injury.",
       "quality_scores": {
-        "primary": 0.3257647156715393,
-        "bertscore_f1": 0.3257647156715393,
-        "bertscore_p": 0.9987682700157166,
-        "bertscore_r": -0.21184870600700378,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -8263,11 +8269,11 @@
       "generated": "",
       "reference": "As many as one in four pregnancies are thought to end in a miscarriage, and yet most women never talk about it.",
       "quality_scores": {
-        "primary": 0.447366863489151,
-        "bertscore_f1": 0.447366863489151,
-        "bertscore_p": 0.9989189505577087,
-        "bertscore_r": -0.01183844730257988,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -8319,11 +8325,11 @@
       "generated": "",
       "reference": "Olympic sprinting gold medallist Mark Lewis-Francis has been named on standby for Great Britain's provisional bobsleigh squad for next month's World Championships in Austria.",
       "quality_scores": {
-        "primary": 0.2953016757965088,
-        "bertscore_f1": 0.2953016757965088,
-        "bertscore_p": 0.9987396001815796,
-        "bertscore_r": -0.26081159710884094,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -8431,11 +8437,11 @@
       "generated": "",
       "reference": "Interim boss Gary Brazil says he would take any role at Nottingham Forest and has not ruled out accepting the manager's job on a longer-term basis.",
       "quality_scores": {
-        "primary": 0.3649028241634369,
-        "bertscore_f1": 0.3649028241634369,
-        "bertscore_p": 0.9988517165184021,
-        "bertscore_r": -0.14830495417118073,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -8459,11 +8465,11 @@
       "generated": "",
       "reference": "British heavyweight Anthony Joshua has been ordered by the WBA to defend his title against Cuba's Luis Ortiz.",
       "quality_scores": {
-        "primary": 0.41082802414894104,
-        "bertscore_f1": 0.41082802414894104,
-        "bertscore_p": 0.9990041851997375,
-        "bertscore_r": -0.07280920445919037,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -8515,11 +8521,11 @@
       "generated": "",
       "reference": "Samsung Electronics is buying automotive electronics-maker Harman International Industries for $8bn (\u00a36.4bn), as it makes a big push into connected car technologies.",
       "quality_scores": {
-        "primary": 0.3276442587375641,
-        "bertscore_f1": 0.3276442587375641,
-        "bertscore_p": 0.9989299178123474,
-        "bertscore_r": -0.20891420543193817,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -8543,11 +8549,11 @@
       "generated": "",
       "reference": "A crisis-hit computer project for the NHS 24 telephone helpline will not be fully rolled out across Scotland until the end of next year - four years later than originally planned.",
       "quality_scores": {
-        "primary": 0.3895493149757385,
-        "bertscore_f1": 0.3895493149757385,
-        "bertscore_p": 0.9988821744918823,
-        "bertscore_r": -0.10788628458976746,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -8599,11 +8605,11 @@
       "generated": "",
       "reference": "Outline plans to double the size of Dyson's research centre in Wiltshire have been approved by planners.",
       "quality_scores": {
-        "primary": 0.46694543957710266,
-        "bertscore_f1": 0.46694543957710266,
-        "bertscore_p": 0.9989405274391174,
-        "bertscore_r": 0.021068884059786797,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -8655,11 +8661,11 @@
       "generated": "",
       "reference": "Hockey Wales head of performance Dan Clements believes the men's promotion to Europe's top tier will help transform the sport in Wales.",
       "quality_scores": {
-        "primary": 0.4364679157733917,
-        "bertscore_f1": 0.4364679157733917,
-        "bertscore_p": 0.998915433883667,
-        "bertscore_r": -0.03007718175649643,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -8711,11 +8717,11 @@
       "generated": "",
       "reference": "A man accused of stabbing his ex-partner to death told police she came at him with a knife and they started to struggle, a court has heard.",
       "quality_scores": {
-        "primary": 0.40665504336357117,
-        "bertscore_f1": 0.40665504336357117,
-        "bertscore_p": 0.9987735748291016,
-        "bertscore_r": -0.07956746220588684,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -8795,11 +8801,11 @@
       "generated": "",
       "reference": "Luke Donald will host the 2016 British Masters at The Grove in his home county of Hertfordshire.",
       "quality_scores": {
-        "primary": 0.3733670711517334,
-        "bertscore_f1": 0.3733670711517334,
-        "bertscore_p": 0.9989086985588074,
-        "bertscore_r": -0.13448919355869293,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -8879,11 +8885,11 @@
       "generated": "",
       "reference": "Swansea City chairman Huw Jenkins is in South America as he steps up the search for a new manager, with Argentina's Marcelo Bielsa the odds-on favourite.",
       "quality_scores": {
-        "primary": 0.3401172161102295,
-        "bertscore_f1": 0.3401172161102295,
-        "bertscore_p": 0.998827338218689,
-        "bertscore_r": -0.18865181505680084,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -8935,11 +8941,11 @@
       "generated": "",
       "reference": "Sadiq Khan has been elected the new Mayor of London - boosting Labour after it slumped in Scotland's elections.",
       "quality_scores": {
-        "primary": 0.47474750876426697,
-        "bertscore_f1": 0.47474750876426697,
-        "bertscore_p": 0.998910129070282,
-        "bertscore_r": 0.03426598757505417,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -9047,11 +9053,11 @@
       "generated": "",
       "reference": "French energy giant EDF says sales fell 7% in the first three months of the year in the face of stiff competition, a mild winter and lower energy prices.",
       "quality_scores": {
-        "primary": 0.4190065264701843,
-        "bertscore_f1": 0.4190065264701843,
-        "bertscore_p": 0.9989610314369202,
-        "bertscore_r": -0.05920496955513954,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -9075,11 +9081,11 @@
       "generated": "",
       "reference": "The poisonous memoirs of a right-wing adviser at the Elysee Palace are proving deeply embarrassing for ex-President Nicolas Sarkozy, just as he gathers strength for a planned presidential comeback.",
       "quality_scores": {
-        "primary": 0.41476258635520935,
-        "bertscore_f1": 0.41476258635520935,
-        "bertscore_p": 0.998814582824707,
-        "bertscore_r": -0.06615494191646576,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -9103,11 +9109,11 @@
       "generated": "",
       "reference": "Worcestershire's Daryl Mitchell has been elected as the new chairman of the Professional Cricketers' Association.",
       "quality_scores": {
-        "primary": 0.3555934727191925,
-        "bertscore_f1": 0.3555934727191925,
-        "bertscore_p": 0.9989787340164185,
-        "bertscore_r": -0.1635826677083969,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -9215,11 +9221,11 @@
       "generated": "",
       "reference": "League One side Oldham Athletic have signed goalkeeper Chris Kettings on a one-year deal.",
       "quality_scores": {
-        "primary": 0.36496639251708984,
-        "bertscore_f1": 0.36496639251708984,
-        "bertscore_p": 0.999068558216095,
-        "bertscore_r": -0.14834244549274445,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -9299,11 +9305,11 @@
       "generated": "",
       "reference": "Lord Derby has won a key High Court stage of his fight to build 400 homes on his land.",
       "quality_scores": {
-        "primary": 0.4826714098453522,
-        "bertscore_f1": 0.4826714098453522,
-        "bertscore_p": 0.9990056157112122,
-        "bertscore_r": 0.04761165380477905,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -9327,11 +9333,11 @@
       "generated": "",
       "reference": "Scunthorpe United have signed Hull City goalkeeper Rory Watson on a 28-day emergency loan.",
       "quality_scores": {
-        "primary": 0.31608277559280396,
-        "bertscore_f1": 0.31608277559280396,
-        "bertscore_p": 0.9990434646606445,
-        "bertscore_r": -0.2276379019021988,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -9439,11 +9445,11 @@
       "generated": "",
       "reference": "Four men have been charged in a shooting at outside a Minneapolis police station that left five protesters wounded.",
       "quality_scores": {
-        "primary": 0.45312023162841797,
-        "bertscore_f1": 0.45312023162841797,
-        "bertscore_p": 0.9990370869636536,
-        "bertscore_r": -0.0022666656877845526,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -9467,11 +9473,11 @@
       "generated": "",
       "reference": "Will Grigg's late strike secured a point for Wigan at bottom club Colchester in a thrilling encounter.",
       "quality_scores": {
-        "primary": 0.37631067633628845,
-        "bertscore_f1": 0.37631067633628845,
-        "bertscore_p": 0.9989699125289917,
-        "bertscore_r": -0.12970294058322906,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -9523,11 +9529,11 @@
       "generated": "",
       "reference": "The Welsh Government is reviewing NHS charges for visitors from outside the UK, the health secretary has said.",
       "quality_scores": {
-        "primary": 0.4750370979309082,
-        "bertscore_f1": 0.4750370979309082,
-        "bertscore_p": 0.9990130662918091,
-        "bertscore_r": 0.03468267247080803,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -9551,11 +9557,11 @@
       "generated": "",
       "reference": "The Green Party has launched a national billboard campaign urging people to \"vote big, vote brave\".",
       "quality_scores": {
-        "primary": 0.4929403066635132,
-        "bertscore_f1": 0.4929403066635132,
-        "bertscore_p": 0.9989444017410278,
-        "bertscore_r": 0.06508775800466537,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -9579,11 +9585,11 @@
       "generated": "",
       "reference": "A rundown of all the latest BBC radio commentaries online.",
       "quality_scores": {
-        "primary": 0.4668264389038086,
-        "bertscore_f1": 0.4668264389038086,
-        "bertscore_p": 0.9992167949676514,
-        "bertscore_r": 0.020675543695688248,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -9663,11 +9669,11 @@
       "generated": "",
       "reference": "Ask anyone from outside Wales to name something for which we're famous, and the odds are that the name of Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch on Anglesey would rank in their top five.",
       "quality_scores": {
-        "primary": 0.1192115843296051,
-        "bertscore_f1": 0.1192115843296051,
-        "bertscore_p": 0.9987063407897949,
-        "bertscore_r": -0.5353317856788635,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -9691,11 +9697,11 @@
       "generated": "",
       "reference": "A Royal Marine who is suing the Ministry of Defence for up to \u00a38m, has denied that he broke his neck performing a \"Baywatch-style\" dive.",
       "quality_scores": {
-        "primary": 0.41016867756843567,
-        "bertscore_f1": 0.41016867756843567,
-        "bertscore_p": 0.9987898468971252,
-        "bertscore_r": -0.07375789433717728,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -9831,11 +9837,11 @@
       "generated": "",
       "reference": "An 11-year-old boy was seriously injured when he was hit by a car whose driver fled the scene.",
       "quality_scores": {
-        "primary": 0.4773859679698944,
-        "bertscore_f1": 0.4773859679698944,
-        "bertscore_p": 0.9990243315696716,
-        "bertscore_r": 0.03864792361855507,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -9887,11 +9893,11 @@
       "generated": "",
       "reference": "David Cameron is embarking on a series of visits to Spain, France and Germany in a bid to sell his idea of reforming the European Union to other leaders.",
       "quality_scores": {
-        "primary": 0.46113452315330505,
-        "bertscore_f1": 0.46113452315330505,
-        "bertscore_p": 0.9988909959793091,
-        "bertscore_r": 0.011310690082609653,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -9943,11 +9949,11 @@
       "generated": "",
       "reference": "Ex-Manchester City and United striker Carlos Tevez has signed for Chinese Super League side Shanghai Shenhua, the club confirmed on Thursday.",
       "quality_scores": {
-        "primary": 0.39063316583633423,
-        "bertscore_f1": 0.39063316583633423,
-        "bertscore_p": 0.9989238977432251,
-        "bertscore_r": -0.1061289831995964,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -9999,11 +10005,11 @@
       "generated": "",
       "reference": "A cafe owner has defended a sign urging people to eat cake to avoid being kidnapped in the town where April Jones was abducted and murdered in 2012.",
       "quality_scores": {
-        "primary": 0.4569545090198517,
-        "bertscore_f1": 0.4569545090198517,
-        "bertscore_p": 0.9987332224845886,
-        "bertscore_r": 0.00438688974827528,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -10055,11 +10061,11 @@
       "generated": "",
       "reference": "News of the retirement of one of Ethiopia's national icons caught most in the country unawares.",
       "quality_scores": {
-        "primary": 0.5121918320655823,
-        "bertscore_f1": 0.5121918320655823,
-        "bertscore_p": 0.9989362955093384,
-        "bertscore_r": 0.09792575985193253,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -10111,11 +10117,11 @@
       "generated": "",
       "reference": "Tucked between the Caribbean Sea and the rainforest on the eastern coast of Central America, Belize is the home of a small and diverse nation.",
       "quality_scores": {
-        "primary": 0.3798825442790985,
-        "bertscore_f1": 0.3798825442790985,
-        "bertscore_p": 0.9989875555038452,
-        "bertscore_r": -0.12385305017232895,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -10167,11 +10173,11 @@
       "generated": "",
       "reference": "News that the UK's best known chocolate brand, Cadbury, is abandoning its Fairtrade certification has caused some concern in the food industry.",
       "quality_scores": {
-        "primary": 0.4635533392429352,
-        "bertscore_f1": 0.4635533392429352,
-        "bertscore_p": 0.998809278011322,
-        "bertscore_r": 0.015442190691828728,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -10307,11 +10313,11 @@
       "generated": "",
       "reference": "Small businesses - those employing a few hundred people or less - are increasingly becoming the target of hackers.",
       "quality_scores": {
-        "primary": 0.46132734417915344,
-        "bertscore_f1": 0.46132734417915344,
-        "bertscore_p": 0.9990261197090149,
-        "bertscore_r": 0.011541672050952911,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -10335,11 +10341,11 @@
       "generated": "",
       "reference": "Mark McGhee has urged fans to turn up for Scotland's World Cup qualifier against Slovenia - but says they will be entitled to boo a poor performance.",
       "quality_scores": {
-        "primary": 0.40562665462493896,
-        "bertscore_f1": 0.40562665462493896,
-        "bertscore_p": 0.9984944462776184,
-        "bertscore_r": -0.08108247071504593,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -10363,11 +10369,11 @@
       "generated": "",
       "reference": "Adele's comeback single, Hello, looks set to top the singles chart, after selling 165,000 copies in three days.",
       "quality_scores": {
-        "primary": 0.4165683090686798,
-        "bertscore_f1": 0.4165683090686798,
-        "bertscore_p": 0.9989097714424133,
-        "bertscore_r": -0.06322115659713745,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -10419,11 +10425,11 @@
       "generated": "",
       "reference": "A philosophy student who wears vintage clothing has won a national contest for alternative models.",
       "quality_scores": {
-        "primary": 0.5056248307228088,
-        "bertscore_f1": 0.5056248307228088,
-        "bertscore_p": 0.9990597367286682,
-        "bertscore_r": 0.08661507070064545,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -10559,11 +10565,11 @@
       "generated": "",
       "reference": "By the end of this decade, four out of every 10 of the world's young graduates are going to come from just two countries - China and India.",
       "quality_scores": {
-        "primary": 0.3930788040161133,
-        "bertscore_f1": 0.3930788040161133,
-        "bertscore_p": 0.9989752173423767,
-        "bertscore_r": -0.10213154554367065,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -10587,11 +10593,11 @@
       "generated": "",
       "reference": "A two-year-old boy found dead in a river after being reported missing in Perthshire has been named by police.",
       "quality_scores": {
-        "primary": 0.41752925515174866,
-        "bertscore_f1": 0.41752925515174866,
-        "bertscore_p": 0.9988811016082764,
-        "bertscore_r": -0.06160604953765869,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -10671,11 +10677,11 @@
       "generated": "",
       "reference": "A man has been jailed for four years for attacking a woman in her 20s in the street in Canterbury.",
       "quality_scores": {
-        "primary": 0.4362313151359558,
-        "bertscore_f1": 0.4362313151359558,
-        "bertscore_p": 0.9989617466926575,
-        "bertscore_r": -0.03050483576953411,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -10783,11 +10789,11 @@
       "generated": "",
       "reference": "Nottingham Forest have signed Andreas Bouchalakis on a three-year contract after the midfielder impressed during pre-season with the Championship side.",
       "quality_scores": {
-        "primary": 0.3583622872829437,
-        "bertscore_f1": 0.3583622872829437,
-        "bertscore_p": 0.9988736510276794,
-        "bertscore_r": -0.15900051593780518,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -10895,11 +10901,11 @@
       "generated": "",
       "reference": "Opener Steven Davies hit 104 off 116 balls as 2015 runners-up Surrey reached another One-Day Cup final with a 19-run win over Yorkshire at Headingley.",
       "quality_scores": {
-        "primary": 0.3226604163646698,
-        "bertscore_f1": 0.3226604163646698,
-        "bertscore_p": 0.998738169670105,
-        "bertscore_r": -0.21684081852436066,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -10923,11 +10929,11 @@
       "generated": "",
       "reference": "Five tonnes of waste from laundered fuel has been dumped at Newtownhamilton in south Armagh.",
       "quality_scores": {
-        "primary": 0.3974364697933197,
-        "bertscore_f1": 0.3974364697933197,
-        "bertscore_p": 0.9989412426948547,
-        "bertscore_r": -0.09492016583681107,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -10951,11 +10957,11 @@
       "generated": "",
       "reference": "Justice Secretary Michael Matheson is to host a summit of experts to consider how the UK's Brexit vote could affect Scotland's justice system.",
       "quality_scores": {
-        "primary": 0.43215617537498474,
-        "bertscore_f1": 0.43215617537498474,
-        "bertscore_p": 0.9989631772041321,
-        "bertscore_r": -0.037308722734451294,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11035,11 +11041,11 @@
       "generated": "",
       "reference": "Twenty full-time firefighters could lose their jobs in Suffolk in order to meet budget cuts of more than \u00a31m.",
       "quality_scores": {
-        "primary": 0.44964370131492615,
-        "bertscore_f1": 0.44964370131492615,
-        "bertscore_p": 0.998903751373291,
-        "bertscore_r": -0.008009734563529491,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11091,11 +11097,11 @@
       "generated": "",
       "reference": "The Liberal Democrats have reacted angrily to Theresa May's claim that a badly managed Brexit would mean fewer resources for public services.",
       "quality_scores": {
-        "primary": 0.4427817463874817,
-        "bertscore_f1": 0.4427817463874817,
-        "bertscore_p": 0.9987367391586304,
-        "bertscore_r": -0.01939506083726883,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11119,11 +11125,11 @@
       "generated": "",
       "reference": "Ed Miliband has accused the Tories of using the SNP to distract voters from their record as he tries to kill off talk of post-election deals.",
       "quality_scores": {
-        "primary": 0.4472683370113373,
-        "bertscore_f1": 0.4472683370113373,
-        "bertscore_p": 0.998809278011322,
-        "bertscore_r": -0.01192829292267561,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11147,11 +11153,11 @@
       "generated": "",
       "reference": "A 12,000-seater music venue on the Temple Meads Enterprise Zone in Bristol is possible by 2016, the council says.",
       "quality_scores": {
-        "primary": 0.4257356822490692,
-        "bertscore_f1": 0.4257356822490692,
-        "bertscore_p": 0.9990512728691101,
-        "bertscore_r": -0.04807185009121895,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11175,11 +11181,11 @@
       "generated": "",
       "reference": "Journalists at Fairfax Media, one of Australia's largest publishers, have gone on strike for a week to protest against massive job cuts.",
       "quality_scores": {
-        "primary": 0.4600817561149597,
-        "bertscore_f1": 0.4600817561149597,
-        "bertscore_p": 0.9989373087882996,
-        "bertscore_r": 0.00950669590383768,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11231,11 +11237,11 @@
       "generated": "",
       "reference": "A man who fled the country after stabbing a university graduate to death in a row between rival drugs gangs, has been jailed for his manslaughter.",
       "quality_scores": {
-        "primary": 0.43448808789253235,
-        "bertscore_f1": 0.43448808789253235,
-        "bertscore_p": 0.9987664818763733,
-        "bertscore_r": -0.033282987773418427,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11371,11 +11377,11 @@
       "generated": "",
       "reference": "A police force has begun the rollout of body cameras for 800 officers and community support officers.",
       "quality_scores": {
-        "primary": 0.492224782705307,
-        "bertscore_f1": 0.492224782705307,
-        "bertscore_p": 0.9989805221557617,
-        "bertscore_r": 0.06384512782096863,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11427,11 +11433,11 @@
       "generated": "",
       "reference": "Bobby Jindal is warning that the Republicans must stop being the \"stupid party\".",
       "quality_scores": {
-        "primary": 0.4668624699115753,
-        "bertscore_f1": 0.4668624699115753,
-        "bertscore_p": 0.9989461898803711,
-        "bertscore_r": 0.020924918353557587,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11483,11 +11489,11 @@
       "generated": "",
       "reference": "Transplanting cells into livers has the potential to completely regenerate them, say scientists.",
       "quality_scores": {
-        "primary": 0.47313567996025085,
-        "bertscore_f1": 0.47313567996025085,
-        "bertscore_p": 0.9991060495376587,
-        "bertscore_r": 0.03140364959836006,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11511,11 +11517,11 @@
       "generated": "",
       "reference": "In our series of letters from African journalists, BBC Africa's Komla Dumor looks back at 2013.",
       "quality_scores": {
-        "primary": 0.35808679461479187,
-        "bertscore_f1": 0.35808679461479187,
-        "bertscore_p": 0.9990590214729309,
-        "bertscore_r": -0.15957000851631165,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11539,11 +11545,11 @@
       "generated": "",
       "reference": "Life-threatening surgery, broken bones and a lifetime of obstacles have not stopped Paralympic champion David Smith scrapping, splashing and sliding his way to the top.",
       "quality_scores": {
-        "primary": 0.3976247012615204,
-        "bertscore_f1": 0.3976247012615204,
-        "bertscore_p": 0.9987403154373169,
-        "bertscore_r": -0.0944758877158165,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11595,11 +11601,11 @@
       "generated": "",
       "reference": "Great Britain's Mark Cavendish is third after day one of the men's omnium as he aims for his first Olympic Games medal.",
       "quality_scores": {
-        "primary": 0.38958850502967834,
-        "bertscore_f1": 0.38958850502967834,
-        "bertscore_p": 0.9989712834358215,
-        "bertscore_r": -0.10788097977638245,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11623,11 +11629,11 @@
       "generated": "",
       "reference": "Oil prices have fallen again, sinking below $28 a barrel.",
       "quality_scores": {
-        "primary": 0.45373860001564026,
-        "bertscore_f1": 0.45373860001564026,
-        "bertscore_p": 0.9992090463638306,
-        "bertscore_r": -0.0013459211913868785,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11651,11 +11657,11 @@
       "generated": "",
       "reference": "Scientists are looking for 100,000 volunteers prepared to have their DNA sequenced and published online for anyone to look at.",
       "quality_scores": {
-        "primary": 0.3743220269680023,
-        "bertscore_f1": 0.3743220269680023,
-        "bertscore_p": 0.9986783862113953,
-        "bertscore_r": -0.13277292251586914,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11735,11 +11741,11 @@
       "generated": "",
       "reference": "Projects worth \u00a358m to regenerate areas across south Wales have been approved.",
       "quality_scores": {
-        "primary": 0.470094233751297,
-        "bertscore_f1": 0.470094233751297,
-        "bertscore_p": 0.9988988041877747,
-        "bertscore_r": 0.026411183178424835,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11763,11 +11769,11 @@
       "generated": "",
       "reference": "Prominent Bahraini human rights activist Nabeel Rajab has been freed after serving two years in prison for his involvement in illegal protests.",
       "quality_scores": {
-        "primary": 0.35471129417419434,
-        "bertscore_f1": 0.35471129417419434,
-        "bertscore_p": 0.998799741268158,
-        "bertscore_r": -0.1649048775434494,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11847,11 +11853,11 @@
       "generated": "",
       "reference": "The most vulnerable people in Scotland are falling into destitution because the benefits system is \"simply not working\", according to a charity.",
       "quality_scores": {
-        "primary": 0.4541638195514679,
-        "bertscore_f1": 0.4541638195514679,
-        "bertscore_p": 0.9988227486610413,
-        "bertscore_r": -0.00036504355375654995,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11875,11 +11881,11 @@
       "generated": "",
       "reference": "Johnny Sexton is out of Ireland's tour to South Africa because of a shoulder injury while brothers Rob and Dave Kearney will also miss the Test series.",
       "quality_scores": {
-        "primary": 0.36041733622550964,
-        "bertscore_f1": 0.36041733622550964,
-        "bertscore_p": 0.9987770915031433,
-        "bertscore_r": -0.15558424592018127,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11931,11 +11937,11 @@
       "generated": "",
       "reference": "A charity that rescues a protected species has said it has taken 600 calls in what has been one of its busiest ever years.",
       "quality_scores": {
-        "primary": 0.40090805292129517,
-        "bertscore_f1": 0.40090805292129517,
-        "bertscore_p": 0.998682975769043,
-        "bertscore_r": -0.08901332318782806,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11987,11 +11993,11 @@
       "generated": "",
       "reference": "The Reality Check team answers more of your questions about the implications of the UK's vote to leave the European Union.",
       "quality_scores": {
-        "primary": 0.4541245996952057,
-        "bertscore_f1": 0.4541245996952057,
-        "bertscore_p": 0.9990087747573853,
-        "bertscore_r": -0.0005595919210463762,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -12015,11 +12021,11 @@
       "generated": "",
       "reference": "Ukraine's President Viktor Yanukovych and his Russian counterpart Vladimir Putin have held surprise talks on a \"strategic partnership treaty\".",
       "quality_scores": {
-        "primary": 0.4249509572982788,
-        "bertscore_f1": 0.4249509572982788,
-        "bertscore_p": 0.9989061951637268,
-        "bertscore_r": -0.04928017035126686,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -12043,11 +12049,11 @@
       "generated": "",
       "reference": "McLaren arrived at this weekend's Monaco Grand Prix, on which they mark the 50th anniversary of their first entry in Formula 1, hoping the race would be their best chance of a decent result so far this year - and possibly all season.",
       "quality_scores": {
-        "primary": 0.3478783071041107,
-        "bertscore_f1": 0.3478783071041107,
-        "bertscore_p": 0.9987968802452087,
-        "bertscore_r": -0.17602668702602386,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -12099,11 +12105,11 @@
       "generated": "",
       "reference": "Celtic boss Ronny Deila reckons reaching the last 32 of the Europa League would mark his finest moment as a manager.",
       "quality_scores": {
-        "primary": 0.37045523524284363,
-        "bertscore_f1": 0.37045523524284363,
-        "bertscore_p": 0.9989539384841919,
-        "bertscore_r": -0.13928887248039246,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -12155,11 +12161,11 @@
       "generated": "",
       "reference": "A car involved in an apparent hit-and-run with a couple on a tandem bicycle was being followed by police at the time, it has emerged.",
       "quality_scores": {
-        "primary": 0.43935078382492065,
-        "bertscore_f1": 0.43935078382492065,
-        "bertscore_p": 0.9986985325813293,
-        "bertscore_r": -0.025109831243753433,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -12183,11 +12189,11 @@
       "generated": "",
       "reference": "The number of patients waiting for treatment in Wales is equivalent to the population of Cardiff, it is claimed.",
       "quality_scores": {
-        "primary": 0.49536511301994324,
-        "bertscore_f1": 0.49536511301994324,
-        "bertscore_p": 0.9989712834358215,
-        "bertscore_r": 0.06919272989034653,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -12211,11 +12217,11 @@
       "generated": "",
       "reference": "The US Treasury Department has warned the European Commission about taking action against US companies over tax avoidance allegations.",
       "quality_scores": {
-        "primary": 0.4736173748970032,
-        "bertscore_f1": 0.4736173748970032,
-        "bertscore_p": 0.9989935755729675,
-        "bertscore_r": 0.032296448945999146,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -12267,11 +12273,11 @@
       "generated": "",
       "reference": "Donald Trump has said that if he is elected president he may abandon a guarantee of protection to fellow Nato countries.",
       "quality_scores": {
-        "primary": 0.4403223395347595,
-        "bertscore_f1": 0.4403223395347595,
-        "bertscore_p": 0.9989911317825317,
-        "bertscore_r": -0.023685382679104805,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -12323,11 +12329,11 @@
       "generated": "",
       "reference": "Colombia's prosecutor general, Alejandro Ordonez, says he will open a \"disciplinary investigation\" against the country's chief of police, Gen Rodolfo Palomino.",
       "quality_scores": {
-        "primary": 0.3185298442840576,
-        "bertscore_f1": 0.3185298442840576,
-        "bertscore_p": 0.9989776611328125,
-        "bertscore_r": -0.22365425527095795,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -12435,11 +12441,11 @@
       "generated": "",
       "reference": "Passengers flying into Belfast International Airport were prevented from getting off planes for a time on Tuesday night due to high winds.",
       "quality_scores": {
-        "primary": 0.45068058371543884,
-        "bertscore_f1": 0.45068058371543884,
-        "bertscore_p": 0.998926043510437,
-        "bertscore_r": -0.0062856818549335,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -12463,11 +12469,11 @@
       "generated": "",
       "reference": "The head of Japanese advertising group Dentsu is to step down following the suicide of an employee who had worked hundreds of hours of overtime.",
       "quality_scores": {
-        "primary": 0.4399087727069855,
-        "bertscore_f1": 0.4399087727069855,
-        "bertscore_p": 0.9988588094711304,
-        "bertscore_r": -0.024286361411213875,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -12491,11 +12497,11 @@
       "generated": "",
       "reference": "The Scottish government has announced funding for a initiative to reduce the cost of offshore wind energy.",
       "quality_scores": {
-        "primary": 0.5032663941383362,
-        "bertscore_f1": 0.5032663941383362,
-        "bertscore_p": 0.9989076256752014,
-        "bertscore_r": 0.08269969373941422,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -12575,11 +12581,11 @@
       "generated": "",
       "reference": "South African Olympic and Paralympic athlete Oscar Pistorius is facing a murder charge after his girlfriend was shot and killed at his Pretoria home.",
       "quality_scores": {
-        "primary": 0.3578060567378998,
-        "bertscore_f1": 0.3578060567378998,
-        "bertscore_p": 0.9988531470298767,
-        "bertscore_r": -0.15989437699317932,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -12631,11 +12637,11 @@
       "generated": "",
       "reference": "Relatives of the 96 people who died at Hillsborough have told the home secretary they want a \"Hillsborough Law\" to compel public officials to tell the truth at inquiries.",
       "quality_scores": {
-        "primary": 0.4307279884815216,
-        "bertscore_f1": 0.4307279884815216,
-        "bertscore_p": 0.9988492727279663,
-        "bertscore_r": -0.03961500525474548,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -12659,11 +12665,11 @@
       "generated": "",
       "reference": "Newport's multi-million pound new shopping centre has opened, in what is seen as a landmark for the city centre's regeneration.",
       "quality_scores": {
-        "primary": 0.4661903977394104,
-        "bertscore_f1": 0.4661903977394104,
-        "bertscore_p": 0.9988542199134827,
-        "bertscore_r": 0.019855963066220284,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -12687,11 +12693,11 @@
       "generated": "",
       "reference": "Shares in mining firm Anglo American have fallen to a record low as the company said it would sell huge chunks of its business and shrink its workforce by nearly two-thirds.",
       "quality_scores": {
-        "primary": 0.4003126323223114,
-        "bertscore_f1": 0.4003126323223114,
-        "bertscore_p": 0.9987466931343079,
-        "bertscore_r": -0.0900401845574379,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -12827,11 +12833,11 @@
       "generated": "",
       "reference": "The sheer pyrotechnics of Labour's internal feuding have mesmerised Westminster, but Conservative MPs should not titter too hard at their opponents' discomfort - they have their own civil war brewing.",
       "quality_scores": {
-        "primary": 0.4138210713863373,
-        "bertscore_f1": 0.4138210713863373,
-        "bertscore_p": 0.9986313581466675,
-        "bertscore_r": -0.06759389489889145,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -13051,11 +13057,11 @@
       "generated": "",
       "reference": "The families of two east London schoolgirls who travelled to Syria are \"distraught\" after learning they have married, their solicitor has said.",
       "quality_scores": {
-        "primary": 0.4308982193470001,
-        "bertscore_f1": 0.4308982193470001,
-        "bertscore_p": 0.9986536502838135,
-        "bertscore_r": -0.03919725865125656,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -13079,11 +13085,11 @@
       "generated": "",
       "reference": "Pharmaceutical firm GlaxoSmithKline (GSK) and some generics companies have been fined for being anti-competitive.",
       "quality_scores": {
-        "primary": 0.34237250685691833,
-        "bertscore_f1": 0.34237250685691833,
-        "bertscore_p": 0.9988492727279663,
-        "bertscore_r": -0.18500633537769318,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -13107,11 +13113,11 @@
       "generated": "",
       "reference": "Syria's cultural heritage is being attacked from all sides: the Assad regime, opportunistic looters, opposition forces, so-called Islamic State fighters and even Russian air strikes.",
       "quality_scores": {
-        "primary": 0.37906569242477417,
-        "bertscore_f1": 0.37906569242477417,
-        "bertscore_p": 0.9987526535987854,
-        "bertscore_r": -0.12503944337368011,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -13135,11 +13141,11 @@
       "generated": "",
       "reference": "More than 600 people in an East Yorkshire village have objected to plans for 119 new homes.",
       "quality_scores": {
-        "primary": 0.451118141412735,
-        "bertscore_f1": 0.451118141412735,
-        "bertscore_p": 0.9988556504249573,
-        "bertscore_r": -0.005501828622072935,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -13163,11 +13169,11 @@
       "generated": "",
       "reference": "A record-breaking attempt to cross the Pacific Ocean using a solar-powered plane has been aborted.",
       "quality_scores": {
-        "primary": 0.5105839371681213,
-        "bertscore_f1": 0.5105839371681213,
-        "bertscore_p": 0.9989755153656006,
-        "bertscore_r": 0.0951465517282486,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -13191,11 +13197,11 @@
       "generated": "",
       "reference": "A high profile figure in the world of technology has criticised poor broadband in parts of Wales.",
       "quality_scores": {
-        "primary": 0.5128551125526428,
-        "bertscore_f1": 0.5128551125526428,
-        "bertscore_p": 0.9989762306213379,
-        "bertscore_r": 0.09903150051832199,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -13387,11 +13393,11 @@
       "generated": "",
       "reference": "France has said it will not back down over its nomination of an openly gay ambassador to the Vatican.",
       "quality_scores": {
-        "primary": 0.47763708233833313,
-        "bertscore_f1": 0.47763708233833313,
-        "bertscore_p": 0.9989518523216248,
-        "bertscore_r": 0.039123330265283585,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -13415,11 +13421,11 @@
       "generated": "",
       "reference": "The most advanced flight incubators in the UK for sick babies will be used by Wales Air Ambulance later this month.",
       "quality_scores": {
-        "primary": 0.42517027258872986,
-        "bertscore_f1": 0.42517027258872986,
-        "bertscore_p": 0.9988888502120972,
-        "bertscore_r": -0.0489034540951252,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -13527,11 +13533,11 @@
       "generated": "",
       "reference": "Injury-hit Wolves have suffered a new blow with the loss of Michal Zyro for potentially more than a year with multiple knee ligament damage.",
       "quality_scores": {
-        "primary": 0.364739328622818,
-        "bertscore_f1": 0.364739328622818,
-        "bertscore_p": 0.9988566637039185,
-        "bertscore_r": -0.14857590198516846,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -13695,11 +13701,11 @@
       "generated": "",
       "reference": "Defender Paul Quinn has rejoined Ross County on an 18-month contract after agreeing his release from Aberdeen.",
       "quality_scores": {
-        "primary": 0.42442086338996887,
-        "bertscore_f1": 0.42442086338996887,
-        "bertscore_p": 0.9989178776741028,
-        "bertscore_r": -0.05017014220356941,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -13751,11 +13757,11 @@
       "generated": "",
       "reference": "Prison guards have shot dead 17 inmates after a mass breakout at Buimo prison in Papua New Guinea.",
       "quality_scores": {
-        "primary": 0.4083848297595978,
-        "bertscore_f1": 0.4083848297595978,
-        "bertscore_p": 0.9991057515144348,
-        "bertscore_r": -0.07692514359951019,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -13863,11 +13869,11 @@
       "generated": "",
       "reference": "Working manuscripts of poems by Dylan Thomas are to go on public show for the first time.",
       "quality_scores": {
-        "primary": 0.47413089871406555,
-        "bertscore_f1": 0.47413089871406555,
-        "bertscore_p": 0.9990922808647156,
-        "bertscore_r": 0.03309515863656998,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {

@@ -11,12 +11,18 @@
   },
   "aggregates": {
     "mean_quality": {
-      "bertscore_r": 0.08835008412437213,
-      "primary": 0.06177590152304376,
       "empty": 0.0,
+      "n_valid": 498,
       "rouge_l": 0.11296747493658191,
+      "rouge_l_penalized": 0.11296747493658191,
+      "primary": 0.06177590152304376,
+      "primary_penalized": 0.06177590152304376,
       "bertscore_f1": 0.06177590152304376,
-      "bertscore_p": 0.034808101790913204
+      "bertscore_f1_penalized": 0.06177590152304376,
+      "bertscore_p": 0.034808101790913204,
+      "bertscore_p_penalized": 0.034808101790913204,
+      "bertscore_r": 0.08835008412437213,
+      "bertscore_r_penalized": 0.08835008412437213
     },
     "mean_joules_per_output_token": 7.178212431551763,
     "mean_joules_per_input_token": 0.6031228552113926,

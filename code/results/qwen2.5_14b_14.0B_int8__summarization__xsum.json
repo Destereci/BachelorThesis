@@ -11,12 +11,18 @@
   },
   "aggregates": {
     "mean_quality": {
-      "bertscore_f1": 0.2788211274097288,
-      "bertscore_r": 0.3121607992628902,
-      "rouge_l": 0.19728899775437958,
       "empty": 0.008032128514056224,
-      "primary": 0.2788211274097288,
-      "bertscore_p": 0.2464558295162215
+      "n_valid": 494,
+      "rouge_l": 0.19888647951757293,
+      "rouge_l_penalized": 0.19728899775437958,
+      "primary": 0.2753664517137465,
+      "primary_penalized": 0.2753664517137465,
+      "bertscore_f1": 0.277596139581874,
+      "bertscore_f1_penalized": 0.2753664517137465,
+      "bertscore_p": 0.24036274648314862,
+      "bertscore_p_penalized": 0.23843212201340447,
+      "bertscore_r": 0.3150133007122187,
+      "bertscore_r_penalized": 0.31248307339726117
     },
     "mean_joules_per_output_token": 7.2711856183789365,
     "mean_joules_per_input_token": 0.5943804817853499,
@@ -451,11 +457,11 @@
       "generated": "",
       "reference": "For years Match of the Day has satisfied impatient football fans by condensing a 90 minute match into a handy chunk of highlights.",
       "quality_scores": {
-        "primary": 0.44268712401390076,
-        "bertscore_f1": 0.44268712401390076,
-        "bertscore_p": 0.998919665813446,
-        "bertscore_r": -0.019679101184010506,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -1851,11 +1857,11 @@
       "generated": "",
       "reference": "Vin Diesel sang, Channing Tatum danced and Zac Efron showed off his abs, yes - again, at the 2015 MTV Movie Awards.",
       "quality_scores": {
-        "primary": 0.35388240218162537,
-        "bertscore_f1": 0.35388240218162537,
-        "bertscore_p": 0.998793363571167,
-        "bertscore_r": -0.16625115275382996,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -4147,11 +4153,11 @@
       "generated": "",
       "reference": "Geordie Shore has unveiled two new characters, Nathan Henry and Chloe Etherington.",
       "quality_scores": {
-        "primary": 0.4358551800251007,
-        "bertscore_f1": 0.4358551800251007,
-        "bertscore_p": 0.9990774393081665,
-        "bertscore_r": -0.031211577355861664,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -5743,11 +5749,11 @@
       "generated": "",
       "reference": "One Direction is not on the verge of splitting up, despite rumours started on social media.",
       "quality_scores": {
-        "primary": 0.48800379037857056,
-        "bertscore_f1": 0.48800379037857056,
-        "bertscore_p": 0.9990158677101135,
-        "bertscore_r": 0.05664931237697601,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {

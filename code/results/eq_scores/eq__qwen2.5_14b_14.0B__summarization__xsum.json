@@ -6,13 +6,13 @@
       "task_type": "summarization",
       "dataset": "xsum",
       "quantization": "int8",
-      "fp16_quality": 0.27993127811105406,
+      "fp16_quality": 0.2758836257262118,
       "fp16_j_per_tok": 7.058755720015881,
-      "quant_quality": 0.2788211274097288,
+      "quant_quality": 0.2753664517137465,
       "quant_j_per_tok": 7.2711856183789365,
-      "delta_quality_pct": 0.4,
+      "delta_quality_pct": 0.19,
       "delta_energy_pct": -3.01,
-      "eq_score": -0.03406
+      "eq_score": -0.031969
     },
     {
       "family": "qwen2.5_14b",
@@ -20,13 +20,13 @@
       "task_type": "summarization",
       "dataset": "xsum",
       "quantization": "int4",
-      "fp16_quality": 0.27993127811105406,
+      "fp16_quality": 0.2758836257262118,
       "fp16_j_per_tok": 7.058755720015881,
       "quant_quality": 0.06177590152304376,
       "quant_j_per_tok": 7.178212431551763,
-      "delta_quality_pct": 77.93,
+      "delta_quality_pct": 77.61,
       "delta_energy_pct": -1.69,
-      "eq_score": -0.796241
+      "eq_score": -0.793003
     }
   ]
 }

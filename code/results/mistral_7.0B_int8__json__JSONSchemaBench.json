@@ -11,10 +11,16 @@
   },
   "aggregates": {
     "mean_quality": {
+      "empty": 0.0,
+      "n_valid": 644,
       "schema_error": 0.0,
+      "schema_error_penalized": 0.0,
       "parseable": 0.9208074534161491,
+      "parseable_penalized": 0.9208074534161491,
       "primary": 0.7670807453416149,
-      "schema_valid": 0.7670807453416149
+      "primary_penalized": 0.7670807453416149,
+      "schema_valid": 0.7670807453416149,
+      "schema_valid_penalized": 0.7670807453416149
     },
     "mean_joules_per_output_token": 5.94454302741223,
     "mean_joules_per_input_token": 1.4100168621652998,

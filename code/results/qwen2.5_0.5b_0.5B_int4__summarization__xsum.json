@@ -11,12 +11,18 @@
   },
   "aggregates": {
     "mean_quality": {
-      "bertscore_r": 0.14232911295762443,
-      "primary": 0.15428778927046635,
       "empty": 0.0321285140562249,
-      "bertscore_f1": 0.15428778927046635,
-      "rouge_l": 0.12983671367744457,
-      "bertscore_p": 0.1684101649156087
+      "n_valid": 482,
+      "rouge_l": 0.1341466460816751,
+      "rouge_l_penalized": 0.12983671367744457,
+      "primary": 0.14151516272210415,
+      "primary_penalized": 0.14151516272210415,
+      "bertscore_f1": 0.14621276148466364,
+      "bertscore_f1_penalized": 0.14151516272210415,
+      "bertscore_p": 0.14084409780344342,
+      "bertscore_p_penalized": 0.1363189862274292,
+      "bertscore_r": 0.15008964572155933,
+      "bertscore_r_penalized": 0.1452674884293004
     },
     "mean_joules_per_output_token": 5.869863565174647,
     "mean_joules_per_input_token": 0.4333923605854797,
@@ -3391,11 +3397,11 @@
       "generated": "",
       "reference": "Luke Wells has established himself in Sussex's County Championship side but is hungry for more.",
       "quality_scores": {
-        "primary": 0.47893989086151123,
-        "bertscore_f1": 0.47893989086151123,
-        "bertscore_p": 0.9987664818763733,
-        "bertscore_r": 0.041459325700998306,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -4259,11 +4265,11 @@
       "generated": "",
       "reference": "A man was arrested on suspicion of holding a staff member at gunpoint at a NatWest bank in Birmingham.",
       "quality_scores": {
-        "primary": 0.4247097671031952,
-        "bertscore_f1": 0.4247097671031952,
-        "bertscore_p": 0.9989394545555115,
-        "bertscore_r": -0.0497039332985878,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -4287,11 +4293,11 @@
       "generated": "",
       "reference": "Celtic striker Leigh Griffiths has yet to score for Scotland but is ready to lead the line against Slovenia despite admitting he is \"rusty\".",
       "quality_scores": {
-        "primary": 0.388043075799942,
-        "bertscore_f1": 0.388043075799942,
-        "bertscore_p": 0.9986886382102966,
-        "bertscore_r": -0.11023890227079391,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -4903,11 +4909,11 @@
       "generated": "",
       "reference": "Manager Keith Curle wants to continue the job he has started at Carlisle United beyond his current contract, but wants assurances he will be backed by the club's board going forward.",
       "quality_scores": {
-        "primary": 0.42125511169433594,
-        "bertscore_f1": 0.42125511169433594,
-        "bertscore_p": 0.9987940788269043,
-        "bertscore_r": -0.055353619158267975,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -6695,11 +6701,11 @@
       "generated": "",
       "reference": "George North believes the British and Irish Lions must \"kick on\" after a tough start to their New Zealand tour.",
       "quality_scores": {
-        "primary": 0.4554302394390106,
-        "bertscore_f1": 0.4554302394390106,
-        "bertscore_p": 0.9989585876464844,
-        "bertscore_r": 0.0016688714968040586,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -8627,11 +8633,11 @@
       "generated": "",
       "reference": "A postgraduate researcher at Glasgow University is developing new technology designed to help people with paralysed faces.",
       "quality_scores": {
-        "primary": 0.4613513648509979,
-        "bertscore_f1": 0.4613513648509979,
-        "bertscore_p": 0.9987661242485046,
-        "bertscore_r": 0.011762750335037708,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -8711,11 +8717,11 @@
       "generated": "",
       "reference": "Hockey Wales head of performance Dan Clements believes the men's promotion to Europe's top tier will help transform the sport in Wales.",
       "quality_scores": {
-        "primary": 0.4364682734012604,
-        "bertscore_f1": 0.4364682734012604,
-        "bertscore_p": 0.998915433883667,
-        "bertscore_r": -0.030076829716563225,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -8795,11 +8801,11 @@
       "generated": " ",
       "reference": "Mae datblygwyr trac rasio ym Mlaenau Gwent wedi rhoi cynnig newydd gerbron Llywodraeth Cymru, wedi i Ysgrifennydd yr Economi alw am fwy o fanylion.",
       "quality_scores": {
-        "primary": -0.010916589759290218,
-        "bertscore_f1": -0.010916589759290218,
-        "bertscore_p": 0.9982447028160095,
-        "bertscore_r": -0.7290213108062744,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -9775,11 +9781,11 @@
       "generated": "",
       "reference": "Hampshire captain James Vince says the ICC World Twenty20 can help put him on the path to playing Test cricket.",
       "quality_scores": {
-        "primary": 0.42628732323646545,
-        "bertscore_f1": 0.42628732323646545,
-        "bertscore_p": 0.9989659786224365,
-        "bertscore_r": -0.04709521681070328,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -10951,11 +10957,11 @@
       "generated": "",
       "reference": "Opener Steven Davies hit 104 off 116 balls as 2015 runners-up Surrey reached another One-Day Cup final with a 19-run win over Yorkshire at Headingley.",
       "quality_scores": {
-        "primary": 0.32266148924827576,
-        "bertscore_f1": 0.32266148924827576,
-        "bertscore_p": 0.998738169670105,
-        "bertscore_r": -0.21684010326862335,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11651,11 +11657,11 @@
       "generated": "",
       "reference": "Great Britain's Mark Cavendish is third after day one of the men's omnium as he aims for his first Olympic Games medal.",
       "quality_scores": {
-        "primary": 0.389588862657547,
-        "bertscore_f1": 0.389588862657547,
-        "bertscore_p": 0.9989712834358215,
-        "bertscore_r": -0.10788027197122574,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11679,11 +11685,11 @@
       "generated": "",
       "reference": "Oil prices have fallen again, sinking below $28 a barrel.",
       "quality_scores": {
-        "primary": 0.45373931527137756,
-        "bertscore_f1": 0.45373931527137756,
-        "bertscore_p": 0.9992090463638306,
-        "bertscore_r": -0.0013455675216391683,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -12239,11 +12245,11 @@
       "generated": "",
       "reference": "The number of patients waiting for treatment in Wales is equivalent to the population of Cardiff, it is claimed.",
       "quality_scores": {
-        "primary": 0.49536511301994324,
-        "bertscore_f1": 0.49536511301994324,
-        "bertscore_p": 0.9989712834358215,
-        "bertscore_r": 0.06919272989034653,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -12687,11 +12693,11 @@
       "generated": "",
       "reference": "Lord Coe is the right man to lead the crisis-hit IAAF, according to the author of a report claiming \"corruption was embedded\" within the organisation.",
       "quality_scores": {
-        "primary": 0.4640742540359497,
-        "bertscore_f1": 0.4640742540359497,
-        "bertscore_p": 0.998782753944397,
-        "bertscore_r": 0.016338175162672997,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -12883,11 +12889,11 @@
       "generated": "",
       "reference": "Two goals from the returning Garry Thompson gave Morecambe a dramatic opening day win over Cheltenham.",
       "quality_scores": {
-        "primary": 0.4255877137184143,
-        "bertscore_f1": 0.4255877137184143,
-        "bertscore_p": 0.9989787340164185,
-        "bertscore_r": -0.048269227147102356,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -13023,11 +13029,11 @@
       "generated": "",
       "reference": "Grimsby halted a run of three straight defeats with a victory over Accrington thanks to goals from Tom Bolarinwa and Ashley Chambers.",
       "quality_scores": {
-        "primary": 0.32818281650543213,
-        "bertscore_f1": 0.32818281650543213,
-        "bertscore_p": 0.9987162351608276,
-        "bertscore_r": -0.20790785551071167,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {

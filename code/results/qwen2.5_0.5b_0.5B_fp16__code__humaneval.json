@@ -11,8 +11,12 @@
   },
   "aggregates": {
     "mean_quality": {
+      "empty": 0.0,
+      "n_valid": 164,
+      "pass_at_1": 0.31097560975609756,
+      "pass_at_1_penalized": 0.31097560975609756,
       "primary": 0.31097560975609756,
-      "pass_at_1": 0.31097560975609756
+      "primary_penalized": 0.31097560975609756
     },
     "mean_joules_per_output_token": 7.639793380944779,
     "mean_joules_per_input_token": 5.003318509018752,

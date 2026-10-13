@@ -11,12 +11,18 @@
   },
   "aggregates": {
     "mean_quality": {
-      "bertscore_p": 0.1803535725140615,
       "empty": 0.03614457831325301,
-      "bertscore_f1": 0.16494388572340335,
-      "rouge_l": 0.13105928925090018,
-      "primary": 0.16494388572340335,
-      "bertscore_r": 0.1537836000208049
+      "n_valid": 480,
+      "rouge_l": 0.13597401259780895,
+      "rouge_l_penalized": 0.13105928925090018,
+      "primary": 0.15315424290107682,
+      "primary_penalized": 0.15315424290107682,
+      "bertscore_f1": 0.1588975270098672,
+      "bertscore_f1_penalized": 0.15315424290107682,
+      "bertscore_p": 0.1496638380655592,
+      "bertscore_p_penalized": 0.1442543017499366,
+      "bertscore_r": 0.1672165305675056,
+      "bertscore_r_penalized": 0.16117255958313792
     },
     "mean_joules_per_output_token": 6.500691177730213,
     "mean_joules_per_input_token": 0.457193100235142,
@@ -1431,11 +1437,11 @@
       "generated": " ",
       "reference": "A Borders textile firm has announced a 20% increase in its turnover, to \u00c2\u00a38m a year, in its annual accounts.",
       "quality_scores": {
-        "primary": 0.41100388765335083,
-        "bertscore_f1": 0.41100388765335083,
-        "bertscore_p": 0.998887836933136,
-        "bertscore_r": -0.07243885844945908,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -2103,11 +2109,11 @@
       "generated": "",
       "reference": "Fe gafodd canolfan siopa yn Abertawe ei gwagio brynhawn dydd Mercher am gyfnod yn dilyn pryderon am ddiogelwch.",
       "quality_scores": {
-        "primary": -0.04201462119817734,
-        "bertscore_f1": -0.04201462119817734,
-        "bertscore_p": 0.9981880784034729,
-        "bertscore_r": -0.7742690443992615,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -2243,11 +2249,11 @@
       "generated": "",
       "reference": "Goals from Sone Aluko and Tom Cairney gave Fulham a west London derby win over Brentford at Griffin Park.",
       "quality_scores": {
-        "primary": 0.25708848237991333,
-        "bertscore_f1": 0.25708848237991333,
-        "bertscore_p": 0.9989320039749146,
-        "bertscore_r": -0.3217374086380005,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -2495,11 +2501,11 @@
       "generated": "",
       "reference": "Wrth i'r swyddfa gartref gyhoeddi \u00a31m i helpu cymunedau noddi ffoaduriaid mae pryder yngl\u0177n \u00e2 pha mor gymhleth yw'r broses.",
       "quality_scores": {
-        "primary": -0.04900263622403145,
-        "bertscore_f1": -0.04900263622403145,
-        "bertscore_p": 0.9981226325035095,
-        "bertscore_r": -0.7843554615974426,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -2831,11 +2837,11 @@
       "generated": "",
       "reference": "Police Scotland has said that it does not collate or hold specific figures on child sexual exploitation.",
       "quality_scores": {
-        "primary": 0.41316595673561096,
-        "bertscore_f1": 0.41316595673561096,
-        "bertscore_p": 0.9988871216773987,
-        "bertscore_r": -0.06885315477848053,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -3167,11 +3173,11 @@
       "generated": "",
       "reference": "Jack Baird scored a dramatic last-minute goal to preserve St Mirren's 100% record in this season's Betfred League Cup.",
       "quality_scores": {
-        "primary": 0.3597925901412964,
-        "bertscore_f1": 0.3597925901412964,
-        "bertscore_p": 0.998893141746521,
-        "bertscore_r": -0.1566786766052246,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -4287,11 +4293,11 @@
       "generated": "",
       "reference": "Celtic striker Leigh Griffiths has yet to score for Scotland but is ready to lead the line against Slovenia despite admitting he is \"rusty\".",
       "quality_scores": {
-        "primary": 0.38804271817207336,
-        "bertscore_f1": 0.38804271817207336,
-        "bertscore_p": 0.9986886382102966,
-        "bertscore_r": -0.11023925989866257,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -6219,11 +6225,11 @@
       "generated": "",
       "reference": "Blackburn Rovers came from behind to earn a crucial draw against fellow Championship strugglers Bristol City.",
       "quality_scores": {
-        "primary": 0.4156232476234436,
-        "bertscore_f1": 0.4156232476234436,
-        "bertscore_p": 0.9989988803863525,
-        "bertscore_r": -0.06485005468130112,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -7143,11 +7149,11 @@
       "generated": " ",
       "reference": "A male osprey has returned to its nest at the Loch of the Lowes reserve after its migration from West Africa.",
       "quality_scores": {
-        "primary": 0.3527579605579376,
-        "bertscore_f1": 0.3527579605579376,
-        "bertscore_p": 0.998805046081543,
-        "bertscore_r": -0.16809087991714478,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -8011,11 +8017,11 @@
       "generated": "",
       "reference": "You wait more than 15 years for a new Ghostbusters film, and then two come along at the same time.",
       "quality_scores": {
-        "primary": 0.46753382682800293,
-        "bertscore_f1": 0.46753382682800293,
-        "bertscore_p": 0.9989745020866394,
-        "bertscore_r": 0.02203773520886898,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -8627,11 +8633,11 @@
       "generated": "",
       "reference": "A postgraduate researcher at Glasgow University is developing new technology designed to help people with paralysed faces.",
       "quality_scores": {
-        "primary": 0.4613513648509979,
-        "bertscore_f1": 0.4613513648509979,
-        "bertscore_p": 0.9987661242485046,
-        "bertscore_r": 0.011762750335037708,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -8795,11 +8801,11 @@
       "generated": "",
       "reference": "Mae datblygwyr trac rasio ym Mlaenau Gwent wedi rhoi cynnig newydd gerbron Llywodraeth Cymru, wedi i Ysgrifennydd yr Economi alw am fwy o fanylion.",
       "quality_scores": {
-        "primary": -0.010916589759290218,
-        "bertscore_f1": -0.010916589759290218,
-        "bertscore_p": 0.9982447028160095,
-        "bertscore_r": -0.7290213108062744,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11679,11 +11685,11 @@
       "generated": "",
       "reference": "Oil prices have fallen again, sinking below $28 a barrel.",
       "quality_scores": {
-        "primary": 0.45373931527137756,
-        "bertscore_f1": 0.45373931527137756,
-        "bertscore_p": 0.9992090463638306,
-        "bertscore_r": -0.0013455675216391683,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11707,11 +11713,11 @@
       "generated": "",
       "reference": "Scientists are looking for 100,000 volunteers prepared to have their DNA sequenced and published online for anyone to look at.",
       "quality_scores": {
-        "primary": 0.37432271242141724,
-        "bertscore_f1": 0.37432271242141724,
-        "bertscore_p": 0.9986783862113953,
-        "bertscore_r": -0.13277220726013184,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -11987,11 +11993,11 @@
       "generated": " ",
       "reference": "A charity that rescues a protected species has said it has taken 600 calls in what has been one of its busiest ever years.",
       "quality_scores": {
-        "primary": 0.40090876817703247,
-        "bertscore_f1": 0.40090876817703247,
-        "bertscore_p": 0.998682975769043,
-        "bertscore_r": -0.08901261538267136,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -12687,11 +12693,11 @@
       "generated": "",
       "reference": "Lord Coe is the right man to lead the crisis-hit IAAF, according to the author of a report claiming \"corruption was embedded\" within the organisation.",
       "quality_scores": {
-        "primary": 0.46407461166381836,
-        "bertscore_f1": 0.46407461166381836,
-        "bertscore_p": 0.998782753944397,
-        "bertscore_r": 0.01633923500776291,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -12883,11 +12889,11 @@
       "generated": "",
       "reference": "Two goals from the returning Garry Thompson gave Morecambe a dramatic opening day win over Cheltenham.",
       "quality_scores": {
-        "primary": 0.4255877137184143,
-        "bertscore_f1": 0.4255877137184143,
-        "bertscore_p": 0.9989787340164185,
-        "bertscore_r": -0.048269227147102356,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -13023,11 +13029,11 @@
       "generated": "",
       "reference": "Grimsby halted a run of three straight defeats with a victory over Accrington thanks to goals from Tom Bolarinwa and Ashley Chambers.",
       "quality_scores": {
-        "primary": 0.32818281650543213,
-        "bertscore_f1": 0.32818281650543213,
-        "bertscore_p": 0.9987162351608276,
-        "bertscore_r": -0.20790785551071167,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {

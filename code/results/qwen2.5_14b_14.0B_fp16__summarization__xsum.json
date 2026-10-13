@@ -11,12 +11,18 @@
   },
   "aggregates": {
     "mean_quality": {
-      "bertscore_r": 0.3111506024512077,
-      "bertscore_p": 0.24982720492076316,
       "empty": 0.010040160642570281,
-      "bertscore_f1": 0.27993127811105406,
-      "primary": 0.27993127811105406,
-      "rouge_l": 0.20123859579995637
+      "n_valid": 493,
+      "rouge_l": 0.20327955518940827,
+      "rouge_l_penalized": 0.20123859579995637,
+      "primary": 0.2758836257262118,
+      "primary_penalized": 0.2758836257262118,
+      "bertscore_f1": 0.278681634100717,
+      "bertscore_f1_penalized": 0.2758836257262118,
+      "bertscore_p": 0.24223002384650652,
+      "bertscore_p_penalized": 0.23979799549463396,
+      "bertscore_r": 0.31516085888975076,
+      "bertscore_r_penalized": 0.31199659323824724
     },
     "mean_joules_per_output_token": 7.058755720015881,
     "mean_joules_per_input_token": 0.5629927692879826,
@@ -451,11 +457,11 @@
       "generated": "",
       "reference": "For years Match of the Day has satisfied impatient football fans by condensing a 90 minute match into a handy chunk of highlights.",
       "quality_scores": {
-        "primary": 0.44268712401390076,
-        "bertscore_f1": 0.44268712401390076,
-        "bertscore_p": 0.998919665813446,
-        "bertscore_r": -0.019679101184010506,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -1851,11 +1857,11 @@
       "generated": "",
       "reference": "Vin Diesel sang, Channing Tatum danced and Zac Efron showed off his abs, yes - again, at the 2015 MTV Movie Awards.",
       "quality_scores": {
-        "primary": 0.35388240218162537,
-        "bertscore_f1": 0.35388240218162537,
-        "bertscore_p": 0.998793363571167,
-        "bertscore_r": -0.16625115275382996,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -4147,11 +4153,11 @@
       "generated": "",
       "reference": "Geordie Shore has unveiled two new characters, Nathan Henry and Chloe Etherington.",
       "quality_scores": {
-        "primary": 0.435855895280838,
-        "bertscore_f1": 0.435855895280838,
-        "bertscore_p": 0.9990777969360352,
-        "bertscore_r": -0.03121122345328331,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -5743,11 +5749,11 @@
       "generated": "",
       "reference": "One Direction is not on the verge of splitting up, despite rumours started on social media.",
       "quality_scores": {
-        "primary": 0.48800379037857056,
-        "bertscore_f1": 0.48800379037857056,
-        "bertscore_p": 0.9990158677101135,
-        "bertscore_r": 0.05664966255426407,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
@@ -8375,11 +8381,11 @@
       "generated": "",
       "reference": "Olympic sprinting gold medallist Mark Lewis-Francis has been named on standby for Great Britain's provisional bobsleigh squad for next month's World Championships in Austria.",
       "quality_scores": {
-        "primary": 0.2953016757965088,
-        "bertscore_f1": 0.2953016757965088,
-        "bertscore_p": 0.9987396001815796,
-        "bertscore_r": -0.26081159710884094,
-        "rouge_l": 0,
+        "primary": null,
+        "bertscore_f1": null,
+        "bertscore_p": null,
+        "bertscore_r": null,
+        "rouge_l": null,
         "empty": true
       },
       "energy": {
