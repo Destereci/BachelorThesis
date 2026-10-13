@@ -8,6 +8,13 @@ CSV_PATH = r"D:\BachelorThesisGit\BachelorThesis\code\results\analysis\summary_a
 OUT_DIR = Path("plots")
 QUANT_ORDER = ["fp16", "int8", "int4"]
 LOWER_IS_BETTER = {"quality_empty", "quality_schema_error"}
+DROP_COLS = {
+    "code": {"empty", "n_valid", "pass_at_1_penalized", "primary_penalized"},
+    "json": {"empty", "schema_error", "schema_error_penalized",
+             "parseable_penalized", "parseable_penalize",
+             "schema_valid_penalized"},
+    "summarization": {"primary_penalized"},
+}
 
 OUT_DIR.mkdir(exist_ok=True)
 
@@ -24,7 +31,8 @@ def short(col: str) -> str:
 
 
 def draw_table(sub: pd.DataFrame, task: str) -> None:
-    cols = [c for c in quality_cols if sub[c].notna().any()]
+    drop = DROP_COLS.get(task, set())
+    cols = [c for c in quality_cols if sub[c].notna().any() and short(c) not in drop]
     sub = sub.sort_values(["family", "size_b", "quantization"])
 
     row_labels = [f"{r.family} {r.size_b}B {r.quantization}" for r in sub.itertuples()]
