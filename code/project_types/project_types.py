@@ -88,7 +88,7 @@ class ExperimentResult:
     config: ExperimentConfig
     samples: list[SampleResult] = field(default_factory=list)
 
-    mean_quality: dict[str, float] = field(default_factory=dict)
+    mean_quality: dict[str, float | int] = field(default_factory=dict)
     mean_joules_per_output_token: float = 0.0
     mean_joules_per_input_token: float = 0.0
     mean_output_tokens: float = 0.0
@@ -115,9 +115,21 @@ class ExperimentResult:
         self.mean_input_tokens = sum(s.energy.prefill_tokens for s in self.samples) / n
  
  
-        all_keys = set()
-        for s in self.samples:
-            all_keys.update(s.quality_scores.keys())
+        n_empty = sum(1 for s in self.samples if s.quality_scores.get("empty", False))
+        self.mean_quality = {
+            "empty": n_empty / n,
+            "n_valid": n - n_empty,
+        }
+
+        all_keys = {k for s in self.samples for k in s.quality_scores} - {"empty"}
         for key in all_keys:
-            vals = [s.quality_scores[key] for s in self.samples if key in s.quality_scores]
-            self.mean_quality[key] = sum(vals) / len(vals) if vals else 0.0
+            vals = [
+                float(s.quality_scores[key])
+                for s in self.samples
+                if s.quality_scores.get(key) is not None
+            ]
+            self.mean_quality[key] = sum(vals) / len(vals) if vals else float("nan")
+            self.mean_quality[f"{key}_penalized"] = sum(vals) / n
+
+        if "primary_penalized" in self.mean_quality:
+            self.mean_quality["primary"] = self.mean_quality["primary_penalized"]

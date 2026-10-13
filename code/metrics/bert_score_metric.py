@@ -18,19 +18,40 @@ class BERTScoreMetric(BaseMetric):
 
     def score_batch(self, generated, references, samples):
         self._load()
-        empty_flags = [not g.strip() for g in generated]
-        safe_gen = [g.strip() if g.strip() else "." for g in generated]
-        P, R, F1 = self._bert_scorer.score(safe_gen, references)
-        results = []
+        results = [None] * len(generated)
+        nonempty_indices = [
+            i for i, gen in enumerate(generated) if gen.strip()
+        ]
+        if nonempty_indices:
+            nonempty_gen = [
+                generated[i].strip() for i in nonempty_indices]
+            nonempty_refs = [
+                references[i] for i in nonempty_indices]
+            P, R, F1 = self._bert_scorer.score(
+                nonempty_gen, nonempty_refs)
 
-        for i, (gen, ref) in enumerate(zip(safe_gen, references)):
-            rouge_score = self._rouge_scorer.score(ref, gen)
-            results.append({
-                "primary":   float(F1[i]),
-                "bertscore_f1": float(F1[i]),
-                "bertscore_p":  float(P[i]),
-                "bertscore_r":  float(R[i]),
-                "rouge_l":      rouge_score["rougeL"].fmeasure,
-                "empty": empty_flags[i]
-            })
+            for j, original_i in enumerate(nonempty_indices):
+                rouge = self._rouge_scorer.score(
+                    nonempty_refs[j],
+                    nonempty_gen[j]
+                )
+                results[original_i] = {
+                    "primary": float(F1[j]),
+                    "bertscore_f1": float(F1[j]),
+                    "bertscore_p": float(P[j]),
+                    "bertscore_r": float(R[j]),
+                    "rouge_l": rouge["rougeL"].fmeasure,
+                    "empty": False
+                }
+        for i, gen in enumerate(generated):
+            if not gen.strip():
+                results[i] = {
+                    "primary": None,
+                    "bertscore_f1": None,
+                    "bertscore_p": None,
+                    "bertscore_r": None,
+                    "rouge_l": None,
+                    "empty": True
+                }
+
         return results
