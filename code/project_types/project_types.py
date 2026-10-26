@@ -68,6 +68,13 @@ class PhaseEnergy:
             return 0.0
         return self.prefill_joules / self.prefill_tokens
 
+    @property
+    def joules_per_processed_token(self) -> float:
+        total_tokens = self.prefill_tokens + self.decode_tokens
+        if total_tokens == 0:
+            return 0.0
+        return self.total_joules / total_tokens
+
 
 @dataclass
 class SampleResult:
@@ -89,6 +96,7 @@ class ExperimentResult:
     samples: list[SampleResult] = field(default_factory=list)
 
     mean_quality: dict[str, float | int] = field(default_factory=dict)
+    mean_joules_per_processed_token: float = 0.0
     mean_joules_per_output_token: float = 0.0
     mean_joules_per_input_token: float = 0.0
     mean_output_tokens: float = 0.0
@@ -103,13 +111,20 @@ class ExperimentResult:
         if not self.samples:
             return
         n = len(self.samples)
- 
+
+        self.mean_joules_per_processed_token = sum(
+            s.energy.joules_per_processed_token for s in self.samples
+        ) / sum( 
+            s.energy.prefill_tokens + s.energy.decode_tokens for s in self.samples)
+        
         self.mean_joules_per_output_token = sum(
             s.energy.joules_per_output_token for s in self.samples
         ) / n
+
         self.mean_joules_per_input_token = sum(
             s.energy.joules_per_input_token for s in self.samples
         ) / n
+        
         self.total_joules = sum(s.energy.total_joules for s in self.samples)
         self.mean_output_tokens = sum(s.energy.decode_tokens for s in self.samples) / n
         self.mean_input_tokens = sum(s.energy.prefill_tokens for s in self.samples) / n

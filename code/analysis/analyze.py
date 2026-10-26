@@ -64,17 +64,62 @@ def analyze_file(path: Path, output_dir: Path) -> dict:
     summary = summarize_single(data)
     sample_df = analyze_samples(data)
 
+    # per-sample
+    sample_df["tok_per_s"] = sample_df["decode_tokens"] / sample_df["latency_s"]
+    sample_df["processed_tok_per_s"] = (
+        sample_df["decode_tokens"] + sample_df["prefill_tokens"]
+    ) / sample_df["latency_s"]
+    sample_df["avg_watts"] = sample_df["total_joules"] / sample_df["latency_s"]
+    sample_df["processed_tokens"] = sample_df["prefill_tokens"] + sample_df["decode_tokens"]
+    sample_df["j_per_processed_token"] = (
+        sample_df["total_joules"] / sample_df["processed_tokens"].replace(0, float("nan"))
+    )
+
+    # per-config (ratio of sums)
+    summary["total_seconds"] = sample_df["latency_s"].sum()
+    summary["mean_latency_s"] = sample_df["latency_s"].mean()
+
+    total_seconds = summary["total_seconds"]
+    summary["tok_per_s"] = (
+    sample_df["decode_tokens"].sum() / total_seconds
+    if total_seconds > 0 else 0.0
+    )
+    summary["avg_watts"] = (
+        sample_df["total_joules"].sum() / total_seconds
+        if total_seconds > 0 else 0.0
+    )
+
+    summary["total_processed_tokens"] = sample_df["processed_tokens"].sum()
+
+    # Energy per request: includes all samples, including empty generations.
+    summary["j_per_request"] = (
+        sample_df["total_joules"].sum() / len(sample_df)
+        if len(sample_df) > 0 else None
+    )
+
+    # Energy per processed token: total energy / total input and output tokens.
+    summary["j_per_processed_token"] = (
+        sample_df["total_joules"].sum() / summary["total_processed_tokens"]
+        if summary["total_processed_tokens"] > 0 else None
+    )
+
     # Print report
     print(f"\n{'='*60}")
     print(f"  {summary['model']}  |  {summary['task_type']}  |  {summary['dataset']}")
     print(f"{'='*60}")
     print(f"  Samples:          {summary['n_samples']}")
     print(f"  Quality (primary):{summary['quality_primary']:.4f}")
+    print(f"  J / request:      {summary['j_per_request']:.4f}")
     print(f"  J / output token: {summary['j_per_output_token']:.4f}")
     print(f"  J / input token:  {summary['j_per_input_token']:.4f}")
+    print(f"  J/processed token:  {summary['j_per_processed_token']:.4f}")
     print(f"  Total joules:     {summary['total_joules']:.2f}")
     print(f"  Mean input tok:   {summary['mean_input_tokens']:.1f}")
     print(f"  Mean output tok:  {summary['mean_output_tokens']:.1f}")
+    print(f"  Total seconds:    {summary['total_seconds']:.2f}")
+    print(f"  Mean latency:     {summary['mean_latency_s']:.3f}")
+    print(f"  Tok / s (decode): {summary['tok_per_s']:.1f}")
+    print(f"  Mean Watts:       {summary['avg_watts']:.2f}")
     print(f"\n  Per-sample breakdown:")
     print(sample_df[["sample_id", "quality_primary", "j_per_output_token",
                       "decode_tokens", "prefill_tokens", "latency_s"
@@ -82,7 +127,7 @@ def analyze_file(path: Path, output_dir: Path) -> dict:
 
     # Save per-sample CSV
     output_dir.mkdir(parents=True, exist_ok=True)
-    stem = path.stem  # e.g. phi3_3.8B_fp16__code__humaneval
+    stem = path.stem  
     csv_path = output_dir / f"{stem}__samples.csv"
     sample_df.to_csv(csv_path, index=False)
     print(f"\n  Saved per-sample CSV → {csv_path}")
@@ -136,8 +181,16 @@ def main():
             print(f"\n{'='*60}")
             print("  SUMMARY TABLE")
             print(f"{'='*60}")
-            print(df[["model", "quantization", "task_type",
-                       "quality_primary", "j_per_output_token", "total_joules"
+            print(df[[
+                    "model", 
+                    "quantization", 
+                    "task_type",
+                    "quality_primary", 
+                    "j_per_request",
+                    "j_per_processed_token",
+                    "j_per_input_token",
+                    "j_per_output_token", 
+                    "total_joules"
                        ]].to_string(index=False, float_format="{:.4f}".format))
 
 

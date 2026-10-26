@@ -1,45 +1,170 @@
+
 import json
+from datetime import datetime
 from pathlib import Path
 
-RESULTS_DIR = Path("results")          # your results folder
-BACKUP_DIR = RESULTS_DIR / "_backup_old_scoring"
-BACKUP_DIR.mkdir(exist_ok=True)
+RESULTS_DIR = Path("results")
+
+# A unique backup directory for this run; never overwrite older backups.
+timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+BACKUP_DIR = RESULTS_DIR / f"_backup_migration_{timestamp}"
+BACKUP_DIR.mkdir(parents=True, exist_ok=False)
+
+
+def get_total_joules(sample):
+    """Return total measured energy for one request."""
+    energy = sample["energy"]
+
+    if energy.get("total_joules") is not None:
+        return float(energy["total_joules"])
+
+    return (
+        float(energy["prefill_joules"])
+        + float(energy["generation_joules"])
+    )
+
+
+def get_token_counts(sample):
+    """Read token counts from the sample, falling back to energy fields."""
+    energy = sample["energy"]
+
+    input_tokens = sample.get("prefill_tokens")
+    output_tokens = sample.get("decode_tokens")
+    
+
+    if input_tokens is None or output_tokens is None:
+        raise ValueError(
+            "Missing input/output token counts; refusing to migrate this file."
+        )
+
+    return int(input_tokens), int(output_tokens)
+
 
 for path in sorted(RESULTS_DIR.glob("*.json")):
-    data = json.loads(path.read_text())
+    # Read and validate everything before changing the result file.
+    original_text = path.read_text(encoding="utf-8")
+    data = json.loads(original_text)
     samples = data["samples"]
-    n = len(samples)
-    if n == 0:
+
+    if not samples:
+        print(f"Skipped {path.name}: no samples")
         continue
 
-    (BACKUP_DIR / path.name).write_text(json.dumps(data))  # keep the original
+    # Prepare token and energy data. If a required field is missing,
+    # the file is left unchanged.
+    try:
+        rows = []
+        for sample in samples:
+            input_tokens, output_tokens = get_token_counts(sample)
+            rows.append({
+                "energy": get_total_joules(sample),
+                "input_tokens": input_tokens,
+                "output_tokens": output_tokens,
+            })
+    except (KeyError, TypeError, ValueError) as exc:
+        print(f"Skipped {path.name}: {exc}")
+        continue
 
-    # 1) invalidate scores of empty generations
-    for s in samples:
-        q = s["quality_scores"]
-        is_empty = bool(q.get("empty")) or s["energy"]["decode_tokens"] == 0
+    # Preserve the exact file contents before changing anything.
+    backup_path = BACKUP_DIR / path.name
+    backup_path.write_text(original_text, encoding="utf-8")
+
+    n = len(samples)
+    total_energy = sum(row["energy"] for row in rows)
+    total_input_tokens = sum(row["input_tokens"] for row in rows)
+    total_output_tokens = sum(row["output_tokens"] for row in rows)
+    total_processed_tokens = total_input_tokens + total_output_tokens
+
+    # 1. Invalidate quality scores for empty generations.
+    for sample, row in zip(samples, rows):
+        quality = sample["quality_scores"]
+        is_empty = (
+            bool(quality.get("empty"))
+            or row["output_tokens"] == 0
+        )
+
         if is_empty:
-            for k in list(q):
-                q[k] = None
-            q["empty"] = True
+            for key in list(quality):
+                quality[key] = None
+            quality["empty"] = True
 
-    # 2) recompute quality aggregates (same logic as compute_aggregates)
-    n_empty = sum(1 for s in samples if s["quality_scores"].get("empty"))
-    mq = {"empty": n_empty / n, "n_valid": n - n_empty}
-    keys = {k for s in samples for k in s["quality_scores"]} - {"empty"}
-    for k in keys:
-        vals = [float(s["quality_scores"][k]) for s in samples
-                if s["quality_scores"].get(k) is not None]
-        mq[k] = sum(vals) / len(vals) if vals else float("nan")
-        mq[f"{k}_penalized"] = sum(vals) / n
-    if "primary_penalized" in mq:
-        mq["primary"] = mq["primary_penalized"]
-    data["aggregates"]["mean_quality"] = mq
+    # 2. Recompute quality aggregates.
+    n_empty = sum(
+        bool(sample["quality_scores"].get("empty"))
+        for sample in samples
+    )
 
-    # 3) energy per output token without zero-token samples
-    jpo = [s["energy"]["joules_per_output_token"] for s in samples
-           if s["energy"]["decode_tokens"] > 0]
-    data["aggregates"]["mean_joules_per_output_token"] = sum(jpo) / len(jpo) if jpo else 0.0
+    mean_quality = {
+        "empty": n_empty / n,
+        "n_valid": n - n_empty,
+    }
 
-    path.write_text(json.dumps(data, indent=2))
-    print(f"fixed {path.name}: {n_empty}/{n} empty")
+    quality_keys = {
+        key
+        for sample in samples
+        for key in sample["quality_scores"]
+    } - {"empty"}
+
+    for key in quality_keys:
+        values = [
+            float(sample["quality_scores"][key])
+            for sample in samples
+            if sample["quality_scores"].get(key) is not None
+        ]
+
+        mean_quality[key] = (
+            sum(values) / len(values) if values else None
+        )
+        mean_quality[f"{key}_penalized"] = sum(values) / n
+
+    if "primary_penalized" in mean_quality:
+        mean_quality["primary"] = mean_quality["primary_penalized"]
+
+    aggregates = data.setdefault("aggregates", {})
+    aggregates["mean_quality"] = mean_quality
+
+    # 3. Energy per request: includes empty generations.
+    aggregates["total_joules"] = total_energy
+    aggregates["n_samples"] = n
+    aggregates["mean_joules_per_request"] = total_energy / n
+
+    # 4. Energy per processed token: ratio of total energy to total tokens.
+    # Empty generations still contribute their energy and input tokens.
+    aggregates["total_input_tokens"] = total_input_tokens
+    aggregates["total_output_tokens"] = total_output_tokens
+    aggregates["total_processed_tokens"] = total_processed_tokens
+
+    aggregates["mean_joules_per_processed_token"] = (
+        total_energy / total_processed_tokens
+        if total_processed_tokens > 0
+        else None
+    )
+
+    # 5. Retain the existing mean energy per output token metric.
+    # This excludes zero-output samples because their ratio is undefined.
+    per_output_token = [
+        row["energy"] / row["output_tokens"]
+        for row in rows
+        if row["output_tokens"] > 0
+    ]
+
+    aggregates["mean_joules_per_output_token"] = (
+        sum(per_output_token) / len(per_output_token)
+        if per_output_token
+        else None
+    )
+
+    # Write only after all calculations have succeeded.
+    path.write_text(
+        json.dumps(data, indent=2, allow_nan=False),
+        encoding="utf-8",
+    )
+
+    print(
+        f"Migrated {path.name}: "
+        f"{n_empty}/{n} empty, "
+        f"{aggregates['mean_joules_per_request']:.4f} J/request, "
+        f"{aggregates['mean_joules_per_processed_token']} J/token"
+    )
+
+print(f"\nBackups saved to: {BACKUP_DIR}")

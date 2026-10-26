@@ -7,12 +7,12 @@
       "dataset": "xsum",
       "quantization": "int8",
       "fp16_quality": 0.1081895681868381,
-      "fp16_j_per_tok": 18.247322294642963,
+      "fp16_j_per_req": 147.9083233384563,
       "quant_quality": 0.10481658364827331,
-      "quant_j_per_tok": 12.722225709464345,
+      "quant_j_per_req": 102.16814864451278,
       "delta_quality_pct": 3.12,
-      "delta_energy_pct": 30.28,
-      "eq_score": 0.271613
+      "delta_energy_pct": 30.92,
+      "eq_score": 0.27807
     },
     {
       "family": "mistral",
@@ -21,12 +21,12 @@
       "dataset": "xsum",
       "quantization": "int4",
       "fp16_quality": 0.1081895681868381,
-      "fp16_j_per_tok": 18.247322294642963,
+      "fp16_j_per_req": 147.9083233384563,
       "quant_quality": 0.10552967324427652,
-      "quant_j_per_tok": 16.41244998133093,
+      "quant_j_per_req": 125.75194735656456,
       "delta_quality_pct": 2.46,
-      "delta_energy_pct": 10.06,
-      "eq_score": 0.07597
+      "delta_energy_pct": 14.98,
+      "eq_score": 0.125213
     }
   ]
 }

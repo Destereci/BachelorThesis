@@ -7,12 +7,12 @@
       "dataset": "humaneval",
       "quantization": "int8",
       "fp16_quality": 0.31097560975609756,
-      "fp16_j_per_tok": 7.639793380944779,
+      "fp16_j_per_req": 2586.3035986566165,
       "quant_quality": 0.31097560975609756,
-      "quant_j_per_tok": 5.220922726891645,
+      "quant_j_per_req": 1830.0049685192218,
       "delta_quality_pct": 0.0,
-      "delta_energy_pct": 31.66,
-      "eq_score": 0.316615
+      "delta_energy_pct": 29.24,
+      "eq_score": 0.292425
     },
     {
       "family": "qwen2.5_0.5b",
@@ -21,12 +21,12 @@
       "dataset": "humaneval",
       "quantization": "int4",
       "fp16_quality": 0.31097560975609756,
-      "fp16_j_per_tok": 7.639793380944779,
+      "fp16_j_per_req": 2586.3035986566165,
       "quant_quality": 0.17682926829268292,
-      "quant_j_per_tok": 5.589231038866256,
+      "quant_j_per_req": 1917.0499540576875,
       "delta_quality_pct": 43.14,
-      "delta_energy_pct": 26.84,
-      "eq_score": -0.162967
+      "delta_energy_pct": 25.88,
+      "eq_score": -0.172604
     }
   ]
 }

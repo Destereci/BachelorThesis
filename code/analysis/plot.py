@@ -31,6 +31,21 @@ QUANT_LABELS: dict[str, str] = {
 }
 
 
+def is_broken(r) -> bool:
+    family = str(r["family"]).strip().lower()
+    quant = str(r["quantization"]).strip().lower()
+    task = str(r["task_type"]).strip().lower()
+
+    return (
+        (family == "qwen2.5_14b" and quant == "int4"
+         and task in {"json", "code"})
+        or
+        (family == "phi3" and quant == "int4"
+         and task == "json")
+    )
+
+
+
 # Plot
 
 def plot_task(df_task: pd.DataFrame, task_type: str, save_path: Path | None) -> None:
@@ -40,7 +55,12 @@ def plot_task(df_task: pd.DataFrame, task_type: str, save_path: Path | None) -> 
     """
     fig, ax = plt.subplots(figsize=(7, 6))
 
-    
+    # Get rid of broken cells
+    broken = df_task.apply(is_broken, axis=1)
+    print(
+        f"{task_type}: excluding {broken.sum()} broken configurations"
+    )
+    df_task = df_task.loc[~broken].copy()      
     # Convert pct columns to fractions e.g. 32.1 → 0.321
     all_vals = pd.concat([
         df_task["delta_energy_pct"].dropna() / 100,

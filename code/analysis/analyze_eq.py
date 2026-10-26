@@ -39,19 +39,21 @@ def extract_key_metrics(data: dict) -> dict:
     qual = agg["mean_quality"]
     cfg  = data["config"]
     return {
-        "model":            cfg["model"],
-        "family":           cfg["family"],
-        "size_b":           cfg["size_b"],
-        "quantization":     cfg["quantization"],
-        "task_type":        cfg["task_type"],
-        "dataset":          cfg["dataset"],
-        "n_samples":        agg["n_samples"],
-        "quality_primary":  qual.get("primary", 0.0),
-        "j_per_output_token": agg["mean_joules_per_output_token"],
-        "j_per_input_token":  agg["mean_joules_per_input_token"],
-        "total_joules":       agg["total_joules"],
+        "model": cfg["model"],
+        "family": cfg["family"],
+        "size_b": cfg["size_b"],
+        "quantization": cfg["quantization"],
+        "task_type": cfg["task_type"],
+        "dataset": cfg["dataset"],
+        "n_samples": agg["n_samples"],
+        "quality_primary": qual.get("primary", 0.0),
+        "total_joules": agg["total_joules"],
+        "j_per_request": (
+            agg["total_joules"] / agg["n_samples"]
+            if agg["n_samples"] > 0 else None
+        ),
         "mean_output_tokens": agg["mean_output_tokens"],
-        "mean_input_tokens":  agg["mean_input_tokens"],
+        "mean_input_tokens": agg["mean_input_tokens"],
     }
 
 
@@ -99,8 +101,8 @@ def compute_all_eq_scores(groups: dict) -> list[dict]:
             eq = compute_eq_score(
                 quality_quant=quant_metrics["quality_primary"],
                 quality_fp16=baseline["quality_primary"],
-                energy_quant=quant_metrics["j_per_output_token"],
-                energy_fp16=baseline["j_per_output_token"],
+                energy_quant=quant_metrics["j_per_request"],
+                energy_fp16=baseline["j_per_request"],
             )
 
             delta_quality = None
@@ -110,10 +112,10 @@ def compute_all_eq_scores(groups: dict) -> list[dict]:
                     (baseline["quality_primary"] - quant_metrics["quality_primary"])
                     / baseline["quality_primary"], 6
                 )
-            if baseline["j_per_output_token"] != 0:
+            if baseline["j_per_request"] != 0:
                 delta_energy = round(
-                    (baseline["j_per_output_token"] - quant_metrics["j_per_output_token"])
-                    / baseline["j_per_output_token"], 6
+                    (baseline["j_per_request"] - quant_metrics["j_per_request"])
+                    / baseline["j_per_request"], 6
                 )
 
             results.append({
@@ -125,10 +127,10 @@ def compute_all_eq_scores(groups: dict) -> list[dict]:
                 "quantization": quant,
                 # baseline values
                 "fp16_quality":  baseline["quality_primary"],
-                "fp16_j_per_tok": baseline["j_per_output_token"],
+                "fp16_j_per_req": baseline["j_per_request"],
                 # quantized values
                 "quant_quality":  quant_metrics["quality_primary"],
-                "quant_j_per_tok": quant_metrics["j_per_output_token"],
+                "quant_j_per_req": quant_metrics["j_per_request"],
                 # deltas
                 "delta_quality_pct": round(delta_quality * 100, 2) if delta_quality is not None else None,
                 "delta_energy_pct":  round(delta_energy  * 100, 2) if delta_energy  is not None else None,

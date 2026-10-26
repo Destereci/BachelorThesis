@@ -7,12 +7,12 @@
       "dataset": "xsum",
       "quantization": "int8",
       "fp16_quality": 0.08247156060368971,
-      "fp16_j_per_tok": 15.762210908344477,
+      "fp16_j_per_req": 141.98223361960123,
       "quant_quality": 0.07872272354616511,
-      "quant_j_per_tok": 19.62593430824824,
+      "quant_j_per_req": 167.96152325134562,
       "delta_quality_pct": 4.55,
-      "delta_energy_pct": -24.51,
-      "eq_score": -0.290582
+      "delta_energy_pct": -18.3,
+      "eq_score": -0.228432
     },
     {
       "family": "phi3",
@@ -21,12 +21,12 @@
       "dataset": "xsum",
       "quantization": "int4",
       "fp16_quality": 0.08247156060368971,
-      "fp16_j_per_tok": 15.762210908344477,
+      "fp16_j_per_req": 141.98223361960123,
       "quant_quality": 0.09873729474311035,
-      "quant_j_per_tok": 14.531499202593858,
+      "quant_j_per_req": 174.1292692302703,
       "delta_quality_pct": -19.72,
-      "delta_energy_pct": 7.81,
-      "eq_score": 0.275308
+      "delta_energy_pct": -22.64,
+      "eq_score": -0.029188
     }
   ]
 }
