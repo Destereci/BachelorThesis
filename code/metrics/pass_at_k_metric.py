@@ -45,10 +45,6 @@ class PassAtKMetric(BaseMetric):
             temp_file.write(full_code)
             temp_file_name=temp_file.name
 
-        #print("="*40)
-        #print(full_code)
-        #print("="*40)
-
         try:
             result = subprocess.run(
                 [sys.executable, "-X", "utf8", temp_file_name],

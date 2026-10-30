@@ -64,7 +64,6 @@ def analyze_file(path: Path, output_dir: Path) -> dict:
     summary = summarize_single(data)
     sample_df = analyze_samples(data)
 
-    # per-sample
     sample_df["tok_per_s"] = sample_df["decode_tokens"] / sample_df["latency_s"]
     sample_df["processed_tok_per_s"] = (
         sample_df["decode_tokens"] + sample_df["prefill_tokens"]
@@ -75,7 +74,6 @@ def analyze_file(path: Path, output_dir: Path) -> dict:
         sample_df["total_joules"] / sample_df["processed_tokens"].replace(0, float("nan"))
     )
 
-    # per-config (ratio of sums)
     summary["total_seconds"] = sample_df["latency_s"].sum()
     summary["mean_latency_s"] = sample_df["latency_s"].mean()
 
@@ -91,13 +89,11 @@ def analyze_file(path: Path, output_dir: Path) -> dict:
 
     summary["total_processed_tokens"] = sample_df["processed_tokens"].sum()
 
-    # Energy per request: includes all samples, including empty generations.
     summary["j_per_request"] = (
         sample_df["total_joules"].sum() / len(sample_df)
         if len(sample_df) > 0 else None
     )
 
-    # Energy per processed token: total energy / total input and output tokens.
     summary["j_per_processed_token"] = (
         sample_df["total_joules"].sum() / summary["total_processed_tokens"]
         if summary["total_processed_tokens"] > 0 else None
@@ -125,7 +121,6 @@ def analyze_file(path: Path, output_dir: Path) -> dict:
                       "decode_tokens", "prefill_tokens", "latency_s"
                       ]].to_string(index=False, float_format="{:.4f}".format))
 
-    # Save per-sample CSV
     output_dir.mkdir(parents=True, exist_ok=True)
     stem = path.stem  
     csv_path = output_dir / f"{stem}__samples.csv"
@@ -156,7 +151,6 @@ def analyze_directory(results_dir: Path, task_filter: str | None, output_dir: Pa
     )
     df = df.sort_values(["family", "size_b", "quantization", "task_type"])
 
-    # Save full summary CSV
     summary_path = output_dir / "summary_all.csv"
     df.to_csv(summary_path, index=False)
     print(f"\nSaved full summary → {summary_path}")
