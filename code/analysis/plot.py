@@ -8,15 +8,12 @@ import numpy as np
 import pandas as pd
 
 
-# Visual style 
-
-
 MODEL_COLOURS: dict[str, str] = {
-    "phi3":     "#4C72B0",   # blue
-    "mistral":  "#DD8452",   # orange
-    "llama3":   "#55A868",   # green
-    "qwen2.5_0.5b":     "#8172B2",   # purple
-    "qwen2.5_14b":  "#C44E52",   # red
+    "phi3":     "#4C72B0",
+    "mistral":  "#DD8452",
+    "llama3":   "#55A868",
+    "qwen2.5_0.5b":     "#8172B2",
+    "qwen2.5_14b":  "#C44E52",
 }
 
 
@@ -69,13 +66,10 @@ def plot_task(df_task: pd.DataFrame, task_type: str, save_path: Path | None) -> 
     pad = 0.08
     lo = min(all_vals.min(), 0) - pad
     hi = max(all_vals.max(), 0) + pad
-
-    # Make axes square
     lim = (min(lo, -0.05), max(hi, 0.05))
     ax.set_xlim(lim)
     ax.set_ylim(lim)
 
-    # Diagonal: EQ = 0
     diag = np.linspace(lim[0], lim[1], 200)
     ax.plot(diag, diag,
             color="black", linewidth=1.2, linestyle="--",
@@ -91,7 +85,6 @@ def plot_task(df_task: pd.DataFrame, task_type: str, save_path: Path | None) -> 
     ax.axhline(0, color="grey", linewidth=0.6, linestyle=":")
     ax.axvline(0, color="grey", linewidth=0.6, linestyle=":")
 
-    # Data points
     plotted_families = set()
 
     for _, row in df_task.iterrows():
@@ -114,7 +107,6 @@ def plot_task(df_task: pd.DataFrame, task_type: str, save_path: Path | None) -> 
                    edgecolors="white",
                    linewidths=0.6)
 
-        # Label each point
         label = f"{row['family']} {QUANT_LABELS.get(quant, quant.upper())}"
         ax.annotate(
             label,
@@ -159,7 +151,6 @@ def plot_task(df_task: pd.DataFrame, task_type: str, save_path: Path | None) -> 
         title_fontsize=8,
     )
 
-    # Axes labels and title 
     ax.set_xlabel(r"Relative energy savings $\Delta E$  (higher → more efficient)",
                   fontsize=10)
     ax.set_ylabel(r"Relative quality degradation $\Delta Q$  (lower → less degraded)",
@@ -170,7 +161,6 @@ def plot_task(df_task: pd.DataFrame, task_type: str, save_path: Path | None) -> 
     ax.xaxis.set_major_formatter(plt.FuncFormatter(lambda x, _: f"{x*100:.0f}%"))
     ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda y, _: f"{y*100:.0f}%"))
 
-    # Quadrant annotations
     ax.text(lim[1] - pad * 0.5, lim[0] + pad * 0.3,
             "Desirable\n(high savings, low loss)",
             ha="right", va="bottom", fontsize=7.5,

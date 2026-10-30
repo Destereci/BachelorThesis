@@ -146,7 +146,6 @@ def compute_all_eq_scores(groups: dict) -> list[dict]:
 def save_eq_results(results: list[dict], output_dir: Path) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
 
-    # One JSON per family, task, dataset, with all quant comparisons grouped
     groups: dict[tuple, list] = {}
     for r in results:
         key = (r["family"], r["size_b"], r["task_type"], r["dataset"])
@@ -159,7 +158,6 @@ def save_eq_results(results: list[dict], output_dir: Path) -> None:
             json.dump({"comparisons": comparisons}, f, indent=2)
         print(f"  Saved → {path}")
 
-    # One CSV with everything
     df = pd.DataFrame(results)
     csv_path = output_dir / "eq_summary.csv"
     df.to_csv(csv_path, index=False)

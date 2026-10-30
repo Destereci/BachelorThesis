@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-CSV_PATH = "results/analysis/summary_all.csv"   # written by analyze.py
+CSV_PATH = "results/analysis/summary_all.csv"
 OUT_DIR = Path("plots")
 OUT_DIR.mkdir(exist_ok=True)
 
@@ -12,6 +12,11 @@ QUANT_ORDER = ["fp16", "int8", "int4"]
 TASKS = ["code", "json", "summarization"]
 MARKERS = {"fp16": "o", "int8": "s", "int4": "^"}
 ENERGY_COL = "j_per_sample"
+TASK_METRIC = {
+    "code": "Pass@1",
+    "json": "Schema validity rate",
+    "summarization": "BERTScore F1",
+}
 
 
 df = pd.read_csv(CSV_PATH)
@@ -70,7 +75,7 @@ def panel_energy_quality(ax, task):
 
     ax.set_title(f"Energy per request vs. quality: {task}", fontweight="bold")
     ax.set_xlabel("Mean energy per request [J] (lower = better)")
-    ax.set_ylabel("quality_primary  (higher = better)")
+    ax.set_ylabel(f"{TASK_METRIC[task]} (higher = better)")
     ax.grid(alpha=0.3)
 
 
@@ -81,7 +86,7 @@ for task in TASKS:
         plt.Line2D([], [], color="black", ls="--", lw=1, label="Pareto frontier")
     ]
     ax.legend(handles=handles, fontsize=8, loc="center left", bbox_to_anchor=(1.02, 0.5))
-    fig.savefig(OUT_DIR / f"1_{task}_energy_per_token_vs_quality.png",
+    fig.savefig(OUT_DIR / f"1_{task}_energy_per_request_vs_quality.png",
                 dpi=200, bbox_inches="tight")
     plt.close(fig)
 
@@ -113,7 +118,7 @@ ax.set_ylim(ylo, yhi)
 for c in (0.25, 0.5, 1, 2.5, 5, 10):
     xs = np.array([lo, hi])
     ax.plot(xs, c * xs, color="gray", ls=":", lw=1)
-    x_lab = min(hi, yhi / c) * 0.97          # where the line leaves the plot
+    x_lab = min(hi, yhi / c) * 0.97
     if x_lab * c > ylo and x_lab > lo:
         exits_top = yhi / c < hi
         ax.text(x_lab, c * x_lab, f"{c} J/processed token", fontsize=8, color="gray",
@@ -213,10 +218,7 @@ plt.close(fig)
 
 
 # ---------- Plot 5: measurement sanity check (energy = power x time) ----------
-# Left:  end-to-end throughput vs. model size, with the memory-bandwidth limit
-#        for batch size 1 (every decoded token reads all weights once).
-# Right: energy per request vs. latency; dotted lines = constant average power.
-BANDWIDTH = 672e9                                   # RTX 8000, bytes/s
+BANDWIDTH = 672e9                                   
 BYTES_PER_PARAM = {"fp16": 2.0, "int8": 1.0, "int4": 0.5}
 task_colors = dict(zip(TASKS, ["tab:blue", "tab:orange", "tab:green"]))
 
@@ -253,7 +255,7 @@ ylo, yhi = df.j_per_sample.min() * 0.7, df.j_per_sample.max() * 1.4
 ts = np.array([lo, hi])
 for watts in (100, 150, 200):
     axB.plot(ts, watts * ts, color="gray", ls=":", lw=1)
-    x_lab = min(hi, yhi / watts) * 0.97             # where the line leaves the plot
+    x_lab = min(hi, yhi / watts) * 0.97             
     axB.text(x_lab, watts * x_lab, f"{watts} W", fontsize=8, color="gray", ha="right", va="top")
 for r in df.itertuples():
     if r.broken:
@@ -282,10 +284,6 @@ plt.close(fig)
 
 
 
-
-
-
-
 cmp = df[(df.quantization == "int4") & ~df.broken][
     ["model_label", "task_type", "speed_change_pct", "energy_change_pct", "quality_delta"]
 ].round(1)
@@ -295,7 +293,6 @@ print(f"\nint4 faster than fp16:        {(cmp.speed_change_pct > 0).sum()}/{n}")
 print(f"int4 uses less energy/sample: {(cmp.energy_change_pct < 0).sum()}/{n}")
 print(f"int4 loses quality:           {(cmp.quality_delta < 0).sum()}/{n}")
 
-# is fp16 the most correct *within each task*?
 best = df[~df.broken].loc[df[~df.broken].groupby("task_type").quality_primary.idxmax()]
 print(best[["task_type", "model", "quality_primary"]].to_string(index=False))
 

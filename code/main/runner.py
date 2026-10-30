@@ -20,8 +20,6 @@ from model_loader.loader import load_model, make_sampling_params, prompt_fits
 
 def run_experiment(config: ExperimentConfig) -> ExperimentResult:
 
-    # Setup
-
     task = get_task(
         config.task_type,
         config.dataset_name,
@@ -43,8 +41,6 @@ def run_experiment(config: ExperimentConfig) -> ExperimentResult:
     skipped_ids: list[str] = []
 
     result = ExperimentResult(config=config)
-
-    # Loop
 
     all_generated: list[str] = []
     all_references: list[str] = []

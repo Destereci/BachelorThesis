@@ -16,11 +16,6 @@ MODEL_CATALOGUE: dict[str, dict] = {
         "family": "qwen2.5_14b",
         "size_b": 14.0,
     },
-    "llama3_8b": {
-        "model_id": "meta-llama/Meta-Llama-3-8B-Instruct",
-        "family": "llama3",
-        "size_b": 8.0,
-    },
     "mistral_7b": {
         "model_id": "mistralai/Mistral-7B-Instruct-v0.3",
         "family": "mistral",
